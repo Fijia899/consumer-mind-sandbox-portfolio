@@ -1,0 +1,1525 @@
+[
+  {
+    "id": "P01",
+    "name": "拾一",
+    "emoji": "👩",
+    "segment": "高执行打卡型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 26,
+    "gender": "女",
+    "city": "一线城市",
+    "occupation": "文案编辑",
+    "family": "独居，删了又加过几次",
+    "income": "个人月入约1.1万",
+    "detach": {
+      "stage": "戒断行动期",
+      "weeks_since_breakup": 4,
+      "relationship_months": 10,
+      "contact_urge": 6,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "屏蔽是第一步，执行要清单化：取关、隐藏、卸载，一次做干净。",
+      "fear": "怕自己半途又心软加回来。",
+      "decision_logic": "把戒断当项目做：有步骤、有检查项、有进度。",
+      "price_sensitivity": 5,
+      "brand_anchor": "任务清单+进度反馈型工具",
+      "channel_preference": "结构化、可勾选的流程",
+      "quote": "一次做不利索，就别做了——我说删，就删干净。"
+    },
+    "dominant_features": [
+      {
+        "code": "B3",
+        "weight": 8
+      },
+      {
+        "code": "A2",
+        "weight": 9
+      },
+      {
+        "code": "B11",
+        "weight": 6
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 9,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 0,
+      "A8": 0,
+      "A9": 0,
+      "A10": 0,
+      "A11": 2,
+      "B1": 0,
+      "B2": 0,
+      "B3": 8,
+      "B4": 0,
+      "B5": 0,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 0,
+      "B11": 6
+    },
+    "blockers": [
+      "删了又加回来过几次",
+      "共同朋友的动态防不胜防"
+    ],
+    "drivers": [
+      "彻底数字隔离",
+      "清单化执行",
+      "进度反馈"
+    ],
+    "decision_style": "果断",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「停止反复查看前任动态」上的任务（我卡在让前任动态从日常视野消失（屏蔽/取关/移除）），尤其是屏蔽是第一步，执行要清单化：取关、隐藏、卸载，一次做干净…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「让前任动态从日常视野消失（屏蔽/取关/移除）」，得再想想。",
+      "reject": "推广没解开我真正卡点（让前任动态从日常视野消失（屏蔽/取关/移除） / 屏蔽是第一步，执行要清单化：取关、隐藏、卸载，一次做干净…），不太信。",
+      "na": "跟我现在的任务「停止反复查看前任动态」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "删了又加、反复纠缠",
+      "job_id": "J1",
+      "job_owner": "本人",
+      "core_job": "停止反复查看前任动态",
+      "job_statement": "当我明知不该复合、却总忍不住反复查看前任的动态和痕迹时，我需要让TA的日常从我的视野里消失，把注意力拿回来。",
+      "current_step": "让前任动态从日常视野消失（屏蔽/取关/移除）",
+      "desired_outcomes": [
+        {
+          "id": "O5",
+          "importance": 10,
+          "satisfaction": 6
+        },
+        {
+          "id": "O2",
+          "importance": 6,
+          "satisfaction": 4
+        },
+        {
+          "id": "O1",
+          "importance": 4,
+          "satisfaction": 4
+        }
+      ],
+      "forces": {
+        "push": [
+          "A2"
+        ],
+        "pull": [
+          "B3",
+          "B11"
+        ],
+        "anxiety": [],
+        "habit_or_alternative": [
+          "A2"
+        ]
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "high_executor_block"
+    ]
+  },
+  {
+    "id": "P02",
+    "name": "一舟",
+    "emoji": "👨",
+    "segment": "高执行打卡型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 30,
+    "gender": "男",
+    "city": "二线城市",
+    "occupation": "健身教练",
+    "family": "独居，分手第30天开始打卡",
+    "income": "个人月入约1.2万",
+    "detach": {
+      "stage": "稳定坚持期",
+      "weeks_since_breakup": 11,
+      "relationship_months": 26,
+      "contact_urge": 4,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "分手第 30 天开始打卡，第 47 天没断过——进度是我最大的动力。",
+      "fear": "怕打卡断了就真的撑不住。",
+      "decision_logic": "要的是可视化的坚持记录和无缝的复盘节奏。",
+      "price_sensitivity": 5,
+      "brand_anchor": "有成就感的打卡体系",
+      "channel_preference": "数据与进度可视化",
+      "quote": "我不用安慰，给我进度条就行——我要看着自己好起来。"
+    },
+    "dominant_features": [
+      {
+        "code": "B11",
+        "weight": 6
+      },
+      {
+        "code": "B6",
+        "weight": 8
+      },
+      {
+        "code": "B10",
+        "weight": 7
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 2,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 0,
+      "A8": 0,
+      "A9": 0,
+      "A10": 0,
+      "A11": 2,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 0,
+      "B6": 8,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 7,
+      "B11": 6
+    },
+    "blockers": [
+      "偶尔怀疑坚持有什么意义",
+      "瓶颈期进度变慢"
+    ],
+    "drivers": [
+      "打卡天数",
+      "里程碑",
+      "看得见的进展"
+    ],
+    "decision_style": "自律",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「重建自我价值与生活秩序」上的任务（我卡在复盘新触发物并确认自我重建路径），尤其是分手第 30 天开始打卡，第 47 天没断过——进度是我…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「复盘新触发物并确认自我重建路径」，得再想想。",
+      "reject": "推广没解开我真正卡点（复盘新触发物并确认自我重建路径 / 分手第 30 天开始打卡，第 47 天没断过——进度是我…），不太信。",
+      "na": "跟我现在的任务「重建自我价值与生活秩序」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "靠打卡重建生活秩序",
+      "job_id": "J6",
+      "job_owner": "本人",
+      "core_job": "重建自我价值与生活秩序",
+      "job_statement": "当分手让我开始怀疑自己的价值、生活失去秩序时，我需要一点点把自己的日子重新立起来，而不是停在自我否定里。",
+      "current_step": "复盘新触发物并确认自我重建路径",
+      "desired_outcomes": [
+        {
+          "id": "O8",
+          "importance": 10,
+          "satisfaction": 5
+        },
+        {
+          "id": "O6",
+          "importance": 5,
+          "satisfaction": 4
+        },
+        {
+          "id": "O2",
+          "importance": 5,
+          "satisfaction": 5
+        }
+      ],
+      "forces": {
+        "push": [],
+        "pull": [
+          "B11",
+          "B6",
+          "B10"
+        ],
+        "anxiety": [],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "high_executor_checkin"
+    ]
+  },
+  {
+    "id": "P03",
+    "name": "纪子",
+    "emoji": "👩",
+    "segment": "孤独依赖型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 21,
+    "gender": "女",
+    "city": "二线城市",
+    "occupation": "应届毕业生",
+    "family": "独居，被抛弃感很强",
+    "income": "待业，靠存款过活",
+    "detach": {
+      "stage": "应激期",
+      "weeks_since_breakup": 3,
+      "relationship_months": 22,
+      "contact_urge": 8,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "TA走之后世界安静得可怕，我好像被整个世界丢下了。",
+      "fear": "怕从此孤独终老，怕没人会再真正懂我。",
+      "decision_logic": "我需要的是陪伴，不是大道理——得先有人陪着，才有力气独立。",
+      "price_sensitivity": 6,
+      "brand_anchor": "温暖社群/陪伴型平台",
+      "channel_preference": "能随时找到同路人",
+      "quote": "我不缺道理，缺的是有人在我哭的时候坐在旁边。"
+    },
+    "dominant_features": [
+      {
+        "code": "A1",
+        "weight": 8
+      },
+      {
+        "code": "A11",
+        "weight": 9
+      },
+      {
+        "code": "B9",
+        "weight": 8
+      }
+    ],
+    "factor_weights": {
+      "A1": 8,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 2,
+      "A7": 0,
+      "A8": 0,
+      "A9": 1,
+      "A10": 0,
+      "A11": 9,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 0,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 8,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "被抛弃感强",
+      "怕朋友觉得我矫情",
+      "一个人不知道干嘛"
+    ],
+    "drivers": [
+      "不评判的陪伴",
+      "被看见",
+      "低负担的联结"
+    ],
+    "decision_style": "依赖",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「面对孤独与被抛弃感」上的任务（我卡在准备对方联系我时的应对预案），尤其是TA走之后世界安静得可怕，我好像被整个世界丢下了。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「准备对方联系我时的应对预案」，得再想想。",
+      "reject": "推广没解开我真正卡点（准备对方联系我时的应对预案 / TA走之后世界安静得可怕，我好像被整个世界丢下了。…），不太信。",
+      "na": "跟我现在的任务「面对孤独与被抛弃感」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "被抛弃感强烈",
+      "job_id": "J5",
+      "job_owner": "本人",
+      "core_job": "面对孤独与被抛弃感",
+      "job_statement": "当失去TA让生活忽然空掉、孤独感把我淹没时，我需要重新建立起让自己不独自硬扛的连接和陪伴。",
+      "current_step": "准备对方联系我时的应对预案",
+      "desired_outcomes": [
+        {
+          "id": "O7",
+          "importance": 10,
+          "satisfaction": 1
+        },
+        {
+          "id": "O1",
+          "importance": 10,
+          "satisfaction": 3
+        },
+        {
+          "id": "O6",
+          "importance": 8,
+          "satisfaction": 5
+        }
+      ],
+      "forces": {
+        "push": [
+          "A1",
+          "A11"
+        ],
+        "pull": [
+          "B9"
+        ],
+        "anxiety": [
+          "A6"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "lonely_dependent_abandoned"
+    ]
+  },
+  {
+    "id": "P04",
+    "name": "阿澄",
+    "emoji": "👩",
+    "segment": "夜间脆弱型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 25,
+    "gender": "女",
+    "city": "一线城市",
+    "occupation": "新媒体编辑",
+    "family": "独居，深夜经常失眠",
+    "income": "个人月入约1.3万",
+    "detach": {
+      "stage": "复发应对期",
+      "weeks_since_breakup": 8,
+      "relationship_months": 36,
+      "contact_urge": 9,
+      "relapse_count": 2,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "冲动来得又急又猛，短信都打好了，就差手指按下去。",
+      "fear": "怕某一晚真的发出那条消息，把好不容易撑住的放下全部打碎。",
+      "decision_logic": "需要一道物理缓冲把冲动和行动隔开。",
+      "price_sensitivity": 6,
+      "brand_anchor": "「先等5分钟」式冷静工具",
+      "channel_preference": "锁屏也能快速触达的提醒",
+      "quote": "我知道不该联系，可手自己会动——得有人在那0.1秒拦住我。"
+    },
+    "dominant_features": [
+      {
+        "code": "A5",
+        "weight": 10
+      },
+      {
+        "code": "A8",
+        "weight": 8
+      },
+      {
+        "code": "B2",
+        "weight": 8
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 10,
+      "A6": 0,
+      "A7": 0,
+      "A8": 8,
+      "A9": 0,
+      "A10": 0,
+      "A11": 0,
+      "B1": 1,
+      "B2": 8,
+      "B3": 0,
+      "B4": 0,
+      "B5": 1,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "夜里冲动最强",
+      "喝多就想打电话",
+      "自责反复循环"
+    ],
+    "drivers": [
+      "冲动延迟缓冲",
+      "火灾发生前的提醒",
+      "允许反复"
+    ],
+    "decision_style": "矛盾",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「抑制联系前任的冲动」上的任务（我卡在为联系冲动设定延迟缓冲（5-10分钟规则）），尤其是冲动来得又急又猛，短信都打好了，就差手指按下去。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「为联系冲动设定延迟缓冲（5-10分钟规则）」，得再想想。",
+      "reject": "推广没解开我真正卡点（为联系冲动设定延迟缓冲（5-10分钟规则） / 冲动来得又急又猛，短信都打好了，就差手指按下去。…），不太信。",
+      "na": "跟我现在的任务「抑制联系前任的冲动」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "夜里冲动最强烈",
+      "job_id": "J2",
+      "job_owner": "本人",
+      "core_job": "抑制联系前任的冲动",
+      "job_statement": "当联系TA的冲动一次次涌上来、几乎要变成行动时，我需要一个能在冲动和行动之间拦住我的缓冲机制。",
+      "current_step": "为联系冲动设定延迟缓冲（5-10分钟规则）",
+      "desired_outcomes": [
+        {
+          "id": "O4",
+          "importance": 10,
+          "satisfaction": 1
+        },
+        {
+          "id": "O1",
+          "importance": 7,
+          "satisfaction": 3
+        },
+        {
+          "id": "O2",
+          "importance": 6,
+          "satisfaction": 4
+        }
+      ],
+      "forces": {
+        "push": [
+          "A5"
+        ],
+        "pull": [
+          "B2"
+        ],
+        "anxiety": [
+          "A4",
+          "A5"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "night_vulnerable_severe"
+    ]
+  },
+  {
+    "id": "P05",
+    "name": "小鹿",
+    "emoji": "👩",
+    "segment": "夜间脆弱型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 23,
+    "gender": "女",
+    "city": "二线城市",
+    "occupation": "插画师",
+    "family": "独居，前任已搬走",
+    "income": "个人月入约8千",
+    "detach": {
+      "stage": "应激期",
+      "weeks_since_breakup": 3,
+      "relationship_months": 18,
+      "contact_urge": 8,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "一到晚上就整个人垮掉，白天还能撑，凌晨三点最难熬。",
+      "fear": "怕这种夜里崩溃永无休止，怕自己真的不正常。",
+      "decision_logic": "先得有人接住我，再用睡眠仪式撑过夜晚。",
+      "price_sensitivity": 5,
+      "brand_anchor": "朋友推荐的温柔陪伴向工具",
+      "channel_preference": "深夜也能随时打开的App",
+      "quote": "我不是矫情，是凌晨三点的想念真的会把人吞掉。"
+    },
+    "dominant_features": [
+      {
+        "code": "A8",
+        "weight": 8
+      },
+      {
+        "code": "A11",
+        "weight": 9
+      },
+      {
+        "code": "B1",
+        "weight": 9
+      }
+    ],
+    "factor_weights": {
+      "A1": 2,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 1,
+      "A6": 0,
+      "A7": 0,
+      "A8": 8,
+      "A9": 0,
+      "A10": 0,
+      "A11": 9,
+      "B1": 9,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 1,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "睡前忍不住翻回忆",
+      "没有人可以倾诉",
+      "天亮了又怪自己矫情"
+    ],
+    "drivers": [
+      "共情陪伴",
+      "夜里有人接住",
+      "被理解不说教"
+    ],
+    "decision_style": "敏感",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「熬过夜间与独处的情绪复发」上的任务（我卡在守住睡眠与作息锚点（睡前仪式、醒来处理）），尤其是一到晚上就整个人垮掉，白天还能撑，凌晨三点最难熬。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「守住睡眠与作息锚点（睡前仪式、醒来处理）」，得再想想。",
+      "reject": "推广没解开我真正卡点（守住睡眠与作息锚点（睡前仪式、醒来处理） / 一到晚上就整个人垮掉，白天还能撑，凌晨三点最难熬。…），不太信。",
+      "na": "跟我现在的任务「熬过夜间与独处的情绪复发」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "凌晨醒来想TA",
+      "job_id": "J3",
+      "job_owner": "本人",
+      "core_job": "熬过夜间与独处的情绪复发",
+      "job_statement": "当黑夜和独处让悲伤、愤怒、想念集中爆发时，我需要一套能接住夜间情绪复发的办法，而不被它整个卷走。",
+      "current_step": "守住睡眠与作息锚点（睡前仪式、醒来处理）",
+      "desired_outcomes": [
+        {
+          "id": "O1",
+          "importance": 10,
+          "satisfaction": 3
+        },
+        {
+          "id": "O7",
+          "importance": 9,
+          "satisfaction": 3
+        },
+        {
+          "id": "O3",
+          "importance": 7,
+          "satisfaction": 6
+        }
+      ],
+      "forces": {
+        "push": [
+          "A8",
+          "A11"
+        ],
+        "pull": [
+          "B1"
+        ],
+        "anxiety": [
+          "A5"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "night_vulnerable_young"
+    ]
+  },
+  {
+    "id": "P06",
+    "name": "阿默",
+    "emoji": "👨",
+    "segment": "创伤恢复型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 27,
+    "gender": "男",
+    "city": "一线城市",
+    "occupation": "后端工程师",
+    "family": "独居，连续失眠与崩溃",
+    "income": "个人月入约2.2万",
+    "detach": {
+      "stage": "复发应对期",
+      "weeks_since_breakup": 7,
+      "relationship_months": 32,
+      "contact_urge": 5,
+      "relapse_count": 3,
+      "safety_flag": true
+    },
+    "mindset": {
+      "core_motive": "撑了两周，夜里有过「就这样算了」的念头——不敢告诉任何人。",
+      "fear": "怕说出来被当笑话，怕真的失控。",
+      "decision_logic": "需要绝对安全的通道被专业的人接住，最好有人注意到我不对劲。",
+      "price_sensitivity": 3,
+      "brand_anchor": "专业危机干预与心理支持",
+      "channel_preference": "紧急而有温度的热线/转介",
+      "quote": "我怕的不是分手，是怕自己撑不到天亮。"
+    },
+    "dominant_features": [
+      {
+        "code": "A10",
+        "weight": 10
+      },
+      {
+        "code": "B8",
+        "weight": 10
+      },
+      {
+        "code": "B7",
+        "weight": 9
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 2,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 1,
+      "A8": 1,
+      "A9": 0,
+      "A10": 10,
+      "A11": 0,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 1,
+      "B5": 0,
+      "B6": 0,
+      "B7": 9,
+      "B8": 10,
+      "B9": 0,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "连续失眠与崩溃",
+      "出现伤害自己的念头",
+      "不敢跟家人说"
+    ],
+    "drivers": [
+      "有人发现我",
+      "专业转介",
+      "安全的紧急出口"
+    ],
+    "decision_style": "危机",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「在高危边界内获得专业支持」上的任务（我卡在识别高危信号并及时求助（自伤/伤人/失控）），尤其是撑了两周，夜里有过「就这样算了」的念头——不敢告诉任何人…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「识别高危信号并及时求助（自伤/伤人/失控）」，得再想想。",
+      "reject": "推广没解开我真正卡点（识别高危信号并及时求助（自伤/伤人/失控） / 撑了两周，夜里有过「就这样算了」的念头——不敢告诉任何人…），不太信。",
+      "na": "跟我现在的任务「在高危边界内获得专业支持」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "连续多日严重失眠与崩溃",
+      "job_id": "J7",
+      "job_owner": "本人",
+      "core_job": "在高危边界内获得专业支持",
+      "job_statement": "当分手引发的情绪严重到威胁我的安全时，我需要被可靠地接住并尽快转介到专业支持，而不是独自硬扛。",
+      "current_step": "识别高危信号并及时求助（自伤/伤人/失控）",
+      "desired_outcomes": [
+        {
+          "id": "O9",
+          "importance": 10,
+          "satisfaction": 2
+        },
+        {
+          "id": "O1",
+          "importance": 7,
+          "satisfaction": 4
+        },
+        {
+          "id": "O7",
+          "importance": 4,
+          "satisfaction": 3
+        }
+      ],
+      "forces": {
+        "push": [
+          "A10"
+        ],
+        "pull": [
+          "B7",
+          "B8"
+        ],
+        "anxiety": [
+          "A10"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "trauma_recovery_highrisk"
+    ]
+  },
+  {
+    "id": "P07",
+    "name": "卷卷",
+    "emoji": "👩",
+    "segment": "创伤恢复型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 28,
+    "gender": "女",
+    "city": "一线城市",
+    "occupation": "数据分析师",
+    "family": "独居，睡前反复回放聊天记录",
+    "income": "个人月入约1.6万",
+    "detach": {
+      "stage": "戒断行动期",
+      "weeks_since_breakup": 5,
+      "relationship_months": 34,
+      "contact_urge": 6,
+      "relapse_count": 1,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "我不是放不下分手，是停不下来复盘——每翻一遍记录心就揪一下。",
+      "fear": "怕越想越陷进去，怕这辈子走不出这个循环。",
+      "decision_logic": "需要能打断反刍的替代动作和让念头过去的练习。",
+      "price_sensitivity": 6,
+      "brand_anchor": "正念/认知行为类工具",
+      "channel_preference": "即时响应、打断型提醒",
+      "quote": "道理我都懂，问题是脑子它不听话，一直回放。"
+    },
+    "dominant_features": [
+      {
+        "code": "A3",
+        "weight": 8
+      },
+      {
+        "code": "A8",
+        "weight": 8
+      },
+      {
+        "code": "B5",
+        "weight": 8
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 8,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 0,
+      "A8": 8,
+      "A9": 0,
+      "A10": 2,
+      "A11": 2,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 8,
+      "B6": 0,
+      "B7": 2,
+      "B8": 2,
+      "B9": 1,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "聊天记录翻了上百遍",
+      "听到特定歌就陷进去",
+      "睡前自动回放细节"
+    ],
+    "drivers": [
+      "打断反刍的动作",
+      "让念头流走的练习",
+      "回到当下"
+    ],
+    "decision_style": "沉思",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「停止反刍与回忆循环」上的任务（我卡在为反刍时刻准备替代动作（离场/小任务/身体唤醒）），尤其是我不是放不下分手，是停不下来复盘——每翻一遍记录心就揪一…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「为反刍时刻准备替代动作（离场/小任务/身体唤醒）」，得再想想。",
+      "reject": "推广没解开我真正卡点（为反刍时刻准备替代动作（离场/小任务/身体唤醒） / 我不是放不下分手，是停不下来复盘——每翻一遍记录心就揪一…），不太信。",
+      "na": "跟我现在的任务「停止反刍与回忆循环」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "反复回看聊天记录",
+      "job_id": "J4",
+      "job_owner": "本人",
+      "core_job": "停止反刍与回忆循环",
+      "job_statement": "当我一遍遍回放过去、在脑海里反复咀嚼时，我需要能打断这个循环的动作，把思绪从TA身上挪走。",
+      "current_step": "为反刍时刻准备替代动作（离场/小任务/身体唤醒）",
+      "desired_outcomes": [
+        {
+          "id": "O3",
+          "importance": 6,
+          "satisfaction": 1
+        },
+        {
+          "id": "O2",
+          "importance": 8,
+          "satisfaction": 4
+        },
+        {
+          "id": "O5",
+          "importance": 9,
+          "satisfaction": 5
+        }
+      ],
+      "forces": {
+        "push": [
+          "A3",
+          "A8"
+        ],
+        "pull": [
+          "B5"
+        ],
+        "anxiety": [
+          "A7"
+        ],
+        "habit_or_alternative": [
+          "A3"
+        ]
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "trauma_recovery_ruminate"
+    ]
+  },
+  {
+    "id": "P08",
+    "name": "夏夏",
+    "emoji": "👩",
+    "segment": "孤独依赖型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 25,
+    "gender": "女",
+    "city": "一线城市",
+    "occupation": "自由职业",
+    "family": "独居，周末最需要有人陪",
+    "income": "个人月入约1万",
+    "detach": {
+      "stage": "戒断行动期",
+      "weeks_since_breakup": 6,
+      "relationship_months": 16,
+      "contact_urge": 7,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "以前周末都是两个人，现在一个人躺到天黑。",
+      "fear": "怕被朋友问「你俩怎么了」，怕解释不清。",
+      "decision_logic": "想找一群不用解释、天然懂我处境的人。",
+      "price_sensitivity": 7,
+      "brand_anchor": "重陪伴轻社交压力的平台",
+      "channel_preference": "匿名的同路人小组",
+      "quote": "我不想解释我的伤，我只想有人陪我慢慢走出来。"
+    },
+    "dominant_features": [
+      {
+        "code": "A1",
+        "weight": 8
+      },
+      {
+        "code": "B9",
+        "weight": 8
+      },
+      {
+        "code": "B1",
+        "weight": 9
+      }
+    ],
+    "factor_weights": {
+      "A1": 8,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 1,
+      "A7": 0,
+      "A8": 0,
+      "A9": 1,
+      "A10": 0,
+      "A11": 1,
+      "B1": 9,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 0,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 8,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "周末无处可去",
+      "社交圈突然空了",
+      "不敢联系老朋友怕被问"
+    ],
+    "drivers": [
+      "低门槛社交",
+      "同路人社群",
+      "不追问的关心"
+    ],
+    "decision_style": "退缩",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「面对孤独与被抛弃感」上的任务（我卡在建立低负担的陪伴支持（家人/好友/社群）），尤其是以前周末都是两个人，现在一个人躺到天黑。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「建立低负担的陪伴支持（家人/好友/社群）」，得再想想。",
+      "reject": "推广没解开我真正卡点（建立低负担的陪伴支持（家人/好友/社群） / 以前周末都是两个人，现在一个人躺到天黑。…），不太信。",
+      "na": "跟我现在的任务「面对孤独与被抛弃感」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "周末无处可去",
+      "job_id": "J5",
+      "job_owner": "本人",
+      "core_job": "面对孤独与被抛弃感",
+      "job_statement": "当失去TA让生活忽然空掉、孤独感把我淹没时，我需要重新建立起让自己不独自硬扛的连接和陪伴。",
+      "current_step": "建立低负担的陪伴支持（家人/好友/社群）",
+      "desired_outcomes": [
+        {
+          "id": "O7",
+          "importance": 10,
+          "satisfaction": 4
+        },
+        {
+          "id": "O6",
+          "importance": 8,
+          "satisfaction": 5
+        },
+        {
+          "id": "O2",
+          "importance": 6,
+          "satisfaction": 4
+        }
+      ],
+      "forces": {
+        "push": [
+          "A1"
+        ],
+        "pull": [
+          "B9",
+          "B1"
+        ],
+        "anxiety": [
+          "A11"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "lonely_dependent_empty"
+    ]
+  },
+  {
+    "id": "P09",
+    "name": "叙白",
+    "emoji": "👨",
+    "segment": "理性清醒型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 28,
+    "gender": "男",
+    "city": "一线城市",
+    "occupation": "建筑师",
+    "family": "独居，业余在学陶艺",
+    "income": "个人月入约1.9万",
+    "detach": {
+      "stage": "重建转化期",
+      "weeks_since_breakup": 14,
+      "relationship_months": 15,
+      "contact_urge": 3,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "分手三个月，我想通了放下，现在想重新成为完整的自己。",
+      "fear": "怕哪一天被一条消息打回原形。",
+      "decision_logic": "用日程、里程碑和复盘把自己稳稳固定在新生活里。",
+      "price_sensitivity": 5,
+      "brand_anchor": "有体系、有成就感的成长工具",
+      "channel_preference": "打卡+长远规划",
+      "quote": "我不是在戒断，我是在重建。"
+    },
+    "dominant_features": [
+      {
+        "code": "B10",
+        "weight": 7
+      },
+      {
+        "code": "B6",
+        "weight": 8
+      },
+      {
+        "code": "B11",
+        "weight": 6
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 0,
+      "A8": 0,
+      "A9": 2,
+      "A10": 0,
+      "A11": 1,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 2,
+      "B6": 8,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 7,
+      "B11": 6
+    },
+    "blockers": [
+      "偶尔被共同记忆绊一下",
+      "担心复发的自己"
+    ],
+    "drivers": [
+      "日程秩序",
+      "自我认同重建",
+      "里程碑反馈"
+    ],
+    "decision_style": "自律",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「重建自我价值与生活秩序」上的任务（我卡在复盘新触发物并确认自我重建路径），尤其是分手三个月，我想通了放下，现在想重新成为完整的自己。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「复盘新触发物并确认自我重建路径」，得再想想。",
+      "reject": "推广没解开我真正卡点（复盘新触发物并确认自我重建路径 / 分手三个月，我想通了放下，现在想重新成为完整的自己。…），不太信。",
+      "na": "跟我现在的任务「重建自我价值与生活秩序」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "把想TA的时间换成想做自己的时间",
+      "job_id": "J6",
+      "job_owner": "本人",
+      "core_job": "重建自我价值与生活秩序",
+      "job_statement": "当分手让我开始怀疑自己的价值、生活失去秩序时，我需要一点点把自己的日子重新立起来，而不是停在自我否定里。",
+      "current_step": "复盘新触发物并确认自我重建路径",
+      "desired_outcomes": [
+        {
+          "id": "O8",
+          "importance": 10,
+          "satisfaction": 5
+        },
+        {
+          "id": "O2",
+          "importance": 6,
+          "satisfaction": 4
+        },
+        {
+          "id": "O6",
+          "importance": 6,
+          "satisfaction": 6
+        }
+      ],
+      "forces": {
+        "push": [],
+        "pull": [
+          "B10",
+          "B6",
+          "B11"
+        ],
+        "anxiety": [],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "rational_clarity_rebuilder"
+    ]
+  },
+  {
+    "id": "P10",
+    "name": "大齐",
+    "emoji": "👨",
+    "segment": "反复联系型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 28,
+    "gender": "男",
+    "city": "一线城市",
+    "occupation": "程序员",
+    "family": "合租，下班后一个人待着",
+    "income": "个人月入约1.8万",
+    "detach": {
+      "stage": "戒断行动期",
+      "weeks_since_breakup": 5,
+      "relationship_months": 24,
+      "contact_urge": 10,
+      "relapse_count": 1,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "面子告诉我别联系，手却比脑子快——每次都是打完整段话才清醒。",
+      "fear": "怕自己永远戒不掉这个毛病，让人看不起。",
+      "decision_logic": "冲动要输给缓冲，先等五分钟再看值不值。",
+      "price_sensitivity": 7,
+      "brand_anchor": "「延迟」类成瘾戒断工具",
+      "channel_preference": "无负担的轻量提醒",
+      "quote": "我不是放不下TA，是放不下那个习惯性想点发送的自己。"
+    },
+    "dominant_features": [
+      {
+        "code": "A5",
+        "weight": 10
+      },
+      {
+        "code": "A4",
+        "weight": 8
+      },
+      {
+        "code": "B2",
+        "weight": 8
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "A4": 8,
+      "A5": 10,
+      "A6": 0,
+      "A7": 0,
+      "A8": 0,
+      "A9": 0,
+      "A10": 0,
+      "A11": 2,
+      "B1": 0,
+      "B2": 8,
+      "B3": 0,
+      "B4": 0,
+      "B5": 0,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "消息打好了又删",
+      "节日特别想祝福",
+      "喝完酒就想打电话"
+    ],
+    "drivers": [
+      "延迟5分钟",
+      "写下来替代",
+      "一个能拉住我的人"
+    ],
+    "decision_style": "冲动",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「抑制联系前任的冲动」上的任务（我卡在为反刍时刻准备替代动作（离场/小任务/身体唤醒）），尤其是面子告诉我别联系，手却比脑子快——每次都是打完整段话才清…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「为反刍时刻准备替代动作（离场/小任务/身体唤醒）」，得再想想。",
+      "reject": "推广没解开我真正卡点（为反刍时刻准备替代动作（离场/小任务/身体唤醒） / 面子告诉我别联系，手却比脑子快——每次都是打完整段话才清…），不太信。",
+      "na": "跟我现在的任务「抑制联系前任的冲动」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "编辑好消息又删掉",
+      "job_id": "J2",
+      "job_owner": "本人",
+      "core_job": "抑制联系前任的冲动",
+      "job_statement": "当联系TA的冲动一次次涌上来、几乎要变成行动时，我需要一个能在冲动和行动之间拦住我的缓冲机制。",
+      "current_step": "为反刍时刻准备替代动作（离场/小任务/身体唤醒）",
+      "desired_outcomes": [
+        {
+          "id": "O4",
+          "importance": 10,
+          "satisfaction": 5
+        },
+        {
+          "id": "O2",
+          "importance": 8,
+          "satisfaction": 4
+        },
+        {
+          "id": "O6",
+          "importance": 7,
+          "satisfaction": 5
+        }
+      ],
+      "forces": {
+        "push": [
+          "A5"
+        ],
+        "pull": [
+          "B2"
+        ],
+        "anxiety": [
+          "A4"
+        ],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "repeat_contact_impulsive"
+    ]
+  },
+  {
+    "id": "P11",
+    "name": "也子",
+    "emoji": "👩",
+    "segment": "等待复合型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 25,
+    "gender": "女",
+    "city": "一线城市",
+    "occupation": "研究生在读",
+    "family": "合租，室友在谈恋爱",
+    "income": "学生补贴约2千",
+    "detach": {
+      "stage": "应激期",
+      "weeks_since_breakup": 2,
+      "relationship_months": 30,
+      "contact_urge": 9,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "嘴上说不等了，但每天第一件事就是看TA有没有新动态。",
+      "fear": "怕TA官宣新恋情，又怕彻底没了希望。",
+      "decision_logic": "理智说该屏蔽，心里还想留一条线——最需要有人帮我把线剪断。",
+      "price_sensitivity": 5,
+      "brand_anchor": "讲分手事实的清醒工具",
+      "channel_preference": "悄悄用、不被发现的App",
+      "quote": "我知道该往前走了，可总想再等等看。"
+    },
+    "dominant_features": [
+      {
+        "code": "A2",
+        "weight": 9
+      },
+      {
+        "code": "B3",
+        "weight": 8
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 9,
+      "A3": 0,
+      "A4": 2,
+      "A5": 0,
+      "A6": 0,
+      "A7": 0,
+      "A8": 0,
+      "A9": 0,
+      "A10": 0,
+      "A11": 2,
+      "B1": 0,
+      "B2": 0,
+      "B3": 8,
+      "B4": 0,
+      "B5": 0,
+      "B6": 0,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 0,
+      "B11": 0
+    },
+    "blockers": [
+      "反复确认TA有没有新对象",
+      "刷TA主页成了必修课",
+      "潜意识还在等契机"
+    ],
+    "drivers": [
+      "数字隔离",
+      "看清事实",
+      "被点醒不复合理由"
+    ],
+    "decision_style": "期待",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「停止反复查看前任动态」上的任务（我卡在梳理分手事实与不复合理由（理性清单）），尤其是嘴上说不等了，但每天第一件事就是看TA有没有新动态。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「梳理分手事实与不复合理由（理性清单）」，得再想想。",
+      "reject": "推广没解开我真正卡点（梳理分手事实与不复合理由（理性清单） / 嘴上说不等了，但每天第一件事就是看TA有没有新动态。…），不太信。",
+      "na": "跟我现在的任务「停止反复查看前任动态」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "反复确认TA有没有新对象",
+      "job_id": "J1",
+      "job_owner": "本人",
+      "core_job": "停止反复查看前任动态",
+      "job_statement": "当我明知不该复合、却总忍不住反复查看前任的动态和痕迹时，我需要让TA的日常从我的视野里消失，把注意力拿回来。",
+      "current_step": "梳理分手事实与不复合理由（理性清单）",
+      "desired_outcomes": [
+        {
+          "id": "O5",
+          "importance": 10,
+          "satisfaction": 4
+        },
+        {
+          "id": "O2",
+          "importance": 7,
+          "satisfaction": 5
+        },
+        {
+          "id": "O1",
+          "importance": 6,
+          "satisfaction": 5
+        }
+      ],
+      "forces": {
+        "push": [
+          "A2",
+          "A3"
+        ],
+        "pull": [
+          "B3"
+        ],
+        "anxiety": [
+          "A5"
+        ],
+        "habit_or_alternative": [
+          "A2"
+        ]
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "waiting_reunion_secret"
+    ]
+  },
+  {
+    "id": "P12",
+    "name": "木子",
+    "emoji": "👨",
+    "segment": "理性清醒型",
+    "role": "本人",
+    "subject": "本人",
+    "age": 27,
+    "gender": "男",
+    "city": "一线城市",
+    "occupation": "产品经理",
+    "family": "独居，生活已基本恢复秩序",
+    "income": "个人月入约2万",
+    "detach": {
+      "stage": "稳定坚持期",
+      "weeks_since_breakup": 10,
+      "relationship_months": 20,
+      "contact_urge": 5,
+      "relapse_count": 0,
+      "safety_flag": false
+    },
+    "mindset": {
+      "core_motive": "理智上早就想通了，现在就差把生活一点点拾起来。",
+      "fear": "怕自己坚持得不够久，怕回到以前那种状态。",
+      "decision_logic": "先立计划再行动，需要看得见的进展来确认自己在变好。",
+      "price_sensitivity": 5,
+      "brand_anchor": "成长型、有进度感的产品",
+      "channel_preference": "习惯打卡与复盘类",
+      "quote": "我不需要劝，我需要方法和一点一点看得见的进步。"
+    },
+    "dominant_features": [
+      {
+        "code": "B6",
+        "weight": 8
+      },
+      {
+        "code": "B10",
+        "weight": 7
+      },
+      {
+        "code": "A7",
+        "weight": 9
+      }
+    ],
+    "factor_weights": {
+      "A1": 0,
+      "A2": 0,
+      "A3": 0,
+      "A4": 0,
+      "A5": 0,
+      "A6": 0,
+      "A7": 9,
+      "A8": 0,
+      "A9": 2,
+      "A10": 0,
+      "A11": 0,
+      "B1": 0,
+      "B2": 0,
+      "B3": 0,
+      "B4": 0,
+      "B5": 2,
+      "B6": 8,
+      "B7": 0,
+      "B8": 0,
+      "B9": 0,
+      "B10": 7,
+      "B11": 2
+    },
+    "blockers": [
+      "偶尔闪回自我怀疑",
+      "生活还没完全立起来"
+    ],
+    "drivers": [
+      "生活秩序",
+      "自我价值重建",
+      "进展可视"
+    ],
+    "decision_style": "理性",
+    "react": {
+      "advance": "听到{{topic}}，这正好推进我在「重建自我价值与生活秩序」上的任务（我卡在重建每日秩序与连接感（饮食/运动/工作/社交）），尤其是理智上早就想通了，现在就差把生活一点点拾起来。…想深入了解。",
+      "hesitate": "{{topic}}有点相关，但我还卡在「重建每日秩序与连接感（饮食/运动/工作/社交）」，得再想想。",
+      "reject": "推广没解开我真正卡点（重建每日秩序与连接感（饮食/运动/工作/社交） / 理智上早就想通了，现在就差把生活一点点拾起来。…），不太信。",
+      "na": "跟我现在的任务「重建自我价值与生活秩序」关系不大。"
+    },
+    "jtbd": {
+      "entry_situation": "觉得自己还能把日子过起来",
+      "job_id": "J6",
+      "job_owner": "本人",
+      "core_job": "重建自我价值与生活秩序",
+      "job_statement": "当分手让我开始怀疑自己的价值、生活失去秩序时，我需要一点点把自己的日子重新立起来，而不是停在自我否定里。",
+      "current_step": "重建每日秩序与连接感（饮食/运动/工作/社交）",
+      "desired_outcomes": [
+        {
+          "id": "O8",
+          "importance": 10,
+          "satisfaction": 5
+        },
+        {
+          "id": "O6",
+          "importance": 6,
+          "satisfaction": 4
+        },
+        {
+          "id": "O2",
+          "importance": 6,
+          "satisfaction": 6
+        }
+      ],
+      "forces": {
+        "push": [
+          "A7"
+        ],
+        "pull": [
+          "B6",
+          "B10"
+        ],
+        "anxiety": [],
+        "habit_or_alternative": []
+      }
+    },
+    "evidence_refs": [
+      "synthetic",
+      "rational_clarity_self"
+    ]
+  }
+]

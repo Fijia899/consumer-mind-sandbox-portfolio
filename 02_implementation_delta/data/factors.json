@@ -1,0 +1,746 @@
+{
+  "version": "2.0",
+  "factors": [
+    {
+      "id": "A1",
+      "group": "A",
+      "name": "社交孤立/场景触发",
+      "weight": 8,
+      "definition": "朋友都有伴、周末/节日、共同场景等触发孤独与情绪复发",
+      "keywords": [
+        "朋友都有伴",
+        "室友脱单",
+        "周末",
+        "共同场景",
+        "路过我们走过的路",
+        "触景生情",
+        "一个人过节",
+        "婚礼",
+        "成双成对"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5",
+        "J3"
+      ],
+      "outcome_ids": [
+        "O7"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "A2",
+      "group": "A",
+      "name": "动态暴露",
+      "weight": 9,
+      "definition": "反复刷新前任动态、主页、共同好友更新，强化戒断难度",
+      "keywords": [
+        "刷TA动态",
+        "看TA主页",
+        "看头像",
+        "点开头像",
+        "共同好友",
+        "微博",
+        "朋友圈",
+        "抖音",
+        "ins",
+        "TA的新动态",
+        "视奸"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J1"
+      ],
+      "outcome_ids": [
+        "O5"
+      ],
+      "force_default": "habit_or_alternative",
+      "stage_scope": [
+        "应激期",
+        "戒断行动期"
+      ]
+    },
+    {
+      "id": "A3",
+      "group": "A",
+      "name": "反刍",
+      "weight": 8,
+      "definition": "反复回看聊天记录、照片、复盘分手细节，陷入回忆循环",
+      "keywords": [
+        "聊天记录",
+        "翻记录",
+        "老照片",
+        "回忆",
+        "复盘",
+        "如果当初",
+        "回放",
+        "过去的细节",
+        "争吵",
+        "甜蜜回忆"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J4"
+      ],
+      "outcome_ids": [
+        "O5",
+        "O2"
+      ],
+      "force_default": "habit_or_alternative",
+      "stage_scope": [
+        "应激期",
+        "戒断行动期"
+      ]
+    },
+    {
+      "id": "A4",
+      "group": "A",
+      "name": "自控矛盾",
+      "weight": 8,
+      "definition": "明知不该复合却控制不住查看/联系，理性与情感拉扯",
+      "keywords": [
+        "控制不住",
+        "忍不住",
+        "明明知道",
+        "说不合理智",
+        "理性无用",
+        "矛盾",
+        "反复拉黑",
+        "删了又加"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J1",
+        "J2"
+      ],
+      "outcome_ids": [
+        "O2"
+      ],
+      "force_default": "anxiety",
+      "stage_scope": [
+        "应激期",
+        "戒断行动期"
+      ]
+    },
+    {
+      "id": "A5",
+      "group": "A",
+      "name": "冲动联系",
+      "weight": 10,
+      "definition": "深夜、酒后、节日等时刻联系冲动直接升为行动",
+      "keywords": [
+        "想发消息",
+        "想打电话",
+        "打好的文字",
+        "发送键",
+        "冲动",
+        "喝多了",
+        "节日祝福",
+        "新年快乐",
+        "生日快乐",
+        "想见面",
+        "最后一面"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J2"
+      ],
+      "outcome_ids": [
+        "O4"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "A6",
+      "group": "A",
+      "name": "未来恐惧",
+      "weight": 7,
+      "definition": "怕错过TA、怕孤单终老、怕再也遇不到，动摇戒断决心",
+      "keywords": [
+        "不会再有人爱我",
+        "找不到更好的",
+        "孤单终老",
+        "错过TA",
+        "再也遇不到",
+        "年龄",
+        "害怕未来",
+        "后悔分手"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5",
+        "J6"
+      ],
+      "outcome_ids": [
+        "O4"
+      ],
+      "force_default": "anxiety",
+      "stage_scope": [
+        "应激期",
+        "稳定坚持期"
+      ]
+    },
+    {
+      "id": "A7",
+      "group": "A",
+      "name": "自我价值质疑",
+      "weight": 9,
+      "definition": "分手触发我是不是不够好/不配被爱的自我怀疑",
+      "keywords": [
+        "我不配",
+        "不够好",
+        "是不是我的错",
+        "自我怀疑",
+        "没人爱我",
+        "被抛弃",
+        "都是我的问题",
+        "配不上"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J6"
+      ],
+      "outcome_ids": [
+        "O8",
+        "O1",
+        "O3"
+      ],
+      "force_default": "anxiety",
+      "stage_scope": [
+        "应激期",
+        "重建转化期"
+      ]
+    },
+    {
+      "id": "A8",
+      "group": "A",
+      "name": "依恋回忆闪回",
+      "weight": 8,
+      "definition": "影像、气味、习惯等触发回忆画面突然闪现",
+      "keywords": [
+        "闪回",
+        "回忆画面",
+        "过去的拥抱",
+        "依恋",
+        "熟悉的味道",
+        "以前的习惯",
+        "梦到TA",
+        "走神想到"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J3",
+        "J4"
+      ],
+      "outcome_ids": [
+        "O7"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "戒断行动期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "A9",
+      "group": "A",
+      "name": "家人朋友期待差异",
+      "weight": 6,
+      "definition": "亲友「该不该和好/怎么还不找对象」的追问放大压力",
+      "keywords": [
+        "家人",
+        "朋友",
+        "父母",
+        "闺蜜",
+        "别和好",
+        "快和好",
+        "怎么还不找对象",
+        "被追问",
+        "不被理解"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5",
+        "J6"
+      ],
+      "outcome_ids": [
+        "O6"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "稳定坚持期"
+      ]
+    },
+    {
+      "id": "A10",
+      "group": "A",
+      "name": "自伤他伤风险",
+      "weight": 10,
+      "definition": "出现自伤/轻生念头、伤害前任冲动等安全红线信号",
+      "keywords": [
+        "不想活",
+        "活不下去",
+        "轻生",
+        "自残",
+        "伤害TA",
+        "报复",
+        "完全崩溃",
+        "撑不下去",
+        "结束自己"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准；独立触发布尔门控，不再参与常规评分",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J7"
+      ],
+      "outcome_ids": [
+        "O9"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "A11",
+      "group": "A",
+      "name": "孤独感/被抛弃感",
+      "weight": 9,
+      "definition": "被丢下、世界变空、独自硬扛的孤独体验",
+      "keywords": [
+        "孤独",
+        "孤单",
+        "被抛弃",
+        "被丢下",
+        "空",
+        "一个人",
+        "没人陪",
+        "寂寞",
+        "被全世界丢下"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5"
+      ],
+      "outcome_ids": [
+        "O1",
+        "O7"
+      ],
+      "force_default": "push",
+      "stage_scope": [
+        "应激期",
+        "稳定坚持期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B1",
+      "group": "B",
+      "name": "共情倾诉",
+      "weight": 9,
+      "definition": "有人理解我、接住情绪且不说教，对被理解感的敏感度",
+      "keywords": [
+        "有人懂",
+        "被理解",
+        "倾诉",
+        "说出来",
+        "不说教",
+        "接住",
+        "抱抱",
+        "听完",
+        "安心",
+        "陪伴",
+        "不评判"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5",
+        "J3"
+      ],
+      "outcome_ids": [
+        "O6",
+        "O1"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "应激期",
+        "稳定坚持期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B2",
+      "group": "B",
+      "name": "冲动延迟工具",
+      "weight": 8,
+      "definition": "5分钟缓冲、写下来、转移注意力等延迟机制的有效性",
+      "keywords": [
+        "5分钟",
+        "延迟",
+        "缓冲",
+        "先等一等",
+        "冷静一下",
+        "写下来",
+        "倒数",
+        "转移注意力",
+        "先不做决定"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J2",
+        "J3"
+      ],
+      "outcome_ids": [
+        "O4",
+        "O2"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "戒断行动期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B3",
+      "group": "B",
+      "name": "屏蔽/数字隔离",
+      "weight": 8,
+      "definition": "屏蔽、取关、卸载后能否真正减少暴露，阻断强化循环",
+      "keywords": [
+        "屏蔽",
+        "取关",
+        "拉黑",
+        "删除好友",
+        "移除",
+        "不再看",
+        "数字隔离",
+        "卸载",
+        "不关注"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J1"
+      ],
+      "outcome_ids": [
+        "O5"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "应激期",
+        "戒断行动期"
+      ]
+    },
+    {
+      "id": "B4",
+      "group": "B",
+      "name": "允许反复",
+      "weight": 7,
+      "definition": "破戒、复发不等于失败的自我许可，减少挫败感",
+      "keywords": [
+        "允许反复",
+        "破戒没关系",
+        "失败不是结束",
+        "重来",
+        "允许自己",
+        "慢慢来",
+        "不苛责",
+        "正常"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J4"
+      ],
+      "outcome_ids": [
+        "O3"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B5",
+      "group": "B",
+      "name": "掌控感训练",
+      "weight": 8,
+      "definition": "训练「想到TA但不会被带走」的觉察与情绪调节能力",
+      "keywords": [
+        "掌控",
+        "不带走",
+        "看着它过去",
+        "观察情绪",
+        "念头来了又走",
+        "命名情绪",
+        "冥想",
+        "呼吸练习"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J3",
+        "J4"
+      ],
+      "outcome_ids": [
+        "O2"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "戒断行动期",
+        "稳定坚持期"
+      ]
+    },
+    {
+      "id": "B6",
+      "group": "B",
+      "name": "自我价值重建",
+      "weight": 8,
+      "definition": "重建兴趣爱好、成就感与「我值得」的自我认同",
+      "keywords": [
+        "自我价值",
+        "重建自己",
+        "找回自己",
+        "兴趣爱好",
+        "优点",
+        "成就感",
+        "我值得",
+        "自信",
+        "新生活"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J6"
+      ],
+      "outcome_ids": [
+        "O8"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "稳定坚持期",
+        "重建转化期"
+      ]
+    },
+    {
+      "id": "B7",
+      "group": "B",
+      "name": "专业支持",
+      "weight": 9,
+      "definition": "情绪严重到无法消化时能否及时获得专业帮助",
+      "keywords": [
+        "咨询师",
+        "心理咨询",
+        "专业帮助",
+        "求助",
+        "热线",
+        "医院",
+        "崩溃无法承受"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J7"
+      ],
+      "outcome_ids": [
+        "O9"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B8",
+      "group": "B",
+      "name": "危机干预",
+      "weight": 10,
+      "definition": "安全网、紧急联系人与预案能否在危险时刻接住用户",
+      "keywords": [
+        "安全网",
+        "紧急联系人",
+        "紧急预案",
+        "告知朋友",
+        "陪着我",
+        "别留我一个人",
+        "危险时刻"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准；与 A10 构成高危门控",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J7"
+      ],
+      "outcome_ids": [
+        "O9"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "应激期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B9",
+      "group": "B",
+      "name": "低负担陪伴",
+      "weight": 8,
+      "definition": "不劝不judge的安静陪伴、同路人社群",
+      "keywords": [
+        "不评判",
+        "陪着我",
+        "朋友",
+        "社群",
+        "同路人",
+        "抱抱",
+        "不劝",
+        "安静的陪伴"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J5",
+        "J7"
+      ],
+      "outcome_ids": [
+        "O7",
+        "O6",
+        "O9"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "应激期",
+        "稳定坚持期",
+        "复发应对期"
+      ]
+    },
+    {
+      "id": "B10",
+      "group": "B",
+      "name": "生活秩序重建",
+      "weight": 7,
+      "definition": "作息、运动、饮食、工作等日常秩序恢复的支撑",
+      "keywords": [
+        "作息",
+        "早睡",
+        "运动",
+        "吃饭",
+        "工作",
+        "天亮",
+        "日常",
+        "规律",
+        "回归生活"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J6"
+      ],
+      "outcome_ids": [
+        "O8",
+        "O3"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "稳定坚持期",
+        "重建转化期"
+      ]
+    },
+    {
+      "id": "B11",
+      "group": "B",
+      "name": "进度反馈与打卡仪式",
+      "weight": 6,
+      "definition": "坚持天数、进度可视化、完成记录带来的进展确认感",
+      "keywords": [
+        "打卡",
+        "坚持天数",
+        "进度",
+        "天数",
+        "里程碑",
+        "完成记录",
+        "签到",
+        "进展"
+      ],
+      "enabled": true,
+      "source": "理论建模",
+      "note": "待问卷校准；对应高执行打卡型人群",
+      "jtbd_type": "outcome_evidence",
+      "job_ids": [
+        "J6"
+      ],
+      "outcome_ids": [
+        "O8"
+      ],
+      "force_default": "pull",
+      "stage_scope": [
+        "稳定坚持期",
+        "重建转化期"
+      ]
+    }
+  ]
+}
