@@ -1,5 +1,6 @@
 from pathlib import Path
 import hashlib
+import subprocess
 
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -24,8 +25,17 @@ def test_package_readme_follows_product_documentation_structure():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "github.com/" not in readme
     assert "旅游意向人群" in readme
-    assert "环境要求" in readme
-    assert "启动服务" in readme
-    assert "使用流程" in readme
-    assert "## API" in readme
-    assert (ROOT / "02_implementation_delta").is_dir()
+    assert "项目内容" in readme
+    assert "验证" in readme
+    assert "02_implementation_delta" not in readme
+
+
+def test_package_does_not_track_application_source():
+    tracked = subprocess.run(
+        ["git", "ls-files", "02_implementation_delta"],
+        cwd=ROOT,
+        check=True,
+        capture_output=True,
+        text=True,
+    ).stdout.strip()
+    assert not tracked
