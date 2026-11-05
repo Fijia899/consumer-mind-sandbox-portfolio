@@ -158,7 +158,11 @@ def test_ci_installs_declared_dependencies_and_runs_both_suites():
     assert set(workflow["on"]) == {"push", "pull_request", "workflow_dispatch"}
     python_steps = workflow["jobs"]["python"]["steps"]
     browser_steps = workflow["jobs"]["browser"]["steps"]
+    container_steps = workflow["jobs"]["container"]["steps"]
     assert any(step.get("run") == "python -m pytest -q" for step in python_steps)
     for command in ("npm ci", "npm run test:syntax", "npm run test:browser"):
         assert any(step.get("run") == command for step in browser_steps)
+    assert any(step.get("run") == "docker compose up -d --build" for step in container_steps)
+    smoke = next(step["run"] for step in container_steps if step.get("name") == "Verify container pages and rule-mode workflow")
+    ast.parse(smoke.split("\n", 1)[1].rsplit("\nPY", 1)[0])
     assert "03_validation" in text("pytest.ini")

@@ -42,3 +42,51 @@ jobs:
       - run: npx playwright install --with-deps chromium
       - run: npm run test:syntax
       - run: npm run test:browser
+
+  container:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: cp .env.example .env
+      - run: docker compose up -d --build
+      - name: Verify container pages and rule-mode workflow
+        run: |
+          python - <<'PY'
+          import json
+          import time
+          from urllib.error import URLError
+          from urllib.request import Request, urlopen
+
+          base = 'http://127.0.0.1:8000'
+          def call(path, payload=None):
+              body = json.dumps(payload).encode() if payload is not None else None
+              request = Request(base + path, data=body, headers={'Content-Type': 'application/json'})
+              with urlopen(request, timeout=5) as response:
+                  return response.read().decode()
+
+          for attempt in range(60):
+              try:
+                  assert json.loads(call('/api/health'))['status'] == 'ok'
+                  break
+              except (URLError, TimeoutError):
+                  time.sleep(1)
+          else:
+              raise RuntimeError('Container did not become ready')
+
+          assert 'id="persona-list"' in call('/')
+          assert 'id="factor-list"' in call('/admin')
+          assert not json.loads(call('/api/config'))['llm_configured']
+          personas = json.loads(call('/api/generate', {'count': 2, 'use_llm': False}))
+          assert len(personas) == 2
+          result = json.loads(call('/api/simulate', {
+              'campaign': '周末短途旅行，费用包含交通与住宿，可免费改期。',
+              'use_llm': False, 'use_memory': True,
+          }))
+          assert len(result['results']) == sum(result['summary'].values()) == 2
+          assert json.loads(call('/api/memories/reset', {}))['status'] == 'ok'
+          print('Container health, pages, generation, simulation and memory reset passed.')
+          PY
+      - if: always()
+        run: docker compose logs --no-color
+      - if: always()
+        run: docker compose down

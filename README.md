@@ -265,4 +265,4 @@ npm run test:syntax
 npm run test:browser
 ```
 
-浏览器测试默认使用 Playwright Chromium；本机已安装 Edge 时，可在 PowerShell 设置 `$env:PLAYWRIGHT_CHANNEL = "msedge"` 后运行。GitHub Actions 执行 Python 测试、JavaScript 语法检查和 Chromium 回归；这些测试不需要真实模型调用。
+浏览器测试默认使用 Playwright Chromium；本机已安装 Edge 时，可在 PowerShell 设置 `$env:PLAYWRIGHT_CHANNEL = "msedge"` 后运行。GitHub Actions 执行 Python 测试、JavaScript 语法检查、Chromium 回归和 Docker 容器构建与启动验证；这些测试不需要真实模型调用。
