@@ -1,0 +1,1534 @@
+{
+  "schema_version": 1,
+  "id": "xiaohongshu-travel-2026-10-24",
+  "title": "小红书旅游意向公开样本核查",
+  "audience": "旅游意向人群",
+  "checked_at": "2026-10-24",
+  "methodology": {
+    "research_reference": {
+      "url": "https://github.com/yiqiyao13/Customer-Mind-JTBD-Sandbox",
+      "commit": "7747517a36ccd92fb4a5c68866bc565ab18329c1",
+      "checked_at": "2026-10-24"
+    },
+    "sampling": "从独行同伴、低开销目的地、与父母出游三个公开讨论中，按可见评论选取20个有旅行愿望或顾虑的账号；这是目的性便利样本，不是随机样本。",
+    "review_scope": "登录后读取页面可见评论、对应主页和本人笔记正文；主页首批约30篇可见内容（含置顶）或当次全部已加载内容，未穷尽历史，未读取私信、私密内容或收藏，未分析视频或图片中的细节。",
+    "inclusion_rule": "须核对入口评论作者与主页、笔记作者的账号ID；入口评论之外至少两篇不同的相关本人笔记参与事实支持，至少四项具体旅行自述，并人工检查情境、时效与矛盾。多篇极简内容不自动满足质量门槛。",
+    "minimum_related_own_notes": 2,
+    "minimum_supported_claims": 4,
+    "limits": [
+      "20个账号均已追溯；6个采纳，14个排除，未用假设凑足20个可用画像。",
+      "账号连续性只证明站内来源一致，无法证明真实身份、内容真实性或不存在商业合作。",
+      "同一作者的多篇自述不是独立第三方验证。评论、愿望与游记不证明当前购买意向或真实预订。",
+      "仅保留与旅行需求有关的摘要和短引文；不补造年龄、收入、职业、家庭成员年龄、当前预算或预订状态。",
+      "页面未显示年份的日期原样保留；“昨天”等相对日期与核查日并列，不以发布时间推定实际旅行日期。",
+      "不同旅行情境分别保留。研究者整理的需求与追问不等同于作者承诺或稳定人格。",
+      "来源链接可能需要登录，签名可能失效或原文被删除；保留规范链接与评论ID以便复查，但未保存完整原文档案。"
+    ],
+    "usage": "用于核对方案涉及的需求、列出待问问题；不生成这些真人的意愿分、购买概率或第一人称预测，不作为独立验证集或市场占比。"
+  },
+  "screening": [
+    {
+      "id": "XHS-01",
+      "account_id": "5f33b6fc0000000001002fa7",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5f33b6fc0000000001002fa7?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-69d25a150000000015003c69",
+        "comment-69d25af8000000000d03e403"
+      ],
+      "entry_summary": "分享从周边短途开始尝试独行的经历。",
+      "decision": "excluded",
+      "reason": "主页可见一篇内容，未找到独立旅行自述；两条入口评论属于同一讨论，不能当作两份独立依据。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-02",
+      "account_id": "583c053750c4b47379ec7277",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/583c053750c4b47379ec7277?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-6ada4e250000000002012fd5"
+      ],
+      "entry_summary": "希望有人分摊住宿开销。",
+      "decision": "excluded",
+      "reason": "主页首批30篇中，未找到能核对独行或住宿分摊需求的独立旅行自述。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-03",
+      "account_id": "562cc879e00dd870d0a0f14a",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/562cc879e00dd870d0a0f14a?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-69c69eaa000000001d00d09b"
+      ],
+      "entry_summary": "回顾个人三亚独行经历与安排。",
+      "decision": "excluded",
+      "reason": "入口评论具体，但主页首批30篇中没有相关独立旅行自述，无法交叉核对。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-04",
+      "account_id": "64bcf8d20000000014037bce",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/64bcf8d20000000014037bce?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-6a1d648c000000002a02654e"
+      ],
+      "entry_summary": "希望独行时有人分摊住宿。",
+      "decision": "excluded",
+      "reason": "主页显示尚未发布内容，只有一条住宿分摊评论。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-05",
+      "account_id": "5cc82cfa0000000017030863",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-69ca4f060000000002034557"
+      ],
+      "entry_summary": "同行休息时间难匹配，开始尝试独行。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6ab7d3d50000000018039e91",
+        "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/69c91e3c000000001d01be3c",
+        "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6a9adcbd0000000011038adf"
+      ]
+    },
+    {
+      "id": "XHS-06",
+      "account_id": "58cfee04fb68a27fe4deb6e2",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/58cfee04fb68a27fe4deb6e2?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-69c1f0fc0000000031033545"
+      ],
+      "entry_summary": "想利用假期出游，但缺少同行人。",
+      "decision": "excluded",
+      "reason": "主页只有一篇东北找同伴笔记，能确认想出游，但达不到至少两篇本人旅行笔记的采纳门槛。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/58cfee04fb68a27fe4deb6e2/6adb1ca1000000002c0151a1"
+      ]
+    },
+    {
+      "id": "XHS-07",
+      "account_id": "5b6abe25215d740001e5eca5",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+      "entry_title": "想旅游 发现找不到朋友一起去的无力感",
+      "entry_comment_ids": [
+        "comment-69c5081800000000090360d2",
+        "comment-69cc6e12000000000f02c56c",
+        "comment-69c1f2df000000001d008521",
+        "comment-69c508110000000009004c8e"
+      ],
+      "entry_summary": "表达找同伴困难及邀约临时变动。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/69de5352000000001f007ca2",
+        "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699d74b0000000000d00a8a9",
+        "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699c5677000000001a02c592"
+      ]
+    },
+    {
+      "id": "XHS-08",
+      "account_id": "59fc46af4eacab4e7dca044e",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/59fc46af4eacab4e7dca044e?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac74d0e000000000d02582f",
+        "comment-6ac74dd0000000000702bbf7"
+      ],
+      "entry_summary": "喜欢低开销、方便舒适的城市体验，希望再访。",
+      "decision": "excluded",
+      "reason": "主页可见4篇，仅一篇简短镰仓旅行笔记；不足以支持更完整的旅行需求画像。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/59fc46af4eacab4e7dca044e/67a9f584000000002a00199c"
+      ]
+    },
+    {
+      "id": "XHS-09",
+      "account_id": "62ee7af0000000001f0141f1",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac5112e000000000d0256b2",
+        "comment-6ac51181000000001103ded0"
+      ],
+      "entry_summary": "欣赏武威人少、住宿不用抢的独行体验。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6ad22a06000000001c00f79e",
+        "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/69fc7c90000000003503ae5f",
+        "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6a6617130000000011010352"
+      ]
+    },
+    {
+      "id": "XHS-10",
+      "account_id": "65d0756c000000000b0316b1",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac8b4a700000000080138d1"
+      ],
+      "entry_summary": "怀念过往泰国体验，同时表达再次前往的安全顾虑。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6adad7a7000000002c00c441",
+        "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6a6824c20000000011017aed",
+        "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/69ecccba0000000035032c29"
+      ]
+    },
+    {
+      "id": "XHS-11",
+      "account_id": "5ec1d4310000000001005516",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5ec1d4310000000001005516?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6aca9e76000000000702a4b9"
+      ],
+      "entry_summary": "询问跟团选择，担心一个人安排出游。",
+      "decision": "excluded",
+      "reason": "主页可见4篇，未找到与跟团、独行顾虑对应的详细旅行自述。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-12",
+      "account_id": "596c49376a6a695d39232235",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac7135800000000070207e9"
+      ],
+      "entry_summary": "询问目的地是否适合带孩子及当地餐饮。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a9e8f77000000002a02683b",
+        "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a1962610000000008031846",
+        "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/64326439000000001303e083"
+      ]
+    },
+    {
+      "id": "XHS-13",
+      "account_id": "61206797000000000101e0d7",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/61206797000000000101e0d7?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac7cd9b0000000012000a96",
+        "comment-6ac7cdc0000000000b034ab7"
+      ],
+      "entry_summary": "希望核实目的地服务体验并比较城市。",
+      "decision": "excluded",
+      "reason": "主页首批30篇中未找到相关旅行自述，入口提问不能展开为稳定的目的地偏好。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-14",
+      "account_id": "597d59fc82ec394911fd683d",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/597d59fc82ec394911fd683d?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+      "entry_title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+      "entry_comment_ids": [
+        "comment-6ac632f0000000000801d60a",
+        "comment-6ac6335d000000001103e230"
+      ],
+      "entry_summary": "分享大同旅行的历史低开销与安静体验。",
+      "decision": "excluded",
+      "reason": "主页可见4篇，未找到独立旅行笔记；大同开销评论不足以推断当前预算。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-15",
+      "account_id": "6333ab98000000002303d3d9",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/6333ab98000000002303d3d9?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-6997fe5400000000050393f1",
+        "comment-6997f98b0000000011018bf8",
+        "comment-6997f4c0000000000f01b562",
+        "comment-6997fac30000000019000890"
+      ],
+      "entry_summary": "带父母出游时遇到路线分歧，反思安排方式。",
+      "decision": "excluded",
+      "reason": "主页首批30篇中仅发现入口旅行讨论本身，作者的多条回复仍属于同一信息来源。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-16",
+      "account_id": "656fdb4f0000000020035e82",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/656fdb4f0000000020035e82?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-699974320000000004001858"
+      ],
+      "entry_summary": "分享家庭同行时路线和活动意见不一致的经历。",
+      "decision": "excluded",
+      "reason": "虽核对3篇旅行笔记，但只有一篇较具体地讨论历史旅行价格；其余是短句和简短酒店视频说明（未分析视频）。缺少足够可核对的文本信息，不采纳为完整需求画像。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/656fdb4f0000000020035e82/68245823000000002202856b",
+        "https://www.xiaohongshu.com/user/profile/656fdb4f0000000020035e82/68784fa6000000000b01e115",
+        "https://www.xiaohongshu.com/user/profile/656fdb4f0000000020035e82/6a36715e000000000f0045ce"
+      ]
+    },
+    {
+      "id": "XHS-17",
+      "account_id": "5b869a14faff1300014f6ba9",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-6999a227000000000600f433"
+      ],
+      "entry_summary": "希望带父母出游能灵活调整，选择可退预订。",
+      "decision": "included",
+      "reason": "入口评论与同账号至少两篇相关笔记相互补充，形成至少四项有出处的旅行自述；已单列情境差异和未知项。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/681b1c990000000023011fc3",
+        "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/68c56f34000000001c0346ae",
+        "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/670bcfd700000000260354f6"
+      ]
+    },
+    {
+      "id": "XHS-18",
+      "account_id": "5e79a9e40000000001003f76",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5e79a9e40000000001003f76?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页首批约30篇可见内容（含置顶），非全部历史",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-6999726e000000000b03687b",
+        "comment-6999926e00000000080323e4"
+      ],
+      "entry_summary": "分享乌镇同行安排与家庭体验的分歧。",
+      "decision": "excluded",
+      "reason": "核对的3篇包括旧假期抢票提问和简短餐饮清单，未形成足够具体、可对应到旅行情境的多项需求；旧日期不当作当前意向。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/5e79a9e40000000001003f76/6503fd1c000000001303629a",
+        "https://www.xiaohongshu.com/user/profile/5e79a9e40000000001003f76/6a5d7901000000000100c1be",
+        "https://www.xiaohongshu.com/user/profile/5e79a9e40000000001003f76/68a1f67f000000001d02ce51"
+      ]
+    },
+    {
+      "id": "XHS-19",
+      "account_id": "5e61d00c000000000100ad68",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5e61d00c000000000100ad68?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-6a421f9c000000000403aa10"
+      ],
+      "entry_summary": "分享父母对自然景观与城市景观偏好的差异。",
+      "decision": "excluded",
+      "reason": "主页可见5篇，未找到独立旅行自述，家庭出游评论缺少其他情境支持。",
+      "reviewed_note_urls": []
+    },
+    {
+      "id": "XHS-20",
+      "account_id": "5dd90a890000000001004d85",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5dd90a890000000001004d85?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "profile_checked": true,
+      "checked_at": "2026-10-24",
+      "scope": "主页当次可见内容，非隐藏或收藏内容",
+      "entry_note_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+      "entry_title": "和父母出游的教训（已完结）",
+      "entry_comment_ids": [
+        "comment-699980700000000008030080"
+      ],
+      "entry_summary": "讨论目的地选择受预算限制。",
+      "decision": "excluded",
+      "reason": "主页可见8篇，仅一篇2024年预算求助；不满足独立来源数，且旧预算口径不清，不能设为当前预算。",
+      "reviewed_note_urls": [
+        "https://www.xiaohongshu.com/user/profile/5dd90a890000000001004d85/65b4735a000000000c00778d"
+      ]
+    }
+  ],
+  "profiles": [
+    {
+      "id": "XHS-05",
+      "label": "短途独行试水与主题乐园出游",
+      "account_id": "5cc82cfa0000000017030863",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J4",
+      "summary": "曾因同行休息时间难统一尝试独行；短假计划偏好城市步行和咖啡，也会与朋友安排主题乐园。需要按每次出行分别确认同伴与节奏。",
+      "sources": [
+        {
+          "id": "XHS-05-C1",
+          "kind": "comment",
+          "account_id": "5cc82cfa0000000017030863",
+          "url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+          "comment_id": "comment-69ca4f060000000002034557",
+          "title": "想旅游 发现找不到朋友一起去的无力感",
+          "date_display": "03-30（未显示年份）",
+          "excerpt": "休息时间完全一致",
+          "summary": "表示伴侣休息时间难完全重合，已尝试独自旅行。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-05-N1",
+          "kind": "note",
+          "account_id": "5cc82cfa0000000017030863",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/69c91e3c000000001d01be3c",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/69c91e3c000000001d01be3c",
+          "comment_id": null,
+          "title": "安阳周边旅游",
+          "date_display": "03-29（未显示年份）",
+          "excerpt": "玩两天然后回家还能休息休息",
+          "summary": "有三天半空闲，拟安排其中两天独行，想去安阳周边城市；偏好城市步行与咖啡，首次独行感到紧张。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-05-N2",
+          "kind": "note",
+          "account_id": "5cc82cfa0000000017030863",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6a9adcbd0000000011038adf",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6a9adcbd0000000011038adf",
+          "comment_id": null,
+          "title": "环球学院袍子鬼日穿还是无鬼日穿比较合适啊姐妹们？和朋友九月底去两天环球（一天鬼日",
+          "date_display": "09-04（未显示年份）",
+          "excerpt": "想出片又想方便",
+          "summary": "另一次与朋友的环球两日安排中，询问如何兼顾服装拍照和游玩便利；与独行情境不同。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-05-N3",
+          "kind": "note",
+          "account_id": "5cc82cfa0000000017030863",
+          "url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6ab7d3d50000000018039e91",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863/6ab7d3d50000000018039e91",
+          "comment_id": null,
+          "title": "北京的闲逛时光",
+          "date_display": "09-26（未显示年份）",
+          "excerpt": "走走看看停停",
+          "summary": "发布北京闲逛记录；正文较短，仅作城市步行兴趣的补充，不能确认独自成行。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supplementary",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5cc82cfa0000000017030863?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-05-F1",
+          "text": "同行休息时间难统一，曾主动尝试独自旅行。",
+          "source_ids": [
+            "XHS-05-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-05-F2",
+          "text": "周边游计划只用部分空闲时间，给返家休息留余量。",
+          "source_ids": [
+            "XHS-05-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-05-F3",
+          "text": "该次周边游明确偏好城市步行和咖啡。",
+          "source_ids": [
+            "XHS-05-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-05-F4",
+          "text": "首次独自出行时有紧张与担忧。",
+          "source_ids": [
+            "XHS-05-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-05-F5",
+          "text": "另一趟与朋友的主题乐园计划，需平衡拍照与活动便利。",
+          "source_ids": [
+            "XHS-05-N2"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-05-Q1",
+          "label": "独行准备与安全信息",
+          "source_ids": [
+            "XHS-05-C1",
+            "XHS-05-N1"
+          ],
+          "terms": [
+            "独行",
+            "一个人",
+            "独自",
+            "安全"
+          ],
+          "question": "路线、住宿和返程是否方便独自完成？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-05-Q2",
+          "label": "短途节奏与休息余量",
+          "source_ids": [
+            "XHS-05-N1"
+          ],
+          "terms": [
+            "两天",
+            "短途",
+            "周边",
+            "休息",
+            "步行",
+            "咖啡"
+          ],
+          "question": "是否给返家休息留时间，而非排满全部假期？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-05-Q3",
+          "label": "同行安排与拍照便利",
+          "source_ids": [
+            "XHS-05-N2"
+          ],
+          "terms": [
+            "同行",
+            "朋友",
+            "拍照",
+            "租赁",
+            "主题乐园"
+          ],
+          "question": "这次是独行还是与朋友同行，拍照安排是否影响游玩？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "三月独行计划与九月朋友出游属于不同情境，不能合并为同一行程。",
+        "北京笔记正文简短，不能据此确认具体路线或独行结果。"
+      ],
+      "unknowns": [
+        "当前目的地和日期",
+        "当前是否独行",
+        "可接受总预算",
+        "是否已预订"
+      ],
+      "profile_checked_at": "2026-10-24"
+    },
+    {
+      "id": "XHS-07",
+      "label": "同伴协调与旅行准备负担",
+      "account_id": "5b6abe25215d740001e5eca5",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J2",
+      "summary": "多次表达想出游却难约齐同伴；在不同旅行中提到攻略准备不足、反复确认同行时间，以及对通关等候的负面体验。",
+      "sources": [
+        {
+          "id": "XHS-07-C1",
+          "kind": "comment",
+          "account_id": "5b6abe25215d740001e5eca5",
+          "url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/69c1ee19000000001e00f409",
+          "comment_id": "comment-69c1f2df000000001d008521",
+          "title": "想旅游 发现找不到朋友一起去的无力感",
+          "date_display": "03-24（未显示年份）",
+          "excerpt": "突然又没空了",
+          "summary": "评论补充说，邀约对象有限，也遇到讨论后临时没空。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-07-N1",
+          "kind": "note",
+          "account_id": "5b6abe25215d740001e5eca5",
+          "url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/69de5352000000001f007ca2",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/69de5352000000001f007ca2",
+          "comment_id": null,
+          "title": "真的很需要一个说走就走 还会喝酒的朋友🥹",
+          "date_display": "04-14（未显示年份）",
+          "excerpt": "高铁票 看了又看",
+          "summary": "想去蚌埠体验当地餐饮与休闲，但朋友因距离或时间拒绝；表示独自去缺少乐趣。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-07-N2",
+          "kind": "note",
+          "account_id": "5b6abe25215d740001e5eca5",
+          "url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699c5677000000001a02c592",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699c5677000000001a02c592",
+          "comment_id": null,
+          "title": "有没有人一起啊 ！！",
+          "date_display": "02-23（未显示年份）",
+          "excerpt": "啥攻略都没做的",
+          "summary": "首次韩国旅行前寻找一起游玩的同伴，自述没有准备攻略。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-07-N3",
+          "kind": "note",
+          "account_id": "5b6abe25215d740001e5eca5",
+          "url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699d74b0000000000d00a8a9",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5/699d74b0000000000d00a8a9",
+          "comment_id": null,
+          "title": "仁川T1入境 真的超级无敌慢！！！",
+          "date_display": "02-24（未显示年份）",
+          "excerpt": "排队排了一两个小时了",
+          "summary": "另一篇记录仁川入境排队体验；只是当时个人经历，不代表现行通关时长。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b6abe25215d740001e5eca5?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-07-F1",
+          "text": "多次因同伴时间或距离安排而难以确定出游。",
+          "source_ids": [
+            "XHS-07-C1",
+            "XHS-07-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-07-F2",
+          "text": "蚌埠计划希望有共同体验当地餐饮、放松的同伴。",
+          "source_ids": [
+            "XHS-07-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-07-F3",
+          "text": "曾反复查看高铁票并向熟人邀约。",
+          "source_ids": [
+            "XHS-07-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-07-F4",
+          "text": "首次韩国旅行前自述没有做攻略，并寻找同游者。",
+          "source_ids": [
+            "XHS-07-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-07-F5",
+          "text": "记录过入境排队时间超出期待的体验。",
+          "source_ids": [
+            "XHS-07-N3"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-07-Q1",
+          "label": "同行时间确认",
+          "source_ids": [
+            "XHS-07-C1",
+            "XHS-07-N1"
+          ],
+          "terms": [
+            "同伴",
+            "同行",
+            "搭伴",
+            "档期",
+            "协调",
+            "日期"
+          ],
+          "question": "能否在购买前确认同行人的时间与是否成行？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-07-Q2",
+          "label": "路线与出境准备",
+          "source_ids": [
+            "XHS-07-N2",
+            "XHS-07-N3"
+          ],
+          "terms": [
+            "攻略",
+            "路线",
+            "入境",
+            "通关",
+            "准备",
+            "缓冲"
+          ],
+          "question": "有没有清楚的出行准备清单和等候缓冲？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-07-Q3",
+          "label": "共同体验当地生活",
+          "source_ids": [
+            "XHS-07-N1"
+          ],
+          "terms": [
+            "餐饮",
+            "美食",
+            "当地",
+            "体验",
+            "休闲"
+          ],
+          "question": "方案是否提供适合一起参与的休闲体验？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "不同笔记对应蚌埠与韩国等不同旅行，不推定现在仍处于相同阶段。",
+        "通关时长为历史个人自述，不作为目的地客观规则。"
+      ],
+      "unknowns": [
+        "当前出行计划",
+        "已确认同行人数",
+        "预算和出行天数",
+        "当前预订状态"
+      ],
+      "profile_checked_at": "2026-10-24"
+    },
+    {
+      "id": "XHS-09",
+      "label": "冷门小城与交通信息核验",
+      "account_id": "62ee7af0000000001f0141f1",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J4",
+      "summary": "多次公开记录西北旅行，欣赏人少、成本可控的小城体验；新的赏秋计划中明确担心公交资料过期，需要可靠的时效信息。",
+      "sources": [
+        {
+          "id": "XHS-09-C1",
+          "kind": "comment",
+          "account_id": "62ee7af0000000001f0141f1",
+          "url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "comment_id": "comment-6ac5112e000000000d0256b2",
+          "title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+          "date_display": "10-06（未显示年份）",
+          "excerpt": "没有人挤人",
+          "summary": "回顾首次独自旅行到武威，对人少、无需抢住宿及较低开销评价积极；花费口径不含往返大交通。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-09-N1",
+          "kind": "note",
+          "account_id": "62ee7af0000000001f0141f1",
+          "url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6ad22a06000000001c00f79e",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6ad22a06000000001c00f79e",
+          "comment_id": null,
+          "title": "临夏旅游求问",
+          "date_display": "10-16（未显示年份）",
+          "excerpt": "不知道是否还有效",
+          "summary": "临夏赏秋计划推迟，查到的公交资料已有两三年、部分无日期，因此寻求当地确认。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-09-N2",
+          "kind": "note",
+          "account_id": "62ee7af0000000001f0141f1",
+          "url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/69fc7c90000000003503ae5f",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/69fc7c90000000003503ae5f",
+          "comment_id": null,
+          "title": "【西北｜武威】羌笛何须怨杨柳……",
+          "date_display": "05-07（未显示年份）",
+          "excerpt": "去年去了两次",
+          "summary": "本人武威笔记说明上年曾两次到访，支持评论所述目的地经历；未显示确切旅行日期。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-09-N3",
+          "kind": "note",
+          "account_id": "62ee7af0000000001f0141f1",
+          "url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6a6617130000000011010352",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1/6a6617130000000011010352",
+          "comment_id": null,
+          "title": "【海南｜东线】未被商业化的海",
+          "date_display": "07-26（未显示年份）",
+          "excerpt": "未被商业化的海",
+          "summary": "海南旅行笔记标题强调较少商业开发的海景；正文仅标签，证据范围限于公开表达的题旨。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supplementary",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/62ee7af0000000001f0141f1?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-09-F1",
+          "text": "武威评论明确赞赏较少拥挤与无需抢住宿的体验。",
+          "source_ids": [
+            "XHS-09-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-09-F2",
+          "text": "回顾个人初次独行，提及参观多个人文景点。",
+          "source_ids": [
+            "XHS-09-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-09-F3",
+          "text": "同账号武威笔记自述上年到访两次。",
+          "source_ids": [
+            "XHS-09-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-09-F4",
+          "text": "临夏计划以赏秋为目的，出行时间曾推迟。",
+          "source_ids": [
+            "XHS-09-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-09-F5",
+          "text": "需要确认公交信息是否仍有效，对无日期攻略有疑虑。",
+          "source_ids": [
+            "XHS-09-N1"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-09-Q1",
+          "label": "交通资料时效与可执行性",
+          "source_ids": [
+            "XHS-09-N1"
+          ],
+          "terms": [
+            "公交",
+            "班次",
+            "更新",
+            "核实",
+            "日期",
+            "交通"
+          ],
+          "question": "班次信息何时核实，是否附官方查询渠道和末班时间？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-09-Q2",
+          "label": "人流与住宿确定性",
+          "source_ids": [
+            "XHS-09-C1"
+          ],
+          "terms": [
+            "人流",
+            "拥挤",
+            "错峰",
+            "住宿",
+            "预约"
+          ],
+          "question": "出行时的人流和住宿是否仍符合预期？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-09-Q3",
+          "label": "景观窗口与费用口径",
+          "source_ids": [
+            "XHS-09-N1",
+            "XHS-09-C1"
+          ],
+          "terms": [
+            "赏秋",
+            "景观",
+            "季节",
+            "费用",
+            "交通费"
+          ],
+          "question": "赏秋时间是否合适，报价是否包含往返交通？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "武威历史开销排除了大交通，不能填成当前人民币人均总预算。",
+        "海南短笔记只作补充，不能据此推断整趟路线或消费偏好。"
+      ],
+      "unknowns": [
+        "当前班次和开放情况",
+        "当前总预算",
+        "当前同行安排",
+        "是否已预订"
+      ],
+      "profile_checked_at": "2026-10-24"
+    },
+    {
+      "id": "XHS-10",
+      "label": "工作日周边游与自由行衔接",
+      "account_id": "65d0756c000000000b0316b1",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J4",
+      "summary": "近期公开寻找工作日逛吃和周边一日游的同伴；既往自由行笔记重视公共接驳、时间缓冲和体验性价比，也表达过目的地安全顾虑。",
+      "sources": [
+        {
+          "id": "XHS-10-C1",
+          "kind": "comment",
+          "account_id": "65d0756c000000000b0316b1",
+          "url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "comment_id": "comment-6ac8b4a700000000080138d1",
+          "title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+          "date_display": "10-09（未显示年份）",
+          "excerpt": "可惜现在太不安全了不能再去",
+          "summary": "怀念过去的泰国旅行体验，同时表达对再次前往的安全顾虑；这只是作者主观判断，不是安全结论。",
+          "context": "mixed",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-10-N1",
+          "kind": "note",
+          "account_id": "65d0756c000000000b0316b1",
+          "url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6adad7a7000000002c00c441",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6adad7a7000000002c00c441",
+          "comment_id": null,
+          "title": "找搭子！女找女，逛吃和周边一日游～",
+          "date_display": "编辑于 昨天 11:43（核查日为2026-10-24）",
+          "excerpt": "工作日也想出门溜达",
+          "summary": "公开寻找工作日一起逛吃、城市步行、游公园与周边一日游的同伴，希望能持续相处。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-10-N2",
+          "kind": "note",
+          "account_id": "65d0756c000000000b0316b1",
+          "url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/69ecccba0000000035032c29",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/69ecccba0000000035032c29",
+          "comment_id": null,
+          "title": "江西四天三晚自由行攻略，内有关键点我保证",
+          "date_display": "04-25（未显示年份）",
+          "excerpt": "自由行一定要提前查",
+          "summary": "江西四天三晚游记详细比较景区接驳、班次、取行李的时间余量、天气准备及夜景体验；记录过交通衔接失误。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-10-N3",
+          "kind": "note",
+          "account_id": "65d0756c000000000b0316b1",
+          "url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6a6824c20000000011017aed",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1/6a6824c20000000011017aed",
+          "comment_id": null,
+          "title": "云南是有什么魔力吗让我去过一次一直想念",
+          "date_display": "07-28（未显示年份）",
+          "excerpt": "让我去过一次一直想念",
+          "summary": "云南笔记标题表达曾去过且持续想念；正文主要标签，不推定旅居时长、预算或已做预订。",
+          "context": "mixed",
+          "checked_at": "2026-10-24",
+          "role": "supplementary",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/65d0756c000000000b0316b1?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-10-F1",
+          "text": "近期想在工作日进行逛吃、城市步行或周边一日游。",
+          "source_ids": [
+            "XHS-10-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-10-F2",
+          "text": "朋友在工作，因而公开寻找可同行的人。",
+          "source_ids": [
+            "XHS-10-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-10-F3",
+          "text": "江西游记提示自由行应提前查询公共接驳班次。",
+          "source_ids": [
+            "XHS-10-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-10-F4",
+          "text": "曾因进出站口与行李存取位置不同造成时间紧张。",
+          "source_ids": [
+            "XHS-10-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-10-F5",
+          "text": "江西游记区分日间、夜间体验，按内容判断是否值得前往。",
+          "source_ids": [
+            "XHS-10-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-10-F6",
+          "text": "对再次前往泰国表达安全顾虑，不能据此认定目的地实际风险。",
+          "source_ids": [
+            "XHS-10-C1"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-10-Q1",
+          "label": "工作日同行匹配",
+          "source_ids": [
+            "XHS-10-N1"
+          ],
+          "terms": [
+            "工作日",
+            "同伴",
+            "同行",
+            "一日游",
+            "周边"
+          ],
+          "question": "同行者时间与想玩的内容是否一致？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-10-Q2",
+          "label": "接驳班次与时间余量",
+          "source_ids": [
+            "XHS-10-N2"
+          ],
+          "terms": [
+            "接驳",
+            "班次",
+            "行李",
+            "缓冲",
+            "时间",
+            "车站"
+          ],
+          "question": "有没有明确接驳、取行李和换乘的时间余量？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-10-Q3",
+          "label": "体验内容与安全信息",
+          "source_ids": [
+            "XHS-10-C1",
+            "XHS-10-N2"
+          ],
+          "terms": [
+            "夜景",
+            "体验",
+            "安全",
+            "官方",
+            "天气",
+            "备选"
+          ],
+          "question": "能否提供可核实的安全和天气信息，并说明日夜体验差异？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "泰国安全表述仅保存为当时的顾虑，不作为事实传播或旅行建议。",
+        "云南标题证据有限，不用于填入居住、预算或旅行天数。",
+        "既往江西行程不能当作当前一日游的行程安排。"
+      ],
+      "unknowns": [
+        "当前可接受预算",
+        "已确定目的地",
+        "是否已有同伴",
+        "当前预订状态"
+      ],
+      "profile_checked_at": "2026-10-24"
+    },
+    {
+      "id": "XHS-12",
+      "label": "低负担亲子游与当地餐饮",
+      "account_id": "596c49376a6a695d39232235",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J2",
+      "summary": "在目的地讨论中询问是否适合带孩子；多篇亲子游自述强调不用排满行程、留出休息、互动场所和当地餐饮，对拥挤及隔音有明确反馈。",
+      "sources": [
+        {
+          "id": "XHS-12-C1",
+          "kind": "comment",
+          "account_id": "596c49376a6a695d39232235",
+          "url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/6ac4d8b9000000001801217b",
+          "comment_id": "comment-6ac7135800000000070207e9",
+          "title": "大家去过低消，但旅游体验巨好的 城市是哪些",
+          "date_display": "10-08（未显示年份）",
+          "excerpt": "适合带娃去吗",
+          "summary": "在汉中推荐的回复中询问亲子适配性和当地餐饮，属于目的地了解阶段。",
+          "context": "planning",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-12-N1",
+          "kind": "note",
+          "account_id": "596c49376a6a695d39232235",
+          "url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a9e8f77000000002a02683b",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a9e8f77000000002a02683b",
+          "comment_id": null,
+          "title": "🎈沈阳四天三晚亲子游 |淡季去真的太爽了！",
+          "date_display": "09-07（未显示年份）",
+          "excerpt": "不想把行程排得满满当当",
+          "summary": "沈阳四天三晚亲子游自述偏好淡季、低负担节奏，比较孩子对不同活动的反应，提到预约和休息安排。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-12-N2",
+          "kind": "note",
+          "account_id": "596c49376a6a695d39232235",
+          "url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a1962610000000008031846",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/6a1962610000000008031846",
+          "comment_id": null,
+          "title": "青岛周边游 | 住进淄博山里",
+          "date_display": "编辑于 06-12（未显示年份）",
+          "excerpt": "隔音不太好",
+          "summary": "回顾上年淄博山居民宿旅行；原目的地酒店约满后更换方案，体验农场并指出隔音不足。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-12-N3",
+          "kind": "note",
+          "account_id": "596c49376a6a695d39232235",
+          "url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/64326439000000001303e083",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235/64326439000000001303e083",
+          "comment_id": null,
+          "title": "青岛-淄博的遛娃（吃吃吃）之旅",
+          "date_display": "编辑于 2023-04-09",
+          "excerpt": "然后就回酒店休息啦",
+          "summary": "早期淄博亲子游记录安排中途休息，因景点拥挤改变游览方式，并比较餐饮口味。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/596c49376a6a695d39232235?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-12-F1",
+          "text": "在汉中讨论中先询问亲子适配与当地餐饮。",
+          "source_ids": [
+            "XHS-12-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-12-F2",
+          "text": "沈阳记录明确不希望亲子行程过满。",
+          "source_ids": [
+            "XHS-12-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-12-F3",
+          "text": "按孩子对活动的实际反应比较游玩地点。",
+          "source_ids": [
+            "XHS-12-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-12-F4",
+          "text": "曾因酒店约满改换出游方案。",
+          "source_ids": [
+            "XHS-12-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-12-F5",
+          "text": "民宿体验中指出隔音不足。",
+          "source_ids": [
+            "XHS-12-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-12-F6",
+          "text": "既往行程包含中途回酒店休息，也会因人多调整游览。",
+          "source_ids": [
+            "XHS-12-N3"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-12-Q1",
+          "label": "亲子活动与休息安排",
+          "source_ids": [
+            "XHS-12-C1",
+            "XHS-12-N1",
+            "XHS-12-N3"
+          ],
+          "terms": [
+            "亲子",
+            "儿童",
+            "孩子",
+            "休息",
+            "互动",
+            "强度"
+          ],
+          "question": "活动是否适合这次同行孩子，能否中途休息或退出？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-12-Q2",
+          "label": "住宿品质和可订性",
+          "source_ids": [
+            "XHS-12-N2"
+          ],
+          "terms": [
+            "住宿",
+            "酒店",
+            "房型",
+            "隔音",
+            "可订",
+            "余房"
+          ],
+          "question": "可订房型、隔音与到活动地点的距离是否经过核实？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-12-Q3",
+          "label": "人流、预约与餐饮",
+          "source_ids": [
+            "XHS-12-C1",
+            "XHS-12-N1",
+            "XHS-12-N3"
+          ],
+          "terms": [
+            "人流",
+            "预约",
+            "排队",
+            "餐饮",
+            "美食",
+            "错峰"
+          ],
+          "question": "是否说明预约方式、排队预案和适合同行人的餐饮？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "亲子活动反应来自当时一次旅行，不推断孩子当前年龄或长期喜好。",
+        "部分补充游记较早，餐厅、价格与设施现状没有复核。",
+        "内容含地点推荐；未独立核实商业合作关系，不据此推荐或背书商家。"
+      ],
+      "unknowns": [
+        "本次孩子需求与同行人数",
+        "当前出行日期",
+        "当前预算",
+        "当前房型和预订状态"
+      ],
+      "profile_checked_at": "2026-10-24"
+    },
+    {
+      "id": "XHS-17",
+      "label": "家庭出游弹性与避拥挤自驾",
+      "account_id": "5b869a14faff1300014f6ba9",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board",
+      "job_id": "J4",
+      "summary": "带父母旅行时采用可退预订和弹性路线；多篇自驾游记表达避开拥挤、保留自由节奏，同时也出现过紧凑行程，需按同行情境重新确认。",
+      "sources": [
+        {
+          "id": "XHS-17-C1",
+          "kind": "comment",
+          "account_id": "5b869a14faff1300014f6ba9",
+          "url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+          "canonical_url": "https://www.xiaohongshu.com/search_result/6997ed6b000000002801fafc",
+          "comment_id": "comment-6999a227000000000600f433",
+          "title": "和父母出游的教训（已完结）",
+          "date_display": "02-21（未显示年份）",
+          "excerpt": "酒店门票全订可退的",
+          "summary": "带父母出游后总结，预订可退的酒店门票，容许路线变化，以同行人体验为目的。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10&parent_page_channel_type=web_user_board"
+        },
+        {
+          "id": "XHS-17-N1",
+          "kind": "note",
+          "account_id": "5b869a14faff1300014f6ba9",
+          "url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/681b1c990000000023011fc3",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/681b1c990000000023011fc3",
+          "comment_id": null,
+          "title": "五一自驾银川乌海",
+          "date_display": "2025-05-07",
+          "excerpt": "每天自然醒 轻松自驾游",
+          "summary": "银川、乌海自驾游记强调避开人多地点，沿途走停，并说明因排队和体力消耗放弃部分景点。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-17-N2",
+          "kind": "note",
+          "account_id": "5b869a14faff1300014f6ba9",
+          "url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/68c56f34000000001c0346ae",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/68c56f34000000001c0346ae",
+          "comment_id": null,
+          "title": "大同云冈石窟-应县木塔-五台山",
+          "date_display": "2025-09-13",
+          "excerpt": "应县木塔到了已经关门了",
+          "summary": "另一次山西短途安排很紧凑，记录抵达景点时已关门；构成节奏偏好不能一概而论的反例。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10"
+        },
+        {
+          "id": "XHS-17-N3",
+          "kind": "note",
+          "account_id": "5b869a14faff1300014f6ba9",
+          "url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/670bcfd700000000260354f6",
+          "canonical_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9/670bcfd700000000260354f6",
+          "comment_id": null,
+          "title": "自驾311国道 十一不堵车不堵人❗️",
+          "date_display": "2024-10-13",
+          "excerpt": "十一不堵车不堵人",
+          "summary": "东北自驾旅行记录强调避拥挤，关注沿途风景、地方餐饮和博物馆；属于历史已完成行程。",
+          "context": "post_trip",
+          "checked_at": "2026-10-24",
+          "role": "supporting",
+          "author_profile_url": "https://www.xiaohongshu.com/user/profile/5b869a14faff1300014f6ba9?channel_type=web_note_detail_r10"
+        }
+      ],
+      "claims": [
+        {
+          "id": "XHS-17-F1",
+          "text": "带父母出游时选择可退预订，以容纳路线变化。",
+          "source_ids": [
+            "XHS-17-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-17-F2",
+          "text": "该次家庭旅行把同行人体验作为安排目的。",
+          "source_ids": [
+            "XHS-17-C1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-17-F3",
+          "text": "银川乌海自驾记录主动回避拥挤、排队或费体力的项目。",
+          "source_ids": [
+            "XHS-17-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-17-F4",
+          "text": "一次自驾安排强调自然醒和沿途走停。",
+          "source_ids": [
+            "XHS-17-N1"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-17-F5",
+          "text": "另一次山西旅行行程紧凑，出现到达时景点已关门。",
+          "source_ids": [
+            "XHS-17-N2"
+          ],
+          "basis": "explicit_self_report"
+        },
+        {
+          "id": "XHS-17-F6",
+          "text": "东北历史自驾记录同时包含风景、当地饮食和博物馆。",
+          "source_ids": [
+            "XHS-17-N3"
+          ],
+          "basis": "explicit_self_report"
+        }
+      ],
+      "needs": [
+        {
+          "id": "XHS-17-Q1",
+          "label": "预订弹性",
+          "source_ids": [
+            "XHS-17-C1"
+          ],
+          "terms": [
+            "可退",
+            "退改",
+            "取消",
+            "改期",
+            "退款"
+          ],
+          "question": "具体退改时限、费用与执行方是什么？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-17-Q2",
+          "label": "拥挤与行程强度",
+          "source_ids": [
+            "XHS-17-N1",
+            "XHS-17-N2"
+          ],
+          "terms": [
+            "拥挤",
+            "排队",
+            "强度",
+            "休息",
+            "人流",
+            "节奏"
+          ],
+          "question": "这次同行情境需要慢游还是紧凑行程，是否留有选择？",
+          "basis": "researcher_mapping"
+        },
+        {
+          "id": "XHS-17-Q3",
+          "label": "开放时间与沿途体验",
+          "source_ids": [
+            "XHS-17-N2",
+            "XHS-17-N3"
+          ],
+          "terms": [
+            "开放时间",
+            "闭馆",
+            "预约",
+            "路线",
+            "沿途",
+            "博物馆"
+          ],
+          "question": "抵达时间能否赶上开放时段，有哪些可调整的备选？",
+          "basis": "researcher_mapping"
+        }
+      ],
+      "limitations": [
+        "同时存在慢游与紧凑行程的自述，不把“总是慢旅行”作为稳定性格。",
+        "不同路线发生于不同年份，不合并成当前计划。",
+        "路线仅作为需求来源，未核查沿线地点的当前开放或安全条件。"
+      ],
+      "unknowns": [
+        "当前旅行是否带父母",
+        "当前出行节奏",
+        "当次人数和预算",
+        "当次可退条款"
+      ],
+      "profile_checked_at": "2026-10-24"
+    }
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "edition": "2026-10-16-zh-v1",
+  "checked_at": "2026-10-16",
+  "scope": "16 条公开中文原文节选，14 个讨论来源；便利样本，身份与经历未经核实。标注为模型辅助整理。补充收集覆盖原有任务缺口，没有改变先前资料的调整/对照分组；不能支持人群占比或行为准确率。",
+  "records": [
+    {
+      "source_url": "https://v2ex.com/t/1070093",
+      "platform": "V2EX",
+      "published_at": "2024-09-04",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "更想带他们看看没见过的，和家里不同的地方",
+      "context": "原帖计划带父母出游；偏好不同于日常的体验。仅摘录非敏感片段，未采集健康信息；不将历史计划改为当前出行。",
+      "job_id": "J1",
+      "stage": "目的地筛选",
+      "labels": [
+        {
+          "factor_id": "A12",
+          "quote": "看看没见过的，和家里不同的地方",
+          "terms": [
+            "不同的地方"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.v2ex.com/t/1207375",
+      "platform": "V2EX",
+      "published_at": "2026-04-21",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "主要是不想多个平台比来比去的，挺累的",
+      "context": "原帖作者第6楼追问：寻找更省心的酒店比价方式；不能简化为只追求最低价格。原页已核对。",
+      "job_id": "J3",
+      "stage": "比价决策",
+      "labels": [
+        {
+          "factor_id": "B12",
+          "quote": "不想多个平台比来比去的，挺累的",
+          "terms": [
+            "比来比去"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.v2ex.com/t/1194037",
+      "platform": "V2EX",
+      "published_at": "2026-02-25",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "不支持能不能承受这么长时间的旅游和坐车。",
+      "context": "保留原帖笔误；作者计划带幼儿自驾青甘环线，主动担心长时旅行和乘车。未将孩子年龄或健康状态写入画像。原页已核对。",
+      "job_id": "J6",
+      "stage": "出行准备",
+      "labels": [
+        {
+          "factor_id": "B13",
+          "quote": "能不能承受这么长时间的旅游和坐车",
+          "terms": [
+            "长时间的旅游和坐车"
+          ]
+        }
+      ],
+      "profile": []
+    },
+    {
+      "source_url": "https://cn.v2ex.com/t/1226722",
+      "platform": "V2EX",
+      "published_at": "2026-07-12",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "因为上海直飞大理机票比较贵，就打算先飞到丽江",
+      "context": "原帖情侣计划云南旅行，为降低机票成本考虑换到达城市。没有明确人民币人均预算，不填造一个数。原页已核对。",
+      "job_id": "J3",
+      "stage": "比价决策",
+      "labels": [
+        {
+          "factor_id": "B1",
+          "quote": "直飞大理机票比较贵",
+          "terms": [
+            "机票比较贵"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://origin.v2ex.com/t/1238848",
+      "platform": "V2EX",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "但是同行的说怕地方太多了",
+      "context": "原帖标题自述同行人对目的地数量有异议，已核对搜索索引标题。正文含AI生成路线，未用作真人事实或验证结果。",
+      "job_id": "J2",
+      "stage": "方案规划",
+      "labels": [
+        {
+          "factor_id": "B4",
+          "quote": "同行的说怕地方太多了",
+          "terms": [
+            "地方太多"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://v2ex.com/t/1191152",
+      "platform": "V2EX",
+      "published_at": "2026-02-06",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "酒店和机票还没订，基本没啥日语口语能力",
+      "context": "原帖计划日本自由行并询问语言工具、交通和行程冲突；摘录明确旅行准备信息。不能将原帖的AI路线当作实测路线。原页已核对。",
+      "job_id": "J6",
+      "stage": "出行准备",
+      "labels": [
+        {
+          "factor_id": "B11",
+          "quote": "基本没啥日语口语能力",
+          "terms": [
+            "日语口语"
+          ]
+        }
+      ],
+      "profile": [
+        {
+          "field": "booked",
+          "value": false,
+          "quote": "酒店和机票还没订"
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.reddit.com/r/AskChina/comments/1x0fl7i/",
+      "platform": "Reddit",
+      "published_at": "2026-10-08",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "想体验一下北京本地人的生活和夜生活。",
+      "context": "原帖计划11月北京旅行，主动寻找经典景点以外的体验；不是推荐者代述。未据此推断国籍、年龄或收入。原页已核对。",
+      "job_id": "J7",
+      "stage": "出行准备",
+      "labels": [
+        {
+          "factor_id": "A12",
+          "quote": "北京本地人的生活和夜生活",
+          "terms": [
+            "夜生活"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.flyert.com.cn/forum.php?mod=viewthread&tid=4697968",
+      "platform": "飞客",
+      "published_at": "2024-12-10",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "想用积分先占一间春节期间的房，结果订完才发现居然不可退款。",
+      "context": "原帖的预订后疑问；核对到公开搜索索引，原页面当前抓取失败。仅作为发帖者自述，不判定平台或商家责任。",
+      "job_id": "J5",
+      "stage": "预订确认",
+      "labels": [
+        {
+          "factor_id": "B9",
+          "quote": "订完才发现居然不可退款",
+          "terms": [
+            "不可退款"
+          ]
+        }
+      ],
+      "profile": [
+        {
+          "field": "booked",
+          "value": true,
+          "quote": "订完才发现居然不可退款"
+        }
+      ]
+    },
+    {
+      "source_url": "https://tousu.sina.com.cn/complaint/view/17393355292",
+      "platform": "黑猫投诉",
+      "published_at": "2026-02-07",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "申请改期入住，并非取消订单。",
+      "context": "投诉者对已预订住宿临时变更的自述，未核实商家回应及处理结果，不能当作责任认定。不用于生成出行前画像，仅保留事后对照。公开索引已核对。",
+      "job_id": "J6",
+      "stage": "出行准备",
+      "perspective": "post_trip",
+      "labels": [
+        {
+          "factor_id": "B9",
+          "quote": "申请改期入住，并非取消订单",
+          "terms": [
+            "改期入住"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://global.v2ex.com/t/1164381",
+      "platform": "V2EX",
+      "published_at": "2025-10-11",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "协商不下来我们都自费去了另一个酒店，现在还在扯皮中。",
+      "context": "旅游住宿到店无房的原帖自述，完整原页已核对。没有把投诉当作独立证实的违约事实；不用于出行前画像生成。",
+      "job_id": "J5",
+      "stage": "预订确认",
+      "perspective": "post_trip",
+      "labels": [
+        {
+          "factor_id": "B10",
+          "quote": "协商不下来我们都自费去了另一个酒店",
+          "terms": [
+            "协商不下来"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.v2ex.com/t/1207375",
+      "platform": "V2EX",
+      "published_at": "2026-04-21",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "比别的平台高的溢价就当保险了，省心",
+      "context": "第17楼评论者谈个人订房偏好；与原帖追求省心比价不同，愿为售后付溢价。不是原帖作者属性，不把推荐品牌写入人物。原页已核对。",
+      "job_id": "J5",
+      "stage": "预订确认",
+      "labels": [
+        {
+          "factor_id": "B10",
+          "quote": "高的溢价就当保险了，省心",
+          "terms": [
+            "省心"
+          ]
+        }
+      ]
+    },
+    {
+      "source_url": "https://www.v2ex.com/t/1194037",
+      "platform": "V2EX",
+      "published_at": "2026-02-25",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "text": "已经向往很久青甘大环线的风景了，喜欢那种天地辽阔、地广人稀的荒凉感。",
+      "context": "同一原帖的另一需求片段，省略换行并加逗号连接；与该帖同行体力问题按同一来源分组，不能当成两位独立用户。原页已核对。",
+      "job_id": "J1",
+      "stage": "目的地筛选",
+      "labels": [
+        {
+          "factor_id": "A9",
+          "quote": "已经向往很久青甘大环线的风景了",
+          "terms": [
+            "向往很久"
+          ]
+        },
+        {
+          "factor_id": "A12",
+          "quote": "喜欢那种天地辽阔、地广人稀的荒凉感",
+          "terms": [
+            "天地辽阔"
+          ]
+        }
+      ]
+    },
+    {
+      "platform": "V2EX",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "source_url": "https://edge.v2ex.com/t/1110642",
+      "published_at": "2025-02-11",
+      "text": "几个地方该如何串联路线，我们计划 5-6 天休闲游",
+      "context": "原帖计划与伴侣云南自由行，明确询问路线串联。原页已核对；天数为区间，未填造单一天数。",
+      "job_id": "J4",
+      "stage": "方案规划",
+      "labels": [
+        {
+          "factor_id": "B7",
+          "quote": "几个地方该如何串联路线",
+          "terms": [
+            "串联路线"
+          ]
+        }
+      ]
+    },
+    {
+      "platform": "V2EX",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "source_url": "https://hk.v2ex.com/t/1233142",
+      "published_at": "2026-08-10",
+      "text": "北京景点都要预约之类的太累人，一环扣不上就怕整段垮掉",
+      "context": "原帖计划带爸妈北京旅行，主动担心预约衔接失败；不是推测父母健康或体力。原页已核对。",
+      "job_id": "J6",
+      "stage": "出行准备",
+      "labels": [
+        {
+          "factor_id": "B7",
+          "quote": "一环扣不上就怕整段垮掉",
+          "terms": [
+            "一环扣不上"
+          ]
+        }
+      ]
+    },
+    {
+      "platform": "V2EX",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "source_url": "https://v2ex.com/t/1164757",
+      "published_at": "2025-10-13",
+      "text": "主要是现在细节不清楚怎么分配预算以及具体计划。",
+      "context": "原帖作者第11楼谈目的地婚礼旅行与酒席的预算分配，场景较特殊，不能代表普通休闲旅行预算。原页与公开索引已核对。",
+      "job_id": "J3",
+      "stage": "比价决策",
+      "labels": [
+        {
+          "factor_id": "B1",
+          "quote": "细节不清楚怎么分配预算",
+          "terms": [
+            "分配预算"
+          ]
+        }
+      ]
+    },
+    {
+      "platform": "V2EX",
+      "usage_basis": "public_research",
+      "language": "zh",
+      "source_url": "https://v2ex.com/t/1159622",
+      "published_at": "2025-09-16",
+      "text": "这周五打算去爬黄山释压，求老司机带带路",
+      "context": "原帖标题明确这次旅行的登山与放松目的；原页已核对。正文后续整理的攻略未当成已发生的行为。",
+      "job_id": "J7",
+      "stage": "出行准备",
+      "labels": [
+        {
+          "factor_id": "A12",
+          "quote": "去爬黄山释压",
+          "terms": [
+            "爬黄山"
+          ]
+        }
+      ]
+    }
+  ]
+}

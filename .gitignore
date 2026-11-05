@@ -1,6 +1,34 @@
-__pycache__/
-*.pyc
-.pytest_cache/
-node_modules/
+# Credentials and environments
 .env
+.env.*
+!.env.example
+.venv/
+venv/
+# Dependencies, caches and generated output
+node_modules/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.coverage
+htmlcov/
+playwright-report/
+test-results/
+build_launcher/
+MindSim.exe
+.research-test-artifacts/
+.agent-test-artifacts/
+.codex-*/
+# Local research state; public source batches are versioned separately
+data/research_state.json
+data/research_state.tmp
+data/participants_state.json
+data/participants_state.tmp
+data/travel_memories.json
+data/persona_backups/
+data/legacy_archive/
+data/agent.sqlite3*
+data/agent_media/
+# Retired local prototype
 02_implementation_delta/
+*.log
+.DS_Store

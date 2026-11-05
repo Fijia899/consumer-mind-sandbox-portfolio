@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>旅游意向人群心智沙盘</title><link rel="stylesheet" href="/static/css/travel.css">
+</head>
+<body>
+  <header class="topbar"><a class="brand" href="/">旅程心智 <span>JTBD Sandbox</span></a><nav><a class="active" href="/">工作台</a><a href="/admin">决策维度</a></nav><span id="api-status" class="api-status">正在检查模型配置…</span></header>
+  <main class="shell">
+    <section class="hero"><div class="eyebrow">TRAVEL INTENT · CUSTOMER MIND</div><h1>把出行意向变成可验证的决策路径</h1><p>按任务蓝图生成人物假设，再用旅行方案或营销话术测试他们的顾虑、期望结果与下一步。</p><div class="notice">当前画像与维度均为合成假设，尚待旅游意向用户研究验证。</div></section>
+    <section class="panel"><div class="section-head"><div><div class="eyebrow">01 / PERSONAS</div><h2>生成旅游意向画像</h2></div><span id="persona-count" class="count">0 位</span></div>
+      <div class="toolbar"><label>数量<input id="count" type="number" min="1" max="60" value="7"></label><label>优先任务<select id="job-filter"><option value="">均衡覆盖</option></select></label><button id="generate" class="button primary">生成画像</button><label class="check"><input id="generate-llm" type="checkbox"> 使用 DeepSeek 创造差异化画像</label></div><p id="generate-hint" class="hint">默认使用可复现的规则画像。配置 DeepSeek 后可启用模型生成与质检修复。</p>
+      <div id="persona-list" class="persona-grid"><div class="empty">正在加载画像…</div></div>
+    </section>
+    <section class="panel"><div class="section-head"><div><div class="eyebrow">02 / CAMPAIGN TEST</div><h2>测试旅行方案或营销话术</h2></div><label class="check"><input id="simulate-llm" type="checkbox"> DeepSeek 个性化表达</label></div>
+      <textarea id="campaign" rows="4" placeholder="例如：周末四天轻松游，行程按区域安排，人均费用包含往返交通、住宿和主要门票；可免费改期一次，提供近期实拍与当地客服。"></textarea>
+      <div class="toolbar"><button id="simulate" class="button primary">运行测试</button><label class="check"><input id="simulate-memory" type="checkbox"> 连续触达记忆</label><button id="reset-memory" class="button">清除记忆</button><span class="hint">规则先判断是否命中画像关注点；可选由 DeepSeek 生成更自然的第一人称反馈。</span></div>
+      <section id="agent-analysis" class="agent-analysis" aria-live="polite" hidden>
+        <div class="agent-analysis-head"><div><div class="eyebrow">ANALYSIS FLOW</div><h3>Agent 分析过程</h3></div><span id="agent-analysis-count" class="count"></span></div>
+        <div class="analysis-status"><span id="analysis-status" role="status"></span><button id="replay-analysis" class="analysis-replay" type="button" hidden>重播过程 ↻</button></div>
+        <div id="analysis-progress" class="analysis-progress" role="progressbar" aria-label="分析展示进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span></span></div>
+        <ol class="analysis-flow">
+          <li data-flow="plan"><span>01</span><div><strong>读取旅行方案</strong><small>提取行程、费用、服务和承诺</small><p></p></div></li>
+          <li data-flow="factors"><span>02</span><div><strong>识别决策维度</strong><small>匹配方案明确回应的关注点</small><p></p></div></li>
+          <li data-flow="personas"><span>03</span><div><strong>分析画像与任务进展</strong><small>逐一检查顾虑、Outcome 和下一步</small><p></p></div></li>
+          <li data-flow="summary"><span>04</span><div><strong>汇总结果</strong><small>呈现整体分类与逐人依据</small><p></p></div></li>
+        </ol>
+      </section>
+      <div id="campaign-hits" class="chips"></div><div id="results" class="results"></div>
+    </section>
+  </main>
+  <script src="/static/js/travel.js"></script>
+</body>
+</html>

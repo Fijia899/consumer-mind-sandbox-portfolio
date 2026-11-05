@@ -1,0 +1,73 @@
+{
+  "description": "公开旅游讨论起步包；2026-10-16 核对原帖。英文、入境中国旅行场景、单一平台，不能代表中国境内旅游意向总体。全部待审核。仅保留短引文及研究标注，不采集账号、头像或健康信息。",
+  "records": [
+    {
+      "source_url": "https://www.reddit.com/r/chinatravel/comments/1vnfvtx/daily_budget_excluding_accommodation_and_trains/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en", "published_at": "2026-08-13",
+      "text": "I am visiting China in September for three weeks. I have already booked and paid for all of my hotels and train travel. All I will need to pay for when I’m there is food, local metro, souvenirs and attractions/entertainment. How much would you recommend as a daily budget for these things? We are on a backpacker budget so can buy street food and cheaper options.",
+      "context": "原帖提问者；计划旅行，已支付住宿与火车，仍在估算其他费用。作者身份未核实，按讨论来源隔离。",
+      "job_id": "J3", "stage": "比价决策",
+      "labels": [{"factor_id":"B1", "quote":"We are on a backpacker budget so can buy street food and cheaper options.", "terms":["backpacker budget", "cheaper options"]}],
+      "profile": [
+        {"field":"trip_length_days", "value":21, "quote":"I am visiting China in September for three weeks."},
+        {"field":"departure_window", "value":"原帖计划于2026年9月出发（历史情境）", "quote":"I am visiting China in September for three weeks."},
+        {"field":"booked", "value":true, "quote":"I have already booked and paid for all of my hotels and train travel."}
+      ]
+    },
+    {
+      "source_url": "https://www.reddit.com/r/chinatravel/comments/1u14fem/what_would_be_an_ideal_itenarary_for_a_budget/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en", "published_at": "2026-06-09",
+      "text": "And i was just wondering what would be the ideal places to go if i'm on a budget (around 1.5k usd). I was thinking at least 10-14 days. Would my budget be sufficient? Lmk what you guys think",
+      "context": "原帖提问；总预算为美元且旅行天数为区间，因此不填人民币人均预算或单一天数。",
+      "job_id": "J3", "stage": "比价决策",
+      "labels": [{"factor_id":"B1", "quote":"Would my budget be sufficient?", "terms":["budget", "budget be sufficient"]}],
+      "profile": []
+    },
+    {
+      "source_url": "https://www.reddit.com/r/travelchina/comments/1lpr2wj/thinking_of_visiting_china_with_kids_seems_too/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en",
+      "text": "I live in Australia and have small children, so I'm keeping my overseas trip 'local' (a direct flight) for the next couple of years. I can't effectively use google maps to find playgrounds or parks which often informs us where we stay. There's so much less information from blogs etc of families traveling to China, especially with younger children. All the frictions with the payment systems etc",
+      "context": "原帖的句子节选拼接，句间句号为整理。计划带幼儿出游；信息、地图和支付困难，不据此推断收入或性格。原帖仅显示相对时间，发布日期留空。",
+      "job_id": "J4", "stage": "方案规划",
+      "labels": [
+        {"factor_id":"B7", "quote":"I can't effectively use google maps to find playgrounds or parks which often informs us where we stay", "terms":["maps", "playgrounds"]},
+        {"factor_id":"B11", "quote":"All the frictions with the payment systems etc", "terms":["payment systems"]}
+      ],
+      "profile": [{"field":"party_description", "value":"带幼儿出行；其他成员及总人数未知", "quote":"I live in Australia and have small children"}]
+    },
+    {
+      "source_url": "https://www.reddit.com/r/travelchina/comments/1ujl0t0/china_travel_plan_for_father_70/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en",
+      "text": "I suggested booking a \"tour\" but he doesn't like how expensive and touristy they are. He would like to just travel to different places and stay in a hotel and walk around. This is what I suggested to him, can anyone recommend or add suggestions. He enjoys walking, technology, industry, nature, cars etc.",
+      "context": "原帖为家人代述旅行偏好；不能将父亲的偏好视为评论者自身属性。只摘录非敏感旅行偏好部分。",
+      "job_id": "J2", "stage": "方案规划",
+      "labels": [
+        {"factor_id":"B4", "quote":"He would like to just travel to different places and stay in a hotel and walk around.", "terms":["walk around"], "basis":"inferred"},
+        {"factor_id":"B1", "quote":"I suggested booking a \"tour\" but he doesn't like how expensive and touristy they are.", "terms":["expensive"]}
+      ],
+      "profile": []
+    },
+    {
+      "source_url": "https://www.reddit.com/r/travelchina/comments/1i9m8ia/zhangjiajie_with_kids/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en", "published_at": "2025-01-25",
+      "text": "Heading back to china this year and would love to bring the kids (3 and 7) and my parents (60’s). From memory, there was a lot of walking and plenty of steps.",
+      "context": "原帖提问的短节选；过去经历引发本次同行规划顾虑。未计算总同行人数，也未保存儿童年龄到画像。",
+      "job_id": "J4", "stage": "方案规划",
+      "labels": [{"factor_id":"B7", "quote":"From memory, there was a lot of walking and plenty of steps.", "terms":["walking", "steps"]}],
+      "profile": [{"field":"party_description", "value":"计划与孩子和父母同行；总人数未知", "quote":"would love to bring the kids (3 and 7) and my parents (60’s)"}]
+    },
+    {
+      "source_url": "https://www.reddit.com/r/chinatravel/comments/1mxf2n6/",
+      "platform": "Reddit", "usage_basis": "public_research", "language": "en", "published_at": "2025-08-22",
+      "text": "Budget-friendly accommodation (clean, safe, and accessible to public transport). The best way to travel between these cities (train, flight, or bus – whichever is more practical). Any tips on how to move around locally and what to expect regarding language, culture, and payment methods.",
+      "context": "原帖三条提问节选；关注住宿位置、城际交通和旅行准备。原文访问偶有超时，已通过搜索索引核对。",
+      "job_id": "J4", "stage": "方案规划",
+      "labels": [
+        {"factor_id":"B6", "quote":"Budget-friendly accommodation (clean, safe, and accessible to public transport).", "terms":["accommodation", "public transport"]},
+        {"factor_id":"B7", "quote":"The best way to travel between these cities (train, flight, or bus – whichever is more practical).", "terms":["travel between", "train"]},
+        {"factor_id":"B11", "quote":"what to expect regarding language, culture, and payment methods", "terms":["language", "payment methods"]}
+      ],
+      "profile": []
+    }
+  ]
+}

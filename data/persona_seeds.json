@@ -1,0 +1,458 @@
+[
+  {
+    "name": "林澄",
+    "emoji": "🧭",
+    "segment": "灵感待收敛型",
+    "role": "独自规划",
+    "subject": "本人",
+    "age": 29,
+    "gender": "女",
+    "city": "杭州",
+    "occupation": "产品运营",
+    "family": "与伴侣同住，常和朋友短途出行",
+    "income": "个人月收入约1.8万元",
+    "job_id": "J1",
+    "stage": "目的地筛选",
+    "departure_window": "未来两个月",
+    "trip_length_days": 4,
+    "party_size": 2,
+    "budget_per_person": 6000,
+    "booked": false,
+    "motive": "想把收藏夹里真正想去的地方变成一趟不后悔的旅行。",
+    "fear": "怕攻略看了很多，最后选到不适合同行人的地方。",
+    "decision_logic": "先确定这趟最想体验什么，再看交通时间和总价。",
+    "price_sensitivity": 6,
+    "brand_anchor": "信息更新及时、比较口径清楚的平台",
+    "channel_preference": "地图与结构化攻略",
+    "quote": "我存了很多地方，但还没想清楚这次到底想要什么。",
+    "blockers": [
+      "选择太多",
+      "攻略信息真假难辨"
+    ],
+    "drivers": [
+      "明确体验目标",
+      "可信近期评价"
+    ],
+    "features": [
+      [
+        "A3",
+        8
+      ],
+      [
+        "A9",
+        7
+      ],
+      [
+        "B5",
+        7
+      ],
+      [
+        "B4",
+        5
+      ]
+    ],
+    "push": [
+      "A1"
+    ],
+    "pull": [
+      "A3",
+      "A9"
+    ],
+    "anxiety": [
+      "B5",
+      "B4"
+    ],
+    "desired_outcomes": [
+      "O1",
+      "O3",
+      "O7"
+    ]
+  },
+  {
+    "name": "周屿",
+    "emoji": "🗓️",
+    "segment": "多人协调型",
+    "role": "朋友出游组织者",
+    "subject": "同行朋友",
+    "age": 32,
+    "gender": "男",
+    "city": "上海",
+    "occupation": "建筑设计师",
+    "family": "和三位朋友约定每年一次旅行",
+    "income": "个人月收入约2.4万元",
+    "job_id": "J2",
+    "stage": "目的地筛选",
+    "departure_window": "国庆后",
+    "trip_length_days": 5,
+    "party_size": 4,
+    "budget_per_person": 8000,
+    "booked": false,
+    "motive": "想尽快把大家的时间和偏好对齐，不要每次都聊到最后不了了之。",
+    "fear": "怕自己安排得太满或太贵，最后还要承担协调责任。",
+    "decision_logic": "先定不可变的日期，再让大家对少量方案投票。",
+    "price_sensitivity": 5,
+    "brand_anchor": "多人协作方便、费用分摊清晰",
+    "channel_preference": "群聊投票和共享行程",
+    "quote": "群里十几条消息，最后还是没人说哪天能走。",
+    "blockers": [
+      "档期无法统一",
+      "活动偏好不同"
+    ],
+    "drivers": [
+      "日期快速收敛",
+      "分工透明"
+    ],
+    "features": [
+      [
+        "B3",
+        9
+      ],
+      [
+        "B4",
+        7
+      ]
+    ],
+    "push": [
+      "A4"
+    ],
+    "pull": [
+      "A2"
+    ],
+    "anxiety": [
+      "B3",
+      "B4"
+    ],
+    "desired_outcomes": [
+      "O4",
+      "O5",
+      "O6"
+    ]
+  },
+  {
+    "name": "许知夏",
+    "emoji": "💳",
+    "segment": "预算精算型",
+    "role": "家庭付款决策者",
+    "subject": "本人和家人",
+    "age": 36,
+    "gender": "女",
+    "city": "成都",
+    "occupation": "财务专员",
+    "family": "与伴侣和一个孩子同住",
+    "income": "家庭月收入约2.8万元",
+    "job_id": "J3",
+    "stage": "比价决策",
+    "departure_window": "暑假",
+    "trip_length_days": 6,
+    "party_size": 3,
+    "budget_per_person": 5000,
+    "booked": false,
+    "motive": "一家人玩得开心，同时把整趟旅行花费控制住。",
+    "fear": "怕低价只是入口价，交通和活动加起来远超预算。",
+    "decision_logic": "比较人均总价和包含项目，不单看机票或酒店价格。",
+    "price_sensitivity": 9,
+    "brand_anchor": "费用拆分透明、退改规则明确",
+    "channel_preference": "表格比价与订单明细",
+    "quote": "能不能先把每个人最后要付多少讲明白？",
+    "blockers": [
+      "总价不透明",
+      "旺季附加成本"
+    ],
+    "drivers": [
+      "完整费用清单",
+      "可控的预算上限"
+    ],
+    "features": [
+      [
+        "B1",
+        10
+      ],
+      [
+        "B2",
+        8
+      ],
+      [
+        "B9",
+        7
+      ]
+    ],
+    "push": [
+      "A7"
+    ],
+    "pull": [
+      "A10"
+    ],
+    "anxiety": [
+      "B1",
+      "B2"
+    ],
+    "desired_outcomes": [
+      "O6",
+      "O2",
+      "O7"
+    ]
+  },
+  {
+    "name": "陈望",
+    "emoji": "🗺️",
+    "segment": "行程效率型",
+    "role": "同行行程规划者",
+    "subject": "本人和伴侣",
+    "age": 28,
+    "gender": "男",
+    "city": "武汉",
+    "occupation": "软件测试工程师",
+    "family": "与伴侣出行，偏好公共交通",
+    "income": "个人月收入约1.9万元",
+    "job_id": "J4",
+    "stage": "方案规划",
+    "departure_window": "下个月",
+    "trip_length_days": 3,
+    "party_size": 2,
+    "budget_per_person": 4500,
+    "booked": false,
+    "motive": "把有限的几天安排得顺路、舒服，核心体验都能去到。",
+    "fear": "怕一天跨几个区一直赶路，实际体验全耗在交通上。",
+    "decision_logic": "按区域和开放时间排路线，每半天留出缓冲。",
+    "price_sensitivity": 6,
+    "brand_anchor": "地图路线可视、交通信息准确",
+    "channel_preference": "地图、行程表和实时交通",
+    "quote": "景点都想去，但我不想每天走很久还一直换乘。",
+    "blockers": [
+      "景点距离被低估",
+      "行程太满"
+    ],
+    "drivers": [
+      "同区域串联",
+      "可调整的每日安排"
+    ],
+    "features": [
+      [
+        "B7",
+        9
+      ],
+      [
+        "B8",
+        6
+      ],
+      [
+        "A11",
+        6
+      ]
+    ],
+    "push": [
+      "A11"
+    ],
+    "pull": [
+      "A5"
+    ],
+    "anxiety": [
+      "B7",
+      "B8"
+    ],
+    "desired_outcomes": [
+      "O8",
+      "O3",
+      "O1"
+    ]
+  },
+  {
+    "name": "罗嘉宁",
+    "emoji": "🔎",
+    "segment": "信息核验型",
+    "role": "预订核验者",
+    "subject": "本人",
+    "age": 31,
+    "gender": "女",
+    "city": "南京",
+    "occupation": "教师",
+    "family": "与朋友结伴旅行",
+    "income": "个人月收入约1.5万元",
+    "job_id": "J5",
+    "stage": "预订确认",
+    "departure_window": "未来六周",
+    "trip_length_days": 4,
+    "party_size": 2,
+    "budget_per_person": 7000,
+    "booked": false,
+    "motive": "订之前确认信息靠谱，到了之后不要发现和页面说的不一样。",
+    "fear": "怕评价失真或过时，或退订时找不到负责方。",
+    "decision_logic": "对照近期评价、官方信息和订单细则后才付款。",
+    "price_sensitivity": 6,
+    "brand_anchor": "评价可信、平台售后明确",
+    "channel_preference": "近期真实评价和官方渠道",
+    "quote": "照片很好看不够，我更想知道最近住过的人怎么说。",
+    "blockers": [
+      "评价真实性",
+      "售后主体不清"
+    ],
+    "drivers": [
+      "近期真实反馈",
+      "订单保障具体"
+    ],
+    "features": [
+      [
+        "B5",
+        9
+      ],
+      [
+        "B10",
+        8
+      ],
+      [
+        "B9",
+        7
+      ]
+    ],
+    "push": [
+      "A5"
+    ],
+    "pull": [
+      "A10"
+    ],
+    "anxiety": [
+      "B5",
+      "B10",
+      "B2"
+    ],
+    "desired_outcomes": [
+      "O7",
+      "O9",
+      "O6"
+    ]
+  },
+  {
+    "name": "宋宁",
+    "emoji": "🌦️",
+    "segment": "变更预案型",
+    "role": "家庭照护同行者",
+    "subject": "本人和父母",
+    "age": 39,
+    "gender": "女",
+    "city": "厦门",
+    "occupation": "社区工作者",
+    "family": "计划带父母出游，父亲膝盖不便",
+    "income": "家庭月收入约2.2万元",
+    "job_id": "J6",
+    "stage": "出行准备",
+    "departure_window": "一个月后",
+    "trip_length_days": 5,
+    "party_size": 3,
+    "budget_per_person": 6500,
+    "booked": true,
+    "motive": "让家人安全、顺利地出行，有变化时也能及时调整。",
+    "fear": "怕天气或身体状况变化后，订单退不了、路线也走不通。",
+    "decision_logic": "先看可取消条件、交通便利和备用活动。",
+    "price_sensitivity": 6,
+    "brand_anchor": "退改清楚、应急联系可靠",
+    "channel_preference": "官方通知和清晰客服流程",
+    "quote": "老人走不动的时候，最好附近就有能坐下休息的地方。",
+    "blockers": [
+      "退改限制",
+      "便利信息不足"
+    ],
+    "drivers": [
+      "可调整路线",
+      "明确的帮助渠道"
+    ],
+    "features": [
+      [
+        "B9",
+        9
+      ],
+      [
+        "B11",
+        8
+      ],
+      [
+        "B8",
+        7
+      ]
+    ],
+    "push": [
+      "A7"
+    ],
+    "pull": [
+      "A8"
+    ],
+    "anxiety": [
+      "B8",
+      "B9",
+      "B11"
+    ],
+    "desired_outcomes": [
+      "O9",
+      "O8",
+      "O5"
+    ]
+  },
+  {
+    "name": "顾一禾",
+    "emoji": "📷",
+    "segment": "体验优先型",
+    "role": "旅行体验发起者",
+    "subject": "本人和伴侣",
+    "age": 27,
+    "gender": "女",
+    "city": "苏州",
+    "occupation": "摄影师",
+    "family": "与伴侣共同出行，喜欢在地文化体验",
+    "income": "个人月收入约1.6万元",
+    "job_id": "J7",
+    "stage": "出行准备",
+    "departure_window": "两周后",
+    "trip_length_days": 5,
+    "party_size": 2,
+    "budget_per_person": 9000,
+    "booked": true,
+    "motive": "旅行里能有一两件真正记得住的体验，而不是一路赶景点。",
+    "fear": "怕日程被打卡清单塞满，没有临时探索的空间。",
+    "decision_logic": "先锁定最重要的体验，其余安排留白并准备替代项。",
+    "price_sensitivity": 4,
+    "brand_anchor": "小众体验质量和当地建议",
+    "channel_preference": "主题攻略、当地推荐和自由时间",
+    "quote": "我不需要一天去八个地方，能好好待在一个地方更重要。",
+    "blockers": [
+      "体验同质化",
+      "行程过度排满"
+    ],
+    "drivers": [
+      "核心体验优先",
+      "保留自由探索时间"
+    ],
+    "features": [
+      [
+        "A9",
+        8
+      ],
+      [
+        "A5",
+        7
+      ],
+      [
+        "B4",
+        6
+      ],
+      [
+        "B8",
+        4
+      ]
+    ],
+    "push": [
+      "A6"
+    ],
+    "pull": [
+      "A9",
+      "A5"
+    ],
+    "anxiety": [
+      "B4",
+      "B8"
+    ],
+    "desired_outcomes": [
+      "O1",
+      "O8",
+      "O2"
+    ]
+  }
+]

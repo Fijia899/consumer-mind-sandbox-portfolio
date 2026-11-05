@@ -1,0 +1,4 @@
+# Optional local audio support. CPU inference; model downloaded on first use.
+faster-whisper>=1.2.1,<2
+# PyAV 19 removed metadata_errors, still used by faster-whisper 1.2.x.
+av>=11,<17

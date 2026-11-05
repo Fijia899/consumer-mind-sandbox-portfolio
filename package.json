@@ -1,0 +1,12 @@
+{
+  "name": "travel-mind-sandbox",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Browser regression tests for the tourism intent JTBD sandbox",
+  "scripts": {
+    "test:syntax": "node --check frontend/js/travel.js && node --check tests/browser_helpers.cjs && node --check tests/travel_browser.cjs",
+    "test:browser": "node tests/travel_browser.cjs"
+  },
+  "devDependencies": {"playwright": "1.62.1"},
+  "engines": {"node": ">=20"}
+}

@@ -1,0 +1,3130 @@
+{
+  "records": [
+    {
+      "subject_key": "62de498e000000001e01d25b",
+      "platform": "小红书",
+      "label": "五月份",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/62de498e000000001e01d25b",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "62de498e000000001e01d25b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/62de498e000000001e01d25b/6ac78e04000000000a024ef2",
+          "title": "徒步愿望与季节选择",
+          "text": "目前一直都是自己旅行比较多\n[…]\n从去年开始想徒步但一直都没实现\n[…]\n五台山想天气暖和那阵儿再去",
+          "published_at": null,
+          "date_display": "10-08（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。徒步尚未实现，五台山季节偏好仅限发帖时。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "62de498e000000001e01d25b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/62de498e000000001e01d25b/6ab75ef5000000000a024eae",
+          "title": "大同旅拍造型选择",
+          "text": "想去做妆造\n[…]\n一直在武周帷帽和小神仙之间做抉择\n[…]\n如果下次还有机会再来旅游我要做小神仙",
+          "published_at": null,
+          "date_display": "编辑于 10-01（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者描述大同妆造经历并表达再次体验愿望；提及商家，合作关系未核实。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "62de498e000000001e01d25b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/62de498e000000001e01d25b/6a7c4ccf000000000502837b",
+          "title": "独行目的地备选",
+          "text": "不想在辽宁省内\n[…]\n大同想中秋节去\n[…]\n哈尔滨想寒假去",
+          "published_at": null,
+          "date_display": "08-12（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原文还有独行过多个城市的自述；不将不同目的地设为一条确定行程。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "目前一直都是自己旅行比较多"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "从去年开始想徒步但一直都没实现"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "五台山想天气暖和那阵儿再去"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "想去做妆造"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "一直在武周帷帽和小神仙之间做抉择"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "如果下次还有机会再来旅游我要做小神仙"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "不想在辽宁省内"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "大同想中秋节去"
+        },
+        {
+          "id": "F9",
+          "source_id": "S3",
+          "quote": "哈尔滨想寒假去"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "徒步愿望与季节选择",
+          "question": "下一次徒步是否仍希望天气暖和，是否需要同行安排？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "徒步",
+            "天气",
+            "同行"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "大同旅拍造型选择",
+          "question": "再次旅拍时是否仍想体验小神仙造型，选择服务还需哪些信息？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "旅拍",
+            "妆造",
+            "造型"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "独行目的地备选",
+          "question": "大同与哈尔滨的备选时间是否仍有效，两个目的地分别想体验什么？",
+          "fact_ids": [
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "terms": [
+            "大同",
+            "哈尔滨",
+            "时间"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "徒步愿望与季节选择",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "大同旅拍造型选择",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "独行目的地备选",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "妆造帖包含商家名称，商业关系未核实；不能据此认定评价独立。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5767671c5e87e774fd965712",
+      "platform": "小红书",
+      "label": "乔的夏天",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5767671c5e87e774fd965712",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5767671c5e87e774fd965712",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5767671c5e87e774fd965712/6ac0cbb8000000001b021bd2",
+          "title": "带孩子同行时的住宿取舍",
+          "text": "攻略都是我在做\n[…]\n房间小，离景点有点远\n[…]\n住近点明天起早进景区不用排队",
+          "published_at": null,
+          "date_display": "编辑于 10-03（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。亲友同行情境中，作者承担规划并提出换到景点附近住宿；不采纳对同伴人格的指责。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5767671c5e87e774fd965712",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5767671c5e87e774fd965712/6a9e7648000000002b011f36",
+          "title": "近郊休闲拍照体验",
+          "text": "简直随便拍都好看\n[…]\n一点都不晒\n[…]\n打车自驾都很方便",
+          "published_at": null,
+          "date_display": "编辑于 09-07（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者对森林咖啡馆的拍照、遮阴和交通评价；未核实商业关系。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5767671c5e87e774fd965712",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5767671c5e87e774fd965712/68d906de000000000e030c9e",
+          "title": "观景门票的价值判断",
+          "text": "我不想坐这么贵的电梯已经被成功劝退\n[…]\n我选择桥下路过",
+          "published_at": "2025-09-28",
+          "date_display": "编辑于 2025-09-28",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。仅记录作者当时对观景票的取舍，不将其价格描述当作当前景区事实。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "攻略都是我在做"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "房间小，离景点有点远"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "住近点明天起早进景区不用排队"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "简直随便拍都好看"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "一点都不晒"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "打车自驾都很方便"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "我不想坐这么贵的电梯已经被成功劝退"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "我选择桥下路过"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "带孩子同行时的住宿取舍",
+          "question": "带孩子同行时，房间条件、景点距离和排队时间怎样权衡？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "住宿",
+            "房间",
+            "距离",
+            "排队"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "近郊休闲拍照体验",
+          "question": "这次近郊休闲是否仍重视拍照、遮阴和到达便利？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "拍照",
+            "遮阴",
+            "交通"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "观景门票的价值判断",
+          "question": "观景体验需要满足哪些条件，才愿意为门票继续了解？",
+          "fact_ids": [
+            "F7",
+            "F8"
+          ],
+          "terms": [
+            "观景",
+            "门票",
+            "费用"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "带孩子同行时的住宿取舍",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "近郊休闲拍照体验",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "观景门票的价值判断",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "账号有内容创作属性；消费体验和推广内容的关系未独立核实。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "642932ca00000000120132a0",
+      "platform": "小红书",
+      "label": "瓜瓜的文章",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/642932ca00000000120132a0",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "642932ca00000000120132a0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/642932ca00000000120132a0/6ad5c18000000000270356be",
+          "title": "短时结伴的边界",
+          "text": "房间一定是要各住各的\n[…]\n双方不用为对方妥协\n[…]\n有明确的省钱的目的",
+          "published_at": null,
+          "date_display": "5天前（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者分享旅游结伴与包车经验；不采用对其他人的阶层、教育背景等判断。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "642932ca00000000120132a0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/642932ca00000000120132a0/6ac0a7b20000000018006223",
+          "title": "错峰旅行与检索投入",
+          "text": "不是为了省钱而牺牲旅行体验\n[…]\n找信息差是我旅行的兴趣",
+          "published_at": null,
+          "date_display": "编辑于 10-03（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者讲述错峰、酒店和路线检索；不能由此推断个人财务状况。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "642932ca00000000120132a0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/642932ca00000000120132a0/6ad1f77400000000140039a0",
+          "title": "独行计划的执行经验",
+          "text": "一开始觉得一个人吃饭很寂寞\n[…]\n后面一个人出境出国\n[…]\n一两天就做完所有攻略了",
+          "published_at": null,
+          "date_display": "编辑于 10-16（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原文有从早期顾虑到后续独行的变化，不能只保留早期顾虑。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "房间一定是要各住各的"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "双方不用为对方妥协"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "有明确的省钱的目的"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "不是为了省钱而牺牲旅行体验"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "找信息差是我旅行的兴趣"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "一开始觉得一个人吃饭很寂寞"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "后面一个人出境出国"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "一两天就做完所有攻略了"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "短时结伴的边界",
+          "question": "短时结伴是否仍要求分开住宿、无需迁就，并有明确分摊目的？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "结伴",
+            "住宿",
+            "分摊"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "错峰旅行与检索投入",
+          "question": "错峰方案需要提供哪些检索价值，且避免牺牲想要的体验？",
+          "fact_ids": [
+            "F4",
+            "F5"
+          ],
+          "terms": [
+            "错峰",
+            "体验",
+            "攻略"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "独行计划的执行经验",
+          "question": "已有独行经验之后，是否还需要规划协助或用餐陪伴？",
+          "fact_ids": [
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "terms": [
+            "独行",
+            "规划",
+            "用餐"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "短时结伴的边界",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "错峰旅行与检索投入",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "独行计划的执行经验",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "作者自述有内容写作和咨询活动；不是普通旅游意向人群的随机样本。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "60e114170000000001002fa8",
+      "platform": "小红书",
+      "label": "乐崽",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/60e114170000000001002fa8",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "60e114170000000001002fa8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/60e114170000000001002fa8/6adc02c0000000002a01efba",
+          "title": "跨年及冬季目的地安排",
+          "text": "跨年、一月底和二月底\n[…]\n想去云冈石窟\n[…]\n想去琅琊山",
+          "published_at": null,
+          "date_display": "昨天 08:58（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原帖在多个时间段与目的地之间选择，作者置顶回复后来调整为下周去大同。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "60e114170000000001002fa8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/60e114170000000001002fa8/6a834983000000002500c0c8",
+          "title": "国庆双人放松旅行",
+          "text": "希望可以尽量人少一些\n[…]\n有山有水的地方\n[…]\n两个人一起出去放松一下",
+          "published_at": null,
+          "date_display": "08-18（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。另一次国庆出行求推荐；不与冬季计划拼接。"
+        },
+        {
+          "id": "S3",
+          "kind": "comment",
+          "subject_key": "60e114170000000001002fa8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/60e114170000000001002fa8/6adc02c0000000002a01efba#comment-6adc049700000000130153f5",
+          "title": "冬季气温与人流的权衡",
+          "text": "一月份是最冷的时候\n[…]\n怕跨年的时候人会爆满",
+          "published_at": null,
+          "date_display": "昨天 09:06（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已核对作者回复的账号 ID 与主页相同；定位到评论 ID comment-6adc049700000000130153f5。"
+        },
+        {
+          "id": "S4",
+          "kind": "comment",
+          "subject_key": "60e114170000000001002fa8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/60e114170000000001002fa8/6adc02c0000000002a01efba#comment-6adc7b33000000000100bd9b",
+          "title": "原帖之后的行程更新",
+          "text": "下周就去大同了",
+          "published_at": null,
+          "date_display": "昨天 17:32（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已核对作者回复的账号 ID 与主页相同；定位到评论 ID comment-6adc7b33000000000100bd9b。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "跨年、一月底和二月底"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "想去云冈石窟"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "想去琅琊山"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "希望可以尽量人少一些"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "有山有水的地方"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "两个人一起出去放松一下"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "一月份是最冷的时候"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "怕跨年的时候人会爆满"
+        },
+        {
+          "id": "F9",
+          "source_id": "S4",
+          "quote": "下周就去大同了"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "跨年及冬季目的地安排",
+          "question": "作者回复已改为下周大同；这项更新是否仍有效，气温与人流如何取舍？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3",
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "terms": [
+            "大同",
+            "气温",
+            "人流",
+            "跨年"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "国庆双人放松旅行",
+          "question": "双人放松旅行是否仍优先人少与山水，当前可用假期是什么？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "双人",
+            "放松",
+            "山水",
+            "人少"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "跨年及冬季目的地安排",
+          "source_ids": [
+            "S1",
+            "S3",
+            "S4"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "国庆双人放松旅行",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "原帖后有计划更新，已单独保留作者回复；未获得本人当前行程确认。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "690f442b000000003702faa5",
+      "platform": "小红书",
+      "label": "Lizz",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/690f442b000000003702faa5",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "690f442b000000003702faa5",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/690f442b000000003702faa5/6adc55b9000000000f03b79d",
+          "title": "台湾出行前准备疑问",
+          "text": "还没有出发正在做攻略\n[…]\n需要注意些什么\n[…]\n要带什么过去",
+          "published_at": null,
+          "date_display": "昨天 14:52（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。仅证明发帖时在准备行程；签注、出发日和预算未知。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "690f442b000000003702faa5",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/690f442b000000003702faa5/6a9c20420000000019024cad",
+          "title": "巴黎餐饮预订与复访愿望",
+          "text": "提前一晚预约\n[…]\n我根据自己喜好点的\n[…]\n下次去巴黎还要吃",
+          "published_at": null,
+          "date_display": "09-05（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者分享巴黎餐厅亲历；不以明星同款或一次消费推断身份收入。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "690f442b000000003702faa5",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/690f442b000000003702faa5/6a9a7d2e000000000d02d388",
+          "title": "剑桥用餐评价",
+          "text": "没吃出来鸡肉和羊肉有什么区别\n[…]\n这个黄油馕真的很好吃\n[…]\n很香而且量大",
+          "published_at": null,
+          "date_display": "09-04（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。具体餐品评价，不能直接迁移为台湾旅行的确定偏好。"
+        },
+        {
+          "id": "S4",
+          "kind": "note",
+          "subject_key": "690f442b000000003702faa5",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/690f442b000000003702faa5/6a91a6d50000000012029f8d",
+          "title": "伦敦套餐的价值评价",
+          "text": "非常推荐这个套餐\n[…]\n人均20£还可以点饮料\n[…]\n烤肉和羊排特别好吃",
+          "published_at": null,
+          "date_display": "08-28（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。记录作者对套餐价格与口味的评价，非当前价格校验。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "还没有出发正在做攻略"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "需要注意些什么"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "要带什么过去"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "提前一晚预约"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "我根据自己喜好点的"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "下次去巴黎还要吃"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "没吃出来鸡肉和羊肉有什么区别"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "这个黄油馕真的很好吃"
+        },
+        {
+          "id": "F9",
+          "source_id": "S3",
+          "quote": "很香而且量大"
+        },
+        {
+          "id": "F10",
+          "source_id": "S4",
+          "quote": "非常推荐这个套餐"
+        },
+        {
+          "id": "F11",
+          "source_id": "S4",
+          "quote": "人均20£还可以点饮料"
+        },
+        {
+          "id": "F12",
+          "source_id": "S4",
+          "quote": "烤肉和羊排特别好吃"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "台湾出行前准备疑问",
+          "question": "台湾出发前最需要补齐哪些行李、交通或预约准备信息？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "台湾",
+            "行李",
+            "准备",
+            "预约"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "巴黎餐饮预订与复访愿望",
+          "question": "巴黎复访时是否仍想提前预约同类餐饮，有哪些口味要求？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "巴黎",
+            "餐饮",
+            "预约"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "剑桥用餐评价",
+          "question": "剑桥用餐中看重的口味与分量，是否适用于这次餐饮安排？",
+          "fact_ids": [
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "terms": [
+            "剑桥",
+            "口味",
+            "分量"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I4",
+          "label": "伦敦套餐的价值评价",
+          "question": "伦敦套餐的口味和价格评价，具体哪些部分值得在下次保留？",
+          "fact_ids": [
+            "F10",
+            "F11",
+            "F12"
+          ],
+          "terms": [
+            "伦敦",
+            "套餐",
+            "口味",
+            "价格"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "台湾出行前准备疑问",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "巴黎餐饮预订与复访愿望",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "剑桥用餐评价",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E4",
+          "title": "伦敦套餐的价值评价",
+          "source_ids": [
+            "S4"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "账号以旅行和美食内容为主，商家合作情况未知。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5f073223000000000101cccb",
+      "platform": "小红书",
+      "label": "俏佳人xxx",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5f073223000000000101cccb",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5f073223000000000101cccb",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f073223000000000101cccb/69a0294f0000000026031b0c",
+          "title": "欧洲行程中遗落物品求助",
+          "text": "把东西落在酒店了\n[…]\n等酒店寄过来我估计已经回国\n[…]\n帮帮俺拿一下",
+          "published_at": null,
+          "date_display": "02-26（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者在欧洲行程中求助取回物品；不记录个人精确位置或私下联络。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5f073223000000000101cccb",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f073223000000000101cccb/6a0de6dd000000003701d670",
+          "title": "赴德观赛与铁路体验",
+          "text": "就1个站，坐了我45分钟\n[…]\n我出发前查过小红书\n[…]\n德国看一次球的人生愿望达成",
+          "published_at": null,
+          "date_display": "编辑于 06-09（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。只记录个人交通体验与观赛愿望；不采纳关于罚款、票务渠道的二手建议。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5f073223000000000101cccb",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f073223000000000101cccb/6adae201000000003300d0bf",
+          "title": "韩国小城慢游体验",
+          "text": "3天都听不到乡音\n[…]\n推荐去，很悠闲",
+          "published_at": null,
+          "date_display": "编辑于 1天前（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者分享韩国小城市场体验；不由语言环境推断政治或身份立场。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "把东西落在酒店了"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "等酒店寄过来我估计已经回国"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "帮帮俺拿一下"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "就1个站，坐了我45分钟"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "我出发前查过小红书"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "德国看一次球的人生愿望达成"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "3天都听不到乡音"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "推荐去，很悠闲"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "欧洲行程中遗落物品求助",
+          "question": "跨城市旅行遗落物品时，需要怎样的取回协助与时间保障？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "遗落",
+            "物品",
+            "寄送",
+            "时间"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "赴德观赛与铁路体验",
+          "question": "观赛旅行如何留出交通延误的余量，并满足最想完成的观赛体验？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "观赛",
+            "铁路",
+            "延误"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "韩国小城慢游体验",
+          "question": "韩国小城慢游是否仍是想要的节奏，三天内希望保留哪些活动？",
+          "fact_ids": [
+            "F7",
+            "F8"
+          ],
+          "terms": [
+            "韩国",
+            "小城",
+            "慢游"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "欧洲行程中遗落物品求助",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "赴德观赛与铁路体验",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "韩国小城慢游体验",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "该账号是高活跃内容创作者，呈现经过编辑；未核实商业关系，也不据此推算市场比例。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5f647ccb00000000010081c8",
+      "platform": "小红书",
+      "label": "小李阳光开朗",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5f647ccb00000000010081c8",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5f647ccb00000000010081c8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f647ccb00000000010081c8/6adcbaa5000000003301bb08",
+          "title": "西湖日出与返程衔接",
+          "text": "因为想看日出\n[…]\n二公园码头坐船到三潭印月\n[…]\n怎么从花港观鱼回武林门地铁站",
+          "published_at": null,
+          "date_display": "编辑于 昨天 22:21（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者询问一天内的游览顺序与返程衔接；地点为公共景点，不记录私人行踪。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5f647ccb00000000010081c8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f647ccb00000000010081c8/6ad8adda000000002c025482",
+          "title": "南京一天游览的体力反馈",
+          "text": "只有一天时间\n[…]\n最终决定去钟山了\n[…]\n实在走不动了",
+          "published_at": null,
+          "date_display": "编辑于 2天前（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者更新实际游览选择与当次步行体验；不推断健康状况。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5f647ccb00000000010081c8",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f647ccb00000000010081c8/6ad8102d0000000025005358",
+          "title": "苏州园林一天安排疑问",
+          "text": "西园寺 留园 狮子林 一天能逛完嘛",
+          "published_at": null,
+          "date_display": "3天前（采集日 2026-10-25）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原文询问多景点能否在一天完成，未证明已完成。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "因为想看日出"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "二公园码头坐船到三潭印月"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "怎么从花港观鱼回武林门地铁站"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "只有一天时间"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "最终决定去钟山了"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "实在走不动了"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "西园寺 留园 狮子林 一天能逛完嘛"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "西湖日出与返程衔接",
+          "question": "日出、游船与返程地铁如何衔接，可接受的最早出门时间是什么？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "日出",
+            "游船",
+            "返程",
+            "地铁"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "南京一天游览的体力反馈",
+          "question": "钟山一天游中哪些路段需要删减或休息，才不会重复走不动的体验？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "钟山",
+            "一天",
+            "步行",
+            "休息"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "苏州园林一天安排疑问",
+          "question": "一天游三座园林最想优先保留哪一座，可接受多少步行和停留时间？",
+          "fact_ids": [
+            "F7"
+          ],
+          "terms": [
+            "园林",
+            "一天",
+            "步行"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "西湖日出与返程衔接",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "南京一天游览的体力反馈",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "苏州园林一天安排疑问",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "连续发布不证明南京、苏州、杭州属于同一次旅程，分别保留情境。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5bacad6964a414000150eeb0",
+      "platform": "小红书",
+      "label": "nube",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5bacad6964a414000150eeb0",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5bacad6964a414000150eeb0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5bacad6964a414000150eeb0/69e76bd3000000001d01e206",
+          "title": "与父母同行的规划负担",
+          "text": "攻略做好到地方罢工\n[…]\n找个地方让坐下我查下路线打车\n[…]\n攻略我做",
+          "published_at": null,
+          "date_display": "04-21（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者报告家庭出游中的计划协调困难；未收录家人的健康或负面人格描述。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5bacad6964a414000150eeb0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5bacad6964a414000150eeb0/6a4b51ab000000001101a617",
+          "title": "腾冲芒市家庭出游经验",
+          "text": "带着父母一定要住在比较方便的地方\n[…]\n我们就住在广场附近\n[…]\n到腾冲就是要躺平泡温泉",
+          "published_at": null,
+          "date_display": "编辑于 07-06（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。仅采用住宿便利、出游节奏和体验内容；未采用温泉疗效等未经核实的说法。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5bacad6964a414000150eeb0",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5bacad6964a414000150eeb0/6ac4c9f0000000001301ae5f",
+          "title": "三峡徒步的预约与等待体验",
+          "text": "前一晚没订到徒步票只好推迟行程\n[…]\n我们选了a路线\n[…]\n排队坐观光车就排了40分钟",
+          "published_at": null,
+          "date_display": "编辑于 10-06（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者自述徒步预约失败、路线选择和等待；不与带父母旅行混为一谈。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "攻略做好到地方罢工"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "找个地方让坐下我查下路线打车"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "攻略我做"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "带着父母一定要住在比较方便的地方"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "我们就住在广场附近"
+        },
+        {
+          "id": "F6",
+          "source_id": "S2",
+          "quote": "到腾冲就是要躺平泡温泉"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "前一晚没订到徒步票只好推迟行程"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "我们选了a路线"
+        },
+        {
+          "id": "F9",
+          "source_id": "S3",
+          "quote": "排队坐观光车就排了40分钟"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "与父母同行的规划负担",
+          "question": "家庭游出发前怎样确认同行者需求，遇到临时调整时由谁决定？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "家庭",
+            "同行",
+            "行程",
+            "调整"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "腾冲芒市家庭出游经验",
+          "question": "腾冲芒市家庭游如何兼顾住宿便利、休息与温泉体验？",
+          "fact_ids": [
+            "F4",
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "住宿",
+            "便利",
+            "休息",
+            "温泉"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "三峡徒步的预约与等待体验",
+          "question": "徒步预约和接驳需要哪些提前提醒，以及排队或无票的替代安排？",
+          "fact_ids": [
+            "F7",
+            "F8",
+            "F9"
+          ],
+          "terms": [
+            "徒步",
+            "预约",
+            "接驳",
+            "排队"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "与父母同行的规划负担",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "腾冲芒市家庭出游经验",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "三峡徒步的预约与等待体验",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "家庭游与徒步游是不同来源情境，同行者和承受步行量不能互相替代。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5f296b880000000001005599",
+      "platform": "小红书",
+      "label": "春胖夏肥 秋膘冬圆",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5f296b880000000001005599",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5f296b880000000001005599",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f296b880000000001005599/6abb895c000000000d02c6c5",
+          "title": "带父母出境的组织负担",
+          "text": "所有攻略 车票 景点票都是我去做 去买\n[…]\n临时出了什么变故就我在那里焦头烂额的想办法",
+          "published_at": null,
+          "date_display": "09-29（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者描述两周家庭出境游的组织压力；不收录对家人能力或人格的断言。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5f296b880000000001005599",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f296b880000000001005599/6abb5e30000000000f03b5b2",
+          "title": "瑞士自驾时的导航协助",
+          "text": "我坐在副驾还得时刻给盯着导航\n[…]\n不知道过几个月得收多少巨额罚单",
+          "published_at": null,
+          "date_display": "09-29（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。罚单是作者担忧，不是已经发生的处罚记录。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5f296b880000000001005599",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f296b880000000001005599/6ab25ca2000000000d00a38d",
+          "title": "巴黎参观的排队顾虑",
+          "text": "不想排长队\n[…]\n这个排队至少1小时起步",
+          "published_at": null,
+          "date_display": "编辑于 09-22（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。仅作为作者表达的排队判断；未核实队长，未确认是否购买任何票务服务。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "所有攻略 车票 景点票都是我去做 去买"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "临时出了什么变故就我在那里焦头烂额的想办法"
+        },
+        {
+          "id": "F3",
+          "source_id": "S2",
+          "quote": "我坐在副驾还得时刻给盯着导航"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "不知道过几个月得收多少巨额罚单"
+        },
+        {
+          "id": "F5",
+          "source_id": "S3",
+          "quote": "不想排长队"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "这个排队至少1小时起步"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "带父母出境的组织负担",
+          "question": "带父母出境时，哪些规划、订票和临时变更工作需要协助？",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ],
+          "terms": [
+            "父母",
+            "规划",
+            "订票",
+            "变更"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "瑞士自驾时的导航协助",
+          "question": "境外交通中如何及时确认站点和乘车方式，减少走错或受罚的担忧？",
+          "fact_ids": [
+            "F3",
+            "F4"
+          ],
+          "terms": [
+            "交通",
+            "站点",
+            "乘车"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "巴黎参观的排队顾虑",
+          "question": "参观时需要哪些预约与排队信息，能接受多长等待？",
+          "fact_ids": [
+            "F5",
+            "F6"
+          ],
+          "terms": [
+            "预约",
+            "排队",
+            "等待"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "带父母出境的组织负担",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "瑞士自驾时的导航协助",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "巴黎参观的排队顾虑",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "没有证据证明收到罚单；不得将担忧写成实际处罚。",
+        "票务帖提及第三方渠道，未核实合作关系或服务有效性。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "568508906a6a69511bad2f5f",
+      "platform": "小红书",
+      "label": "壮游中的女性游荡者",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/568508906a6a69511bad2f5f",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "568508906a6a69511bad2f5f",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/568508906a6a69511bad2f5f/681ced04000000002202b4ad",
+          "title": "独行时的社交边界",
+          "text": "旅行中，最烦被问为什么一个人\n[…]\n国外旅行，前几天报了个day trip",
+          "published_at": "2025-05-09",
+          "date_display": "2025-05-09",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。仅采用独行及一日团场景中的边界表达；不收录婚恋立场或其他人的个人信息。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "568508906a6a69511bad2f5f",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/568508906a6a69511bad2f5f/6a50e816000000001101a3a5",
+          "title": "中亚旅行中的通信与城市停留",
+          "text": "用了2小时不到就一直持续3G网\n[…]\n城市对于我来说，挺无聊的\n[…]\n就计划待一天",
+          "published_at": null,
+          "date_display": "07-10（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者讲述电话卡体验与当次城市停留选择；不证明当地网络普遍状况。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "568508906a6a69511bad2f5f",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/568508906a6a69511bad2f5f/6a385b5b000000000f017705",
+          "title": "夜间拼车的道路顾虑",
+          "text": "我第一次坐这么晚的车\n[…]\n整条路上，一个路灯都没有",
+          "published_at": null,
+          "date_display": "编辑于 06-22（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。夜间拼车情境的个人观察，不能推为整国道路结论。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "旅行中，最烦被问为什么一个人"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "国外旅行，前几天报了个day trip"
+        },
+        {
+          "id": "F3",
+          "source_id": "S2",
+          "quote": "用了2小时不到就一直持续3G网"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "城市对于我来说，挺无聊的"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "就计划待一天"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "我第一次坐这么晚的车"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "整条路上，一个路灯都没有"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "独行时的社交边界",
+          "question": "独行活动是否需要明确保留个人边界，减少对同行方式的追问？",
+          "fact_ids": [
+            "F1",
+            "F2"
+          ],
+          "terms": [
+            "独行",
+            "边界",
+            "同行"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "中亚旅行中的通信与城市停留",
+          "question": "当地通信准备和城市停留时间怎样安排，才符合这次想看的内容？",
+          "fact_ids": [
+            "F3",
+            "F4",
+            "F5"
+          ],
+          "terms": [
+            "通信",
+            "行程",
+            "停留"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "夜间拼车的道路顾虑",
+          "question": "夜间拼车是否需要改为白天、核实道路和返程安排，哪些条件必须先确认？",
+          "fact_ids": [
+            "F6",
+            "F7"
+          ],
+          "terms": [
+            "夜间",
+            "拼车",
+            "道路",
+            "返程"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "独行时的社交边界",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "中亚旅行中的通信与城市停留",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "夜间拼车的道路顾虑",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "仅采用与旅行相关的原话，未将私人立场或对其他人的评论作为画像字段。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "59860c5b50c4b42cd5466988",
+      "platform": "小红书",
+      "label": "奶油小林",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/59860c5b50c4b42cd5466988",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "59860c5b50c4b42cd5466988",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/59860c5b50c4b42cd5466988/6a2d2367000000002003846b",
+          "title": "家庭长线游后的节奏调整",
+          "text": "我最喜欢体验当地不同的美食\n[…]\n23天确实太长了\n[…]\n不用太走路、风景一眼就能看懂",
+          "published_at": null,
+          "date_display": "06-13（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者比较自身体会与家庭同行的安排，并提出下次调整愿望。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "59860c5b50c4b42cd5466988",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/59860c5b50c4b42cd5466988/6a301de9000000002101514b",
+          "title": "欧洲多国自由行复盘",
+          "text": "亲测的23天路线\n[…]\n会根据当天情况删减",
+          "published_at": null,
+          "date_display": "编辑于 06-16（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。行程表是作者对曾经路线的总结，不能设为下一次确定行程。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "59860c5b50c4b42cd5466988",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/59860c5b50c4b42cd5466988/6a3bdf9200000000080326f5",
+          "title": "瑞士天气备选体验",
+          "text": "说几个我们雨天实测的地方\n[…]\n等雨停了趁着阴天出门逛\n[…]\n雨雾天上山等于白跑",
+          "published_at": null,
+          "date_display": "编辑于 06-25（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原文提到10月而页面显示06-25且无年份，不能自动拼接旅行日期。"
+        },
+        {
+          "id": "S4",
+          "kind": "note",
+          "subject_key": "59860c5b50c4b42cd5466988",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/59860c5b50c4b42cd5466988/6a3a7cce0000000007013f54",
+          "title": "山景住宿体验",
+          "text": "刚到的第一天下雨了\n[…]\n开窗就看到雪山",
+          "published_at": null,
+          "date_display": "06-23（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。只采用本人到达与景观体验，不收录房东年龄及家庭资料。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "我最喜欢体验当地不同的美食"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "23天确实太长了"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "不用太走路、风景一眼就能看懂"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "亲测的23天路线"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "会根据当天情况删减"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "说几个我们雨天实测的地方"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "等雨停了趁着阴天出门逛"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "雨雾天上山等于白跑"
+        },
+        {
+          "id": "F9",
+          "source_id": "S4",
+          "quote": "刚到的第一天下雨了"
+        },
+        {
+          "id": "F10",
+          "source_id": "S4",
+          "quote": "开窗就看到雪山"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "家庭长线游后的节奏调整",
+          "question": "下次家庭旅行希望缩短到多少天，并减少哪些步行安排？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "家庭",
+            "天数",
+            "步行"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "欧洲多国自由行复盘",
+          "question": "较长欧洲路线中，哪些城市和活动最值得保留，哪些能删减？",
+          "fact_ids": [
+            "F4",
+            "F5"
+          ],
+          "terms": [
+            "欧洲",
+            "路线",
+            "行程"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "瑞士天气备选体验",
+          "question": "如果遇到降雨，山景与室内活动应如何替换，并确认实际出行季节？",
+          "fact_ids": [
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "terms": [
+            "降雨",
+            "山景",
+            "室内",
+            "季节"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I4",
+          "label": "山景住宿体验",
+          "question": "山中住宿如何应对雨雪遮挡景观，哪些体验仍值得保留？",
+          "fact_ids": [
+            "F9",
+            "F10"
+          ],
+          "terms": [
+            "住宿",
+            "雨雪",
+            "景观"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "家庭长线游后的节奏调整",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "欧洲多国自由行复盘",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "瑞士天气备选体验",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E4",
+          "title": "山景住宿体验",
+          "source_ids": [
+            "S4"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "雨天帖内的月份与页面日期不能直接对应，具体年份及是否同一次欧洲行未知。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5ac9d86f11be10535183e9ed",
+      "platform": "小红书",
+      "label": "好喝到咩噗茶",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5ac9d86f11be10535183e9ed",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5ac9d86f11be10535183e9ed",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5ac9d86f11be10535183e9ed/6ac893890000000012038a1d",
+          "title": "珠海海滨出游的遮阴与拥挤体验",
+          "text": "太晒了我们选择骑车\n[…]\n沙滩那边人挤人\n[…]\n骑过去都没下去又回来了",
+          "published_at": null,
+          "date_display": "10-09（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者当次游览反应；不把环境评价设为景区长期客观状况。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5ac9d86f11be10535183e9ed",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5ac9d86f11be10535183e9ed/6ac5ac700000000013018071",
+          "title": "海岛拍照与休息条件落差",
+          "text": "之前在小红书上搜的攻略看了很多机位\n[…]\n没啥可以坐着休息的",
+          "published_at": null,
+          "date_display": "编辑于 10-09（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者比较攻略预期与实地体会，只保留其个人体验。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5ac9d86f11be10535183e9ed",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5ac9d86f11be10535183e9ed/69ea01340000000019025c06",
+          "title": "大理拍照机位的消费门槛",
+          "text": "稍微好看点的机位都是在需要消费的咖啡馆里面\n[…]\n我去的早人不多",
+          "published_at": null,
+          "date_display": "04-23（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。记录摄影体验中的消费条件与到达时人流，不推算所有机位收费。"
+        },
+        {
+          "id": "S4",
+          "kind": "note",
+          "subject_key": "5ac9d86f11be10535183e9ed",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5ac9d86f11be10535183e9ed/69e2e49f00000000230138b9",
+          "title": "版纳路线调整与用餐选择",
+          "text": "发现路程太远，最后换成了花卉园\n[…]\n得提前选座位\n[…]\n游玩时间2h 然后回酒店休息",
+          "published_at": null,
+          "date_display": "04-18（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。前两段分别涉及景点距离、餐饮预约与中途休息，均保留在该版纳情境。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "太晒了我们选择骑车"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "沙滩那边人挤人"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "骑过去都没下去又回来了"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "之前在小红书上搜的攻略看了很多机位"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "没啥可以坐着休息的"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "稍微好看点的机位都是在需要消费的咖啡馆里面"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "我去的早人不多"
+        },
+        {
+          "id": "F8",
+          "source_id": "S4",
+          "quote": "发现路程太远，最后换成了花卉园"
+        },
+        {
+          "id": "F9",
+          "source_id": "S4",
+          "quote": "得提前选座位"
+        },
+        {
+          "id": "F10",
+          "source_id": "S4",
+          "quote": "游玩时间2h 然后回酒店休息"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "珠海海滨出游的遮阴与拥挤体验",
+          "question": "海边行程需要多少遮阴、骑行或避开人流的选择？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "遮阴",
+            "骑行",
+            "人流"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "海岛拍照与休息条件落差",
+          "question": "海岛方案如何提供实景与休息座位信息，减少攻略与体验的落差？",
+          "fact_ids": [
+            "F4",
+            "F5"
+          ],
+          "terms": [
+            "海岛",
+            "实景",
+            "休息"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "大理拍照机位的消费门槛",
+          "question": "拍照前是否需要明确机位消费条件和人流，哪些费用可以接受？",
+          "fact_ids": [
+            "F6",
+            "F7"
+          ],
+          "terms": [
+            "拍照",
+            "机位",
+            "消费",
+            "人流"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I4",
+          "label": "版纳路线调整与用餐选择",
+          "question": "版纳路线如何减少远距离移动，并安排用餐预约和酒店休息？",
+          "fact_ids": [
+            "F8",
+            "F9",
+            "F10"
+          ],
+          "terms": [
+            "版纳",
+            "距离",
+            "预约",
+            "休息"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "珠海海滨出游的遮阴与拥挤体验",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "海岛拍照与休息条件落差",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "大理拍照机位的消费门槛",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E4",
+          "title": "版纳路线调整与用餐选择",
+          "source_ids": [
+            "S4"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "评价具有鲜明个人取向，不能当作景区品质的普遍结论。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5f4dda40000000000100027b",
+      "platform": "小红书",
+      "label": "momo",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5f4dda40000000000100027b",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5f4dda40000000000100027b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f4dda40000000000100027b/6ac5faab000000001303f870",
+          "title": "北京旅拍的真实评价需求",
+          "text": "冬天准备去北京做格格妆造\n[…]\n目前比较心仪的是星光兔和野孩子这两家\n[…]\n求真实评价",
+          "published_at": null,
+          "date_display": "10-07（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。发帖时比较两家旅拍服务，要求真实返图；不推断已购买或当前仍计划出发。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5f4dda40000000000100027b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f4dda40000000000100027b/6aa7990b0000000011037810",
+          "title": "家庭旅行中的行程协调困难",
+          "text": "机票+高铁+酒店+游玩所有项目钱都是我花的\n[…]\n我问想干什么/吃什么就不说",
+          "published_at": null,
+          "date_display": "09-14（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者自述承担家庭旅行支出和询问需求遇到困难；不采纳对他人外貌、人格的贬损，也不推断支付能力。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5f4dda40000000000100027b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f4dda40000000000100027b/6a587cf5000000000402b36b",
+          "title": "大连住宿比较的决策困难",
+          "text": "大连酒店选哪个\n[…]\n这两个价格位置好像都差不多\n[…]\n有没有住过的宝宝说一下哪个好",
+          "published_at": null,
+          "date_display": "07-16（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。两家备选名称只在图片或搜索建议中，不据此补写酒店名单；页面文字支持价格位置相近时寻求体验比较。"
+        },
+        {
+          "id": "S4",
+          "kind": "note",
+          "subject_key": "5f4dda40000000000100027b",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5f4dda40000000000100027b/69f3e8a0000000003700dbb6",
+          "title": "独行海滨假期愿望",
+          "text": "年假连上周末大概十天\n[…]\n准备下半年非节假日期间去\n[…]\n猛猛吃海鲜猛猛赏海景的",
+          "published_at": null,
+          "date_display": "05-01（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。原文表示决定一个人旅游，向往海边；不能把发帖时的大约十天当作当前假期。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "冬天准备去北京做格格妆造"
+        },
+        {
+          "id": "F2",
+          "source_id": "S1",
+          "quote": "目前比较心仪的是星光兔和野孩子这两家"
+        },
+        {
+          "id": "F3",
+          "source_id": "S1",
+          "quote": "求真实评价"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "机票+高铁+酒店+游玩所有项目钱都是我花的"
+        },
+        {
+          "id": "F5",
+          "source_id": "S2",
+          "quote": "我问想干什么/吃什么就不说"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "大连酒店选哪个"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "这两个价格位置好像都差不多"
+        },
+        {
+          "id": "F8",
+          "source_id": "S3",
+          "quote": "有没有住过的宝宝说一下哪个好"
+        },
+        {
+          "id": "F9",
+          "source_id": "S4",
+          "quote": "年假连上周末大概十天"
+        },
+        {
+          "id": "F10",
+          "source_id": "S4",
+          "quote": "准备下半年非节假日期间去"
+        },
+        {
+          "id": "F11",
+          "source_id": "S4",
+          "quote": "猛猛吃海鲜猛猛赏海景的"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "北京旅拍的真实评价需求",
+          "question": "选择北京旅拍时，需要哪些真实返图与评价来比较两家服务？",
+          "fact_ids": [
+            "F1",
+            "F2",
+            "F3"
+          ],
+          "terms": [
+            "旅拍",
+            "返图",
+            "评价"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "家庭旅行中的行程协调困难",
+          "question": "家庭出行前怎样确认餐饮与行程，减少承担安排后仍反复调整的负担？",
+          "fact_ids": [
+            "F4",
+            "F5"
+          ],
+          "terms": [
+            "家庭",
+            "餐饮",
+            "行程"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "大连住宿比较的决策困难",
+          "question": "当酒店价格和位置相近时，需要比较哪些住客体验和房间条件？",
+          "fact_ids": [
+            "F6",
+            "F7",
+            "F8"
+          ],
+          "terms": [
+            "酒店",
+            "住客",
+            "房间"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I4",
+          "label": "独行海滨假期愿望",
+          "question": "独行海滨假期是否仍有约十天，海鲜、海景和非节假日安排怎样排序？",
+          "fact_ids": [
+            "F9",
+            "F10",
+            "F11"
+          ],
+          "terms": [
+            "独行",
+            "海滨",
+            "海鲜",
+            "海景"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "北京旅拍的真实评价需求",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "家庭旅行中的行程协调困难",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "大连住宿比较的决策困难",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E4",
+          "title": "独行海滨假期愿望",
+          "source_ids": [
+            "S4"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "独行、家庭游和旅拍为不同帖子的情境，不把同行方式或假期天数合并为固定属性。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    },
+    {
+      "subject_key": "5657d56af53ee0237879b1b3",
+      "platform": "小红书",
+      "label": "小王妈妈很爱玩",
+      "profile_url": "https://www.xiaohongshu.com/user/profile/5657d56af53ee0237879b1b3",
+      "sources": [
+        {
+          "id": "S1",
+          "kind": "note",
+          "subject_key": "5657d56af53ee0237879b1b3",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5657d56af53ee0237879b1b3/6ac4d8b9000000001801217b",
+          "title": "低消费与旅行体验的目的地征集",
+          "text": "低消，但旅游体验巨好的 城市是哪些",
+          "published_at": null,
+          "date_display": "10-06（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。正文除标题外主要为话题标签；仅证明征集低消费且体验好的城市，不足以证明有明确待出发计划。"
+        },
+        {
+          "id": "S2",
+          "kind": "note",
+          "subject_key": "5657d56af53ee0237879b1b3",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5657d56af53ee0237879b1b3/6a01bf3d0000000037034fa7",
+          "title": "仙本那亲子水屋旅行自述",
+          "text": "独自带娃的马来西亚\n[…]\n我们的3天2晚经典行程（躺平+浮潜）\n[…]\n海钓吹海风看星星",
+          "published_at": null,
+          "date_display": "编辑于 05-11（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者自述亲子旅行的行程与活动；未验证商家关系，不采用天气、支付或生态保护等通用攻略作为人物事实。"
+        },
+        {
+          "id": "S3",
+          "kind": "note",
+          "subject_key": "5657d56af53ee0237879b1b3",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5657d56af53ee0237879b1b3/699c73c80000000015038bfd",
+          "title": "赤柱一日游的复访意愿与餐饮感受",
+          "text": "下次还来\n[…]\n这次来，做了攻略\n[…]\n从我个人口味来说，赤柱好吃的东西并不多",
+          "published_at": null,
+          "date_display": "02-23（未显示年份）",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者分享赤柱路线并表达复访意愿，同时保留餐饮评价这一限制；未核实票价和交通时刻。"
+        },
+        {
+          "id": "S4",
+          "kind": "note",
+          "subject_key": "5657d56af53ee0237879b1b3",
+          "platform": "小红书",
+          "locator": "https://www.xiaohongshu.com/user/profile/5657d56af53ee0237879b1b3/6276873d00000000010273d9",
+          "title": "往年杭州近郊步行探索",
+          "text": "今天，出于好奇心来抄个小道\n[…]\n有被惊艳到\n[…]\n转了一大圈",
+          "published_at": "2022-05-07",
+          "date_display": "编辑于 2022-05-07",
+          "collected_at": "2026-10-25",
+          "usage_basis": "public_research",
+          "instrument_version": "",
+          "review_status": "checked",
+          "review_method": "assisted",
+          "reviewer": "公开页面核查（AI辅助）",
+          "review_note": "已阅读正文并核对主页、正文作者的账号 ID 一致。作者记述探索万松岭附近公园；2022 年旧帖仅作为历史体验，不能据此推断当前出行频率。"
+        }
+      ],
+      "facts": [
+        {
+          "id": "F1",
+          "source_id": "S1",
+          "quote": "低消，但旅游体验巨好的 城市是哪些"
+        },
+        {
+          "id": "F2",
+          "source_id": "S2",
+          "quote": "独自带娃的马来西亚"
+        },
+        {
+          "id": "F3",
+          "source_id": "S2",
+          "quote": "我们的3天2晚经典行程（躺平+浮潜）"
+        },
+        {
+          "id": "F4",
+          "source_id": "S2",
+          "quote": "海钓吹海风看星星"
+        },
+        {
+          "id": "F5",
+          "source_id": "S3",
+          "quote": "下次还来"
+        },
+        {
+          "id": "F6",
+          "source_id": "S3",
+          "quote": "这次来，做了攻略"
+        },
+        {
+          "id": "F7",
+          "source_id": "S3",
+          "quote": "从我个人口味来说，赤柱好吃的东西并不多"
+        },
+        {
+          "id": "F8",
+          "source_id": "S4",
+          "quote": "今天，出于好奇心来抄个小道"
+        },
+        {
+          "id": "F9",
+          "source_id": "S4",
+          "quote": "有被惊艳到"
+        },
+        {
+          "id": "F10",
+          "source_id": "S4",
+          "quote": "转了一大圈"
+        }
+      ],
+      "insights": [
+        {
+          "id": "I1",
+          "label": "低消费与旅行体验的目的地征集",
+          "question": "征集低消费城市时具体想要什么体验，费用范围与出行时间是否已确定？",
+          "fact_ids": [
+            "F1"
+          ],
+          "terms": [
+            "低消费",
+            "城市",
+            "体验"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I2",
+          "label": "仙本那亲子水屋旅行自述",
+          "question": "下一次亲子海岛游是否仍想兼顾休息与浮潜，需要哪些接送协助？",
+          "fact_ids": [
+            "F2",
+            "F3",
+            "F4"
+          ],
+          "terms": [
+            "亲子",
+            "海岛",
+            "休息",
+            "浮潜"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I3",
+          "label": "赤柱一日游的复访意愿与餐饮感受",
+          "question": "赤柱复访需要保留哪些路线体验，餐饮如何更贴合个人口味？",
+          "fact_ids": [
+            "F5",
+            "F6",
+            "F7"
+          ],
+          "terms": [
+            "赤柱",
+            "路线",
+            "餐饮"
+          ],
+          "method": "assisted"
+        },
+        {
+          "id": "I4",
+          "label": "往年杭州近郊步行探索",
+          "question": "近郊步行探索是否仍是想要的体验，是否需要明确路线与休息信息？",
+          "fact_ids": [
+            "F8",
+            "F9",
+            "F10"
+          ],
+          "terms": [
+            "近郊",
+            "步行",
+            "路线"
+          ],
+          "method": "assisted"
+        }
+      ],
+      "episodes": [
+        {
+          "id": "E1",
+          "title": "低消费与旅行体验的目的地征集",
+          "source_ids": [
+            "S1"
+          ],
+          "time_scope": "undated",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E2",
+          "title": "仙本那亲子水屋旅行自述",
+          "source_ids": [
+            "S2"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E3",
+          "title": "赤柱一日游的复访意愿与餐饮感受",
+          "source_ids": [
+            "S3"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        },
+        {
+          "id": "E4",
+          "title": "往年杭州近郊步行探索",
+          "source_ids": [
+            "S4"
+          ],
+          "time_scope": "historical",
+          "current_confirmed_at": null,
+          "current_valid_until": null,
+          "confirmation_quote": ""
+        }
+      ],
+      "limitations": [
+        "核查方式为 AI 辅助公开页面阅读；仅确认站内账号连续性，未核验现实身份或实际经历。",
+        "资料仅保存必要短引文，省略处不表示相邻；完整语境请复查原文。",
+        "公开发帖样本不是随机招募；需求解释是研究者分析，未经本人确认。",
+        "未获得本人对当前旅行安排的确认；过去经历和当时愿望不能直接当作现状。",
+        "主页自述为旅行博主；内容经过编辑，商业合作与是否使用写作辅助均未知。",
+        "低消费征集不等于已形成出游意向；当前行程需要另行确认。"
+      ],
+      "unknowns": [
+        "现实身份与一人一号关系",
+        "当前有效行程、日期及同行人",
+        "本次预算与付款意愿",
+        "完整可接受约束",
+        "本人对分析和预测的反馈"
+      ]
+    }
+  ]
+}
