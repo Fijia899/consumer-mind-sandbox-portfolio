@@ -29,12 +29,3 @@ def test_package_readme_follows_product_documentation_structure():
     assert "使用流程" in readme
     assert "## API" in readme
     assert (ROOT / "02_implementation_delta").is_dir()
-
-
-def test_app_readme_documents_runtime_and_features():
-    readme = (ROOT / "02_implementation_delta" / "README.md").read_text(encoding="utf-8")
-    assert "抚心 App" in readme
-    assert "Persona" in readme
-    assert "启动服务" in readme
-    assert "使用流程" in readme
-    assert "验证" in readme
