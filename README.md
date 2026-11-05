@@ -175,6 +175,7 @@ consumer-mind-sandbox-portfolio/
 ├── docs/                       # 文档索引、研究记录与检查报告
 ├── 01_BP/                      # 保留的项目方案 PPT
 ├── tests/                      # Python 与浏览器回归
+├── scripts/smoke_deployment.py  # 容器启动与规则流程验收
 ├── 03_validation/              # 仓库、文档和部署配置校验
 ├── package.json                # 浏览器测试命令与依赖
 └── .github/workflows/ci.yml    # 干净检出后的自动验证

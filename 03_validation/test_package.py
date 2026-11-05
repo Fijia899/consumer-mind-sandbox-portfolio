@@ -22,6 +22,7 @@ REQUIRED = {
     "docs/README.md", "docs/repository-audit-20261105.md",
     "01_BP/消费者心智沙盘_BP.pptx", "03_validation/test_package.py",
     "package.json", "package-lock.json", "pytest.ini", ".github/workflows/ci.yml",
+    "scripts/smoke_deployment.py",
 }
 
 
@@ -164,5 +165,6 @@ def test_ci_installs_declared_dependencies_and_runs_both_suites():
         assert any(step.get("run") == command for step in browser_steps)
     assert any(step.get("run") == "docker compose up -d --build" for step in container_steps)
     smoke = next(step["run"] for step in container_steps if step.get("name") == "Verify container pages and rule-mode workflow")
-    ast.parse(smoke.split("\n", 1)[1].rsplit("\nPY", 1)[0])
+    assert smoke == "python scripts/smoke_deployment.py"
+    ast.parse(text("scripts/smoke_deployment.py"))
     assert "03_validation" in text("pytest.ini")
