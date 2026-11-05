@@ -20,11 +20,12 @@ def test_package_does_not_include_upstream_git_metadata():
     assert not any(ROOT.rglob("node_modules"))
 
 
-def test_package_readme_describes_current_scope_and_contents():
+def test_package_readme_follows_product_documentation_structure():
     readme = (ROOT / "README.md").read_text(encoding="utf-8")
     assert "github.com/" not in readme
     assert "旅游意向人群" in readme
-    assert "仓库内容" in readme
-    assert "本地校验" in readme
-    assert "不等同于完整部署包" in readme
+    assert "环境要求" in readme
+    assert "启动服务" in readme
+    assert "使用流程" in readme
+    assert "## API" in readme
     assert (ROOT / "02_implementation_delta").is_dir()
