@@ -89,7 +89,7 @@ def test_markdown_navigation_and_page_assets_resolve():
 
 def test_readme_api_table_matches_registered_application_routes():
     routes = set()
-    for filename, prefix in (("backend/main.py", ""), ("backend/routes/travel.py", "/api")):
+    for filename, prefix in (("backend/main.py", ""), ("backend/routes/travel.py", "/api"), ("backend/routes/agent.py", "/api/agent")):
         tree = ast.parse(text(filename))
         for node in ast.walk(tree):
             if isinstance(node, ast.FunctionDef):
@@ -99,7 +99,7 @@ def test_readme_api_table_matches_registered_application_routes():
                             routes.add(prefix + ast.literal_eval(decorator.args[0]))
     api_section = text("README.md").split("## API\n", 1)[1].split("\n---", 1)[0]
     for endpoint in re.findall(r"`(/api/[^`]+)`", api_section):
-        assert endpoint in routes, endpoint
+        assert endpoint.split("?", 1)[0] in routes, endpoint
 
 
 def test_credentials_and_local_state_are_excluded_from_git_and_docker():

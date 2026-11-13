@@ -41,7 +41,9 @@ def service_ready(port: int) -> bool:
             health = json.loads(response.read(65536))
         if not isinstance(health, dict) or health.get("app_id") != "travel-mind-sandbox":
             return False
-        if health.get("status") != "ok" or "legacy-travel-simulator-v1" not in health.get("capabilities", []):
+        required = {"legacy-travel-simulator-v1", "generated-persona-retest-v4"}
+        capabilities = health.get("capabilities")
+        if health.get("status") != "ok" or not isinstance(capabilities, list) or not required.issubset(capabilities):
             return False
         with urlopen(f"http://{HOST}:{port}/", timeout=1) as response:
             return response.status == 200 and 'id="persona-list"' in response.read(65536).decode("utf-8")
@@ -197,7 +199,8 @@ def main() -> int:
 
         print(f"工作台: {url}")
         print(f"维度后台: {url}/admin")
-        print(f"API 文档: {url}/docs")
+        print(f"Jobs 页: {url}/jobs")
+        print(f"研究校准: {url}/research")
         print("\n按 Ctrl+C 或直接关闭窗口可停止服务。\n")
         proc.wait()
     except KeyboardInterrupt:

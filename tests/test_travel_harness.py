@@ -1,10 +1,15 @@
 import json
 
+import pytest
+
 from services import travel_harness
 
 
 def test_llm_generation_retries_after_structural_qc(monkeypatch):
     blueprint = travel_harness._blueprints(1)[0]
+    blueprint["name"] = "宋雨宁"
+    blueprint["mindset"]["quote"] = "我想留一天陪家人在海边散步。"
+    blueprint["travel"]["trip_length_days"] += 1
     invalid = json.loads(json.dumps(blueprint, ensure_ascii=False))
     invalid["dominant_features"][0]["code"] = "UNKNOWN"
     prompts = []
@@ -25,15 +30,14 @@ def test_llm_generation_retries_after_structural_qc(monkeypatch):
     assert personas[0].jtbd.job_id == blueprint["jtbd"]["job_id"]
 
 
-def test_llm_generation_falls_back_to_valid_blueprint_after_content_qc(monkeypatch):
+def test_llm_generation_rejects_invalid_content_after_retries(monkeypatch):
     blueprint = travel_harness._blueprints(1)[0]
     invalid = json.loads(json.dumps(blueprint, ensure_ascii=False))
     invalid["dominant_features"][0]["code"] = "UNKNOWN"
     monkeypatch.setattr(travel_harness, "_client", lambda: object())
     monkeypatch.setattr(travel_harness, "_complete", lambda *args, **kwargs: json.dumps(invalid, ensure_ascii=False))
-    personas = travel_harness.generate_personas(1, use_llm=True)
-    assert personas[0].id == blueprint["id"]
-    assert "archetype_fallback" in personas[0].evidence_refs
+    with pytest.raises(ValueError, match="未通过质检.*UNKNOWN"):
+        travel_harness.generate_personas(1, use_llm=True)
 
 
 def test_blueprints_only_use_enabled_dimensions(monkeypatch):

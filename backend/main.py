@@ -81,4 +81,4 @@ def admin_page():
 def health():
     from config import llm_configured
     return {"status": "ok", "llm_configured": llm_configured(), "audience": "旅游意向人群",
-            "app_id": "travel-mind-sandbox", "capabilities": ["legacy-travel-simulator-v1", "visual-analysis-flow-v1", "real-participants-v1", "same-participant-feedback-v1"]}
+            "app_id": "travel-mind-sandbox", "capabilities": ["legacy-travel-simulator-v1", "visual-analysis-flow-v1", "real-participants-v1", "same-participant-feedback-v1", "generated-persona-retest-v4"]}

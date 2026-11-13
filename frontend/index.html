@@ -3,21 +3,63 @@
 <head>
   <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
   <title>旅游意向人群心智沙盘</title><link rel="stylesheet" href="/static/css/travel.css">
+  <link rel="stylesheet" href="/static/css/research-console.css">
 </head>
 <body>
   <header class="topbar"><a class="brand" href="/">旅程心智 <span>JTBD Sandbox</span></a><nav><a class="active" href="/">工作台</a><a href="/admin">决策维度</a></nav><span id="api-status" class="api-status">正在检查模型配置…</span></header>
   <main class="shell">
-    <section class="hero"><div class="eyebrow">TRAVEL INTENT · CUSTOMER MIND</div><h1>把出行意向变成可验证的决策路径</h1><p>按任务蓝图生成人物假设，再用旅行方案或营销话术测试他们的顾虑、期望结果与下一步。</p><div class="notice">当前画像与维度均为合成假设，尚待旅游意向用户研究验证。</div></section>
+    <section class="hero"><div class="eyebrow">TRAVEL INTENT · CUSTOMER MIND</div><h1>分析、修改并复测旅游方案</h1><p>让研究 Agent 找出方案没有覆盖的出行需求，提出修改，再用同一批画像比较修改前后的表现。</p></section>
     <section class="panel"><div class="section-head"><div><div class="eyebrow">01 / PERSONAS</div><h2>生成旅游意向画像</h2></div><span id="persona-count" class="count">0 位</span></div>
-      <div class="toolbar"><label>数量<input id="count" type="number" min="1" max="60" value="7"></label><label>优先任务<select id="job-filter"><option value="">均衡覆盖</option></select></label><button id="generate" class="button primary">生成画像</button><label class="check"><input id="generate-llm" type="checkbox"> 使用 DeepSeek 创造差异化画像</label></div><p id="generate-hint" class="hint">默认使用可复现的规则画像。配置 DeepSeek 后可启用模型生成与质检修复。</p>
+      <div class="toolbar"><label>数量<input id="count" type="number" min="1" max="60" value="7"></label><label>优先任务<select id="job-filter"><option value="">均衡覆盖</option></select></label><button id="generate" class="button primary">生成画像</button><label class="check"><input id="generate-llm" type="checkbox"> 使用 DeepSeek 创造差异化画像</label></div><p id="generate-hint" class="hint" role="status">默认使用可复现的规则画像。配置 DeepSeek 后可启用模型生成与质检修复。</p>
       <div id="persona-list" class="persona-grid"><div class="empty">正在加载画像…</div></div>
+      <details id="persona-overflow" hidden>
+        <summary><span id="persona-expand-label"></span><span class="persona-collapse-label">收起其余画像</span></summary>
+        <div id="persona-extra-list" class="persona-grid"></div>
+      </details>
     </section>
-    <section class="panel"><div class="section-head"><div><div class="eyebrow">02 / CAMPAIGN TEST</div><h2>测试旅行方案或营销话术</h2></div><label class="check"><input id="simulate-llm" type="checkbox"> DeepSeek 个性化表达</label></div>
-      <textarea id="campaign" rows="4" placeholder="例如：周末四天轻松游，行程按区域安排，人均费用包含往返交通、住宿和主要门票；可免费改期一次，提供近期实拍与当地客服。"></textarea>
-      <div class="toolbar"><button id="simulate" class="button primary">运行测试</button><label class="check"><input id="simulate-memory" type="checkbox"> 连续触达记忆</label><button id="reset-memory" class="button">清除记忆</button><span class="hint">规则先判断是否命中画像关注点；可选由 DeepSeek 生成更自然的第一人称反馈。</span></div>
+    <section class="panel" aria-labelledby="research-agent-title">
+      <div id="research-console" class="research-console" data-run-state="idle">
+        <div class="console-header">
+          <div><div class="console-kicker">02 / TRAVEL INTELLIGENCE</div><h2 id="research-agent-title">可视化研究 Agent</h2></div>
+          <span id="research-console-badge" class="console-badge">待命</span>
+        </div>
+        <div class="console-workspace">
+          <div class="console-core" aria-hidden="true">
+            <span class="core-caption">JTBD / RESEARCH CORE</span>
+            <div class="core-visual">
+              <span class="core-axis"></span><span class="core-sweep"></span>
+              <span class="core-orbit orbit-outer"></span><span class="core-orbit orbit-inner"></span>
+              <span class="core-wave"></span><span class="core-glyph">✦</span>
+            </div>
+            <span class="core-caption">需求识别 · 同组复测</span>
+          </div>
+          <div class="console-inputs">
+            <label for="campaign">旅游方案</label>
+            <textarea id="campaign" maxlength="10000" rows="3" placeholder="例如：周末两天游，人均 1200 元，含往返交通和一晚住宿。"></textarea>
+            <label for="agent-constraints">业务约束 <span>选填</span></label>
+            <textarea id="agent-constraints" rows="2" maxlength="2000" placeholder="例如：总价不得增加，改期政策需要商家确认。"></textarea>
+            <p class="console-hint">Agent 优先使用已生成的旅游意向画像，未生成时使用 6 个内置旅游假设画像。原方案和修改稿使用同一组画像。</p>
+            <button id="run-research-agent" class="button console-run" aria-describedby="research-agent-status">分析并复测 <span aria-hidden="true">↗</span></button>
+            <p id="research-agent-status" role="status">输入旅游方案后启动研究。</p>
+          </div>
+        </div>
+        <div class="console-flow">
+          <h3>执行流程</h3>
+          <ol aria-label="研究 Agent 执行阶段">
+            <li data-research-step="profiles"><span>01</span><div><strong>选取画像</strong><small>待执行</small></div></li>
+            <li data-research-step="baseline"><span>02</span><div><strong>分析原方案</strong><small>待执行</small></div></li>
+            <li data-research-step="draft"><span>03</span><div><strong>生成修改稿</strong><small>待执行</small></div></li>
+            <li data-research-step="retest"><span>04</span><div><strong>同组画像复测</strong><small>待执行</small></div></li>
+          </ol>
+        </div>
+      </div>
+      <details id="research-agent-log" hidden open><summary>Agent 执行记录</summary><ol id="research-agent-events"></ol></details>
+      <div id="research-agent-result"></div>
+      <details><summary>快速规则仿真</summary>
+      <div class="toolbar"><button id="simulate" class="button">运行测试</button><label class="check"><input id="simulate-llm" type="checkbox"> DeepSeek 个性化表达</label><label class="check"><input id="simulate-memory" type="checkbox"> 连续触达记忆</label><button id="reset-memory" class="button">清除记忆</button></div>
       <section id="agent-analysis" class="agent-analysis" aria-live="polite" hidden>
-        <div class="agent-analysis-head"><div><div class="eyebrow">ANALYSIS FLOW</div><h3>Agent 分析过程</h3></div><span id="agent-analysis-count" class="count"></span></div>
-        <div class="analysis-status"><span id="analysis-status" role="status"></span><button id="replay-analysis" class="analysis-replay" type="button" hidden>重播过程 ↻</button></div>
+        <div class="agent-analysis-head"><div><div class="eyebrow">ANALYSIS FLOW</div><h3>规则仿真结果</h3></div><span id="agent-analysis-count" class="count"></span></div>
+        <div class="analysis-status"><span id="analysis-status" role="status"></span></div>
         <div id="analysis-progress" class="analysis-progress" role="progressbar" aria-label="分析展示进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span></span></div>
         <ol class="analysis-flow">
           <li data-flow="plan"><span>01</span><div><strong>读取旅行方案</strong><small>提取行程、费用、服务和承诺</small><p></p></div></li>
@@ -27,6 +69,7 @@
         </ol>
       </section>
       <div id="campaign-hits" class="chips"></div><div id="results" class="results"></div>
+      </details>
     </section>
   </main>
   <script src="/static/js/travel.js"></script>

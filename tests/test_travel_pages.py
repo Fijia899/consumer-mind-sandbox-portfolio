@@ -6,6 +6,7 @@ def test_original_travel_workflow_is_the_only_primary_page(client):
         response = client.get(path)
         assert response.status_code == 200
         assert '旅游意向人群心智沙盘' in response.text
+        assert '画像用于推演，方案仍需结合真实旅游研究和业务条件核实。' not in response.text
         assert 'id="persona-list"' in response.text
         assert 'id="agent-analysis"' in response.text
         assert 'href="/jobs"' not in response.text
@@ -24,6 +25,8 @@ def test_original_travel_workflow_is_the_only_primary_page(client):
 
 def test_home_restores_legacy_generation_and_analysis_controls(client):
     page = client.get('/').text
+    assert '原方案和修改稿使用同一组画像。' in page
+    assert '费用和服务承诺仍需核实。' not in page
     for control in ['count', 'job-filter', 'generate', 'persona-list', 'campaign', 'simulate', 'agent-analysis']:
         assert f'id="{control}"' in page
     assert 'data-flow="plan"' in page
@@ -37,13 +40,14 @@ def test_home_restores_legacy_generation_and_analysis_controls(client):
     assert "api('/api/simulate'" in js
 
 
-def test_analysis_flow_has_accessible_progress_and_replay(client):
+def test_analysis_flow_has_accessible_progress_without_replay(client):
     page = client.get('/').text
     assert '沿用 JTBD 旧分析逻辑' not in page
     assert 'id="analysis-progress"' in page
     assert 'role="progressbar"' in page
     assert 'id="analysis-status" role="status"' in page
-    assert 'id="replay-analysis"' in page
+    assert 'id="replay-analysis"' not in page
+    assert '重播过程' not in page
     css = client.get('/static/css/travel.css').text
     assert '@media(prefers-reduced-motion:reduce)' in css
     assert '@keyframes flow-stream' in css

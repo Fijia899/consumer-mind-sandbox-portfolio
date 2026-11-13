@@ -5,8 +5,11 @@ import json
 import re
 import random
 from copy import deepcopy
+from difflib import SequenceMatcher
+from itertools import combinations
 from pathlib import Path
 from typing import Any
+from unicodedata import normalize
 
 from openai import APIError, OpenAI
 
@@ -16,6 +19,14 @@ from schemas import Factor, Job, Outcome, Persona, SimulateResult, SubJob
 ROOT = Path(__file__).resolve().parents[2]
 DATA = ROOT / "data"
 MAX_QC_RETRIES = 3
+GEN_TEMPERATURE = 0.88
+REPAIR_TEMPERATURE = 0.35
+TRAVEL_CONSTRAINTS = (
+    "协调同行者的假期", "只能用周末出发", "避免夜间抵达",
+    "照顾同行者的体力", "预算优先留给核心体验", "需要可退改的预订",
+    "避开人流高峰", "依赖公共交通接驳", "预留临时休息时间",
+    "天气变化时需要备用行程", "行李携带受限", "兼顾同行者不同的兴趣",
+)
 
 # 旅游方案助力点属于规则假设，编码只连接本项目的旅游维度。
 INTERVENTIONS = {
@@ -100,12 +111,12 @@ def _json_object(text: str) -> dict:
     return value
 
 
-def _complete(client: OpenAI, prompt: str, *, temperature: float = 0.75) -> str:
+def _complete(client: OpenAI, prompt: str, *, temperature: float = 0.75, max_tokens: int = 3500) -> str:
     response = client.chat.completions.create(
         model=get_model_name(),
         messages=[{"role": "user", "content": prompt}],
         temperature=temperature,
-        max_tokens=3500,
+        max_tokens=max_tokens,
         extra_body={"thinking": {"type": "disabled"}},
     )
     content = response.choices[0].message.content or ""
@@ -180,9 +191,22 @@ def _blueprints(count: int, job_ids: list[str] | None = None, *, randomize: bool
     return result
 
 
-def _generation_prompt(blueprint: dict, factors: list[Factor], jobs: list[Job], steps: list[SubJob], outcomes: list[Outcome]) -> str:
+def _generation_prompt(blueprint: dict, factors: list[Factor], jobs: list[Job], steps: list[SubJob], outcomes: list[Outcome], previous: list[Persona], seed_names: list[str], constraints: tuple[str, str]) -> str:
+    jtbd = blueprint["jtbd"]
+    slot = {
+        "id": blueprint["id"],
+        "stage": blueprint["travel"]["stage"],
+        "jtbd": {key: jtbd[key] for key in ("job_id", "job_owner", "core_job", "entry_situation", "current_step")},
+    }
     context = {
-        "blueprint": blueprint,
+        "blueprint": blueprint if blueprint.get("research", {}).get("record_ids") else slot,
+        "travel_constraints": constraints,
+        "seed_names": seed_names,
+        "existing_personas": [
+            {"name": p.name, "travel": p.travel.model_dump(), "quote": p.mindset.quote,
+             "blockers": p.blockers, "drivers": p.drivers, "decision_logic": p.mindset.decision_logic}
+            for p in previous
+        ],
         "jobs": [x.model_dump() for x in jobs],
         "steps": [x.model_dump() for x in steps],
         "outcomes": [x.model_dump() for x in outcomes],
@@ -205,13 +229,15 @@ def _generation_prompt(blueprint: dict, factors: list[Factor], jobs: list[Job], 
 - 目标人群是有明确或初步旅游意向、正在决定/规划/预订/准备出行的人。
 - 禁止虚构调查、访谈、市场规模、转化率或统计比例。
 - JTBD、步骤、期望结果、维度编码必须来自上述结构上下文。
-- 不要复制蓝图的故事原句；可以保留任务结构并原创姓名、职业、情境和口语表达。
+- 保留蓝图任务结构和旅行阶段，原创姓名、职业、情境和第一人称自述。
+- 结合 travel_constraints 构思这位旅客的生活约束与取舍。姓名不得与 seed_names 或 existing_personas 重复，姓名末尾不得加数字编号。
+- 即使承担同一任务，也要与 existing_personas 中的人物区分开。用不同的出游安排、顾虑和取舍体现差异，不能只更换姓名或改写措辞。
 
 【输出】只返回一个 JSON 对象，不要 Markdown。字段结构如下：
 {{"id":"{blueprint['id']}","name":"","emoji":"🧳","segment":"","role":"","subject":"","age":30,"gender":"","city":"","occupation":"","family":"","income":"","travel":{{"stage":"目的地筛选","departure_window":"未来三个月","trip_length_days":4,"party_size":2,"budget_per_person":5000,"booked":false}},"mindset":{{"core_motive":"","fear":"","decision_logic":"","price_sensitivity":5,"brand_anchor":"","channel_preference":"","quote":""}},"dominant_features":[{{"code":"B1","weight":7}}],"factor_weights":{{"B1":7}},"blockers":[],"drivers":[],"decision_style":"","react":{{"advance":"","hesitate":"","reject":"","na":""}},"jtbd":{{"entry_situation":"","job_id":"{blueprint['jtbd']['job_id']}","job_owner":"","core_job":"","job_statement":"","current_step":"","desired_outcomes":[{{"id":"O1","importance":8,"satisfaction":3}}],"forces":{{"push":[],"pull":[],"anxiety":[],"habit_or_alternative":[]}}}},"evidence_refs":["synthetic","hypothesis"]}}"""
 
 
-def _validate(persona: Persona, factors: list[Factor], jobs: list[Job], steps: list[SubJob], outcomes: list[Outcome], blueprint: dict, names: set[str]) -> list[str]:
+def _validate(persona: Persona, factors: list[Factor], jobs: list[Job], steps: list[SubJob], outcomes: list[Outcome], blueprint: dict) -> list[str]:
     issues: list[str] = []
     factor_ids = {f.id for f in factors}
     job_map = {j.id: j for j in jobs}
@@ -229,8 +255,6 @@ def _validate(persona: Persona, factors: list[Factor], jobs: list[Job], steps: l
         issues.append("起始情境与蓝图不一致")
     if persona.jtbd.core_job != blueprint["jtbd"]["core_job"]:
         issues.append("核心任务与蓝图不一致")
-    if persona.name in names:
-        issues.append("画像姓名重复")
     job = job_map.get(persona.jtbd.job_id)
     step = next((s for s in steps if s.name == persona.jtbd.current_step), None)
     if not step or (job and step.id not in job.step_ids):
@@ -264,6 +288,50 @@ def _validate(persona: Persona, factors: list[Factor], jobs: list[Job], steps: l
     return issues
 
 
+def _normalized_text(value: str) -> str:
+    return re.sub(r"[\W_]+", "", normalize("NFKC", value).casefold())
+
+
+def _similar_text(left: str, right: str) -> bool:
+    return bool(left and right and SequenceMatcher(None, left, right, autojunk=False).ratio() >= 0.8)
+
+
+def _same_travel_arrangement(persona: Persona, other: Persona) -> bool:
+    left, right = persona.travel, other.travel
+    if (left.trip_length_days, left.party_size, left.booked) != (right.trip_length_days, right.party_size, right.booked):
+        return False
+    if _normalized_text(left.departure_window or "") != _normalized_text(right.departure_window or ""):
+        return False
+    a, b = left.budget_per_person, right.budget_per_person
+    return a == b or (a is not None and b is not None and abs(a - b) <= min(a, b) * 0.1)
+
+
+def _diversity_issues(persona: Persona, references: list[Persona]) -> list[str]:
+    quote = _normalized_text(persona.mindset.quote)
+    if not quote:
+        return ["缺少第一人称旅行自述"]
+    for other in references:
+        if quote == _normalized_text(other.mindset.quote):
+            return [f"与「{other.name}」的旅行自述重复，请根据新的旅行情境重新创作"]
+        if not _same_travel_arrangement(persona, other):
+            continue
+        same_concerns = (
+            {_normalized_text(item) for item in persona.blockers} == {_normalized_text(item) for item in other.blockers}
+            and {_normalized_text(item) for item in persona.drivers} == {_normalized_text(item) for item in other.drivers}
+            and bool(persona.blockers or persona.drivers)
+        )
+        similar_decision = all(
+            _similar_text(_normalized_text(left), _normalized_text(right))
+            for left, right in (
+                (persona.mindset.fear, other.mindset.fear),
+                (persona.mindset.decision_logic, other.mindset.decision_logic),
+            )
+        )
+        if same_concerns or similar_decision or _similar_text(quote, _normalized_text(other.mindset.quote)):
+            return [f"与「{other.name}」的出游安排、顾虑和关注点重复，请重新设计旅行约束与决策取舍"]
+    return []
+
+
 def generate_personas(count: int, *, use_llm: bool = False, job_ids: list[str] | None = None, randomize: bool = False, random_seed: int | None = None, use_evidence: bool = False, use_profile: bool = True) -> list[Persona]:
     blueprints = _blueprints(count, job_ids, randomize=randomize, random_seed=random_seed)
     if use_evidence:
@@ -274,34 +342,48 @@ def generate_personas(count: int, *, use_llm: bool = False, job_ids: list[str] |
     client = _client()
     factors, jobs, steps, outcomes = load_factors(True), load_jobs(), load_steps(), load_outcomes()
     personas: list[Persona] = []
-    names: set[str] = set()
-    for bp in blueprints:
-        prompt = _generation_prompt(bp, factors, jobs, steps, outcomes)
+    seed_profiles = [Persona.model_validate(bp) for bp in _blueprints(len(_raw("persona_seeds.json")))]
+    seed_names = sorted(p.name for p in seed_profiles)
+    names = {_normalized_text(name) for name in seed_names}
+    constraint_pairs = list(combinations(TRAVEL_CONSTRAINTS, 2))
+    random.Random(random_seed).shuffle(constraint_pairs)
+    for index, bp in enumerate(blueprints):
+        constraints = constraint_pairs[index % len(constraint_pairs)]
+        prompt = _generation_prompt(bp, factors, jobs, steps, outcomes, personas, seed_names, constraints)
+        evidence_locked = bool(bp.get("research", {}).get("record_ids"))
+        references = [*seed_profiles, *personas] if not evidence_locked else []
         issues: list[str] = []
         candidate: Persona | None = None
         for attempt in range(MAX_QC_RETRIES):
             current = prompt
             if attempt:
-                current = prompt + f"""\n修复以下旅游心智画像，最小化修改，并解决所有质检问题。只能依据给出的结构上下文、原画像和问题修复；不要添加真实研究证据。
+                current = prompt + f"""\n修复以下旅游心智画像。解决所有质检问题，遇到重复时重新设计旅行情境与自述。保留任务结构，不要添加真实研究证据。
 问题：{json.dumps(issues, ensure_ascii=False)}
 原画像：{json.dumps(candidate.model_dump() if candidate else {}, ensure_ascii=False)}
-蓝图：{json.dumps(bp, ensure_ascii=False)}
 只返回修复后的 JSON 对象。"""
             try:
-                raw = _json_object(_complete(client, current, temperature=0.72 if attempt == 0 else 0.25))
+                temperature = REPAIR_TEMPERATURE if attempt else GEN_TEMPERATURE
+                raw = _json_object(_complete(client, current, temperature=temperature, max_tokens=4096))
                 raw["id"] = bp["id"]
                 # Provenance is owned by the harness; the LLM cannot invent evidence.
                 raw["evidence_refs"] = bp["evidence_refs"]
                 raw["research"] = bp.get("research", {})
-                if bp.get("research", {}).get("record_ids"):
+                if evidence_locked:
                     for key in ("travel", "family", "dominant_features", "factor_weights", "jtbd", "blockers", "drivers"):
                         raw[key] = deepcopy(bp[key])
                     raw.setdefault("mindset", {}).update({key: bp["mindset"][key] for key in ("fear", "quote")})
                 candidate = Persona.model_validate(raw)
-                issues = _validate(candidate, factors, jobs, steps, outcomes, bp, names)
+                issues = _validate(candidate, factors, jobs, steps, outcomes, bp)
+                name = _normalized_text(candidate.name)
+                if not name or name[-1].isdigit():
+                    issues.append("画像须使用原创姓名，末尾不得带数字编号")
+                elif name in names:
+                    issues.append("画像姓名与规则种子或本批已生成画像重复")
+                if not evidence_locked:
+                    issues.extend(_diversity_issues(candidate, references))
                 if not issues:
                     personas.append(candidate)
-                    names.add(candidate.name)
+                    names.add(name)
                     break
             except APIError:
                 # SDK 已重试接口故障；它不属于画像内容问题，不能进入质检修复。
@@ -309,14 +391,7 @@ def generate_personas(count: int, *, use_llm: bool = False, job_ids: list[str] |
             except Exception as exc:
                 issues = [str(exc)[:500]]
         else:
-            # 内容质检连续失败时回退到确定性结构蓝图；服务/API 故障仍在上方原样抛出。
-            fallback = Persona.model_validate(deepcopy(bp))
-            fallback.evidence_refs = list(dict.fromkeys([*fallback.evidence_refs, "archetype_fallback", "synthetic", "hypothesis"]))
-            fallback_issues = _validate(fallback, factors, jobs, steps, outcomes, bp, names)
-            if fallback_issues:
-                raise ValueError(f"{bp['id']} 生成质检及蓝图回退均未通过：{'；'.join(fallback_issues)}")
-            personas.append(fallback)
-            names.add(fallback.name)
+            raise ValueError(f"DeepSeek 第 {len(personas) + 1} 位画像未通过质检：{'；'.join(issues)}。请重试生成。")
     return personas
 
 

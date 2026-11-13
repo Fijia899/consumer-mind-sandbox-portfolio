@@ -73,6 +73,8 @@ class AnalysisRequest(Strict):
     constraints: str = Field(default="", max_length=2000)
     discussion: str = Field(default="", max_length=2000)
     cohort_size: int = Field(default=24, ge=1, le=48)
+    prefer_generated_personas: bool = False
+    optimize: bool = False
 
 
 class CompareRequest(Strict):
@@ -101,6 +103,8 @@ class Assessment(Strict):
 
 class CaseAssessment(Strict):
     profile_id: str
+    willingness: int | None = Field(default=None, strict=True, ge=1, le=10)
+    concern: str | None = Field(default=None, min_length=2, max_length=240)
     rows: list[Assessment] = Field(min_length=1, max_length=16)
 
 
@@ -108,10 +112,17 @@ class BatchAssessment(Strict):
     cases: list[CaseAssessment] = Field(min_length=1, max_length=6)
 
 
+class PlanChange(Strict):
+    before: str = Field(max_length=500)
+    after: str = Field(max_length=500)
+    reason: str = Field(min_length=2, max_length=200)
+
+
 class Candidate(Strict):
     title: str = Field(min_length=2, max_length=100)
     plan: str = Field(min_length=5, max_length=10000)
     tradeoff: str = Field(min_length=2, max_length=800)
+    changes: list[PlanChange] = Field(default_factory=list, max_length=5)
 
 
 class Recommendations(Strict):

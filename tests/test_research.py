@@ -131,6 +131,7 @@ def test_llm_cannot_forge_provenance_or_override_observed_attributes(monkeypatch
     corpus()
     blueprint = harness.generate_personas(1,job_ids=["J3"],use_evidence=True)[0].model_dump()
     fake = deepcopy(blueprint)
+    fake["name"] = "宋雨宁"
     fake["evidence_refs"] = ["fake-actual-interview"]
     fake["travel"]["budget_per_person"] = 99999
     fake["research"] = {"record_ids":["forged"]}

@@ -53,7 +53,7 @@ def test_mentions_of_concerns_do_not_count_as_resolved():
 def test_random_blueprints_pass_structural_checks():
     for bp in harness._blueprints(21, randomize=True, random_seed=7):
         persona = Persona.model_validate(bp)
-        assert not harness._validate(persona, harness.load_factors(), harness.load_jobs(), harness.load_steps(), harness.load_outcomes(), bp, set())
+        assert not harness._validate(persona, harness.load_factors(), harness.load_jobs(), harness.load_steps(), harness.load_outcomes(), bp)
 
 
 @pytest.mark.parametrize("mismatch", ["role", "stage", "weight", "outcome"])
@@ -68,7 +68,7 @@ def test_generation_qc_rejects_inconsistent_profiles(mismatch):
         persona.factor_weights[persona.dominant_features[0].code] = 0
     else:
         persona.jtbd.desired_outcomes.append(persona.jtbd.desired_outcomes[0])
-    assert harness._validate(persona, harness.load_factors(), harness.load_jobs(), harness.load_steps(), harness.load_outcomes(), bp, set())
+    assert harness._validate(persona, harness.load_factors(), harness.load_jobs(), harness.load_steps(), harness.load_outcomes(), bp)
 
 
 
@@ -76,6 +76,9 @@ def test_generation_qc_rejects_inconsistent_profiles(mismatch):
 @pytest.mark.parametrize("invalid", ["not json", '{"name":"缺少字段"}'])
 def test_llm_generation_recovers_from_parse_or_schema_error(monkeypatch, invalid):
     bp = harness._blueprints(1)[0]
+    bp["name"] = "宋雨宁"
+    bp["mindset"]["quote"] = "我想留一天陪家人在海边散步。"
+    bp["travel"]["trip_length_days"] += 1
     responses = iter([invalid, json.dumps(bp, ensure_ascii=False)])
     prompts = []
     monkeypatch.setattr(harness, "_client", lambda: object())

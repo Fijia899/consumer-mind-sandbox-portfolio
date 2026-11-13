@@ -15,11 +15,13 @@ class Response(io.BytesIO):
     status = 200
 
 
-def test_ready_requires_legacy_travel_workbench(monkeypatch):
+def test_ready_requires_workbench_and_generated_persona_retest(monkeypatch):
     health = {"status":"ok", "app_id":"travel-mind-sandbox", "capabilities":["legacy-travel-simulator-v1"]}
     def respond(url, **kwargs):
         return Response(json.dumps(health).encode() if url.endswith("health") else b'<div id="persona-list"></div>')
     monkeypatch.setattr(launcher,"urlopen",respond)
+    assert not launcher.service_ready(8000)
+    health["capabilities"].append("generated-persona-retest-v4")
     assert launcher.service_ready(8000)
     health.pop("capabilities")
     assert not launcher.service_ready(8000)
@@ -32,7 +34,7 @@ def test_legacy_or_unrelated_service_is_not_ready(monkeypatch, value):
 
 
 def test_missing_workbench_route_is_not_ready(monkeypatch):
-    health = {"status":"ok", "app_id":"travel-mind-sandbox", "capabilities":["legacy-travel-simulator-v1"]}
+    health = {"status":"ok", "app_id":"travel-mind-sandbox", "capabilities":["legacy-travel-simulator-v1", "generated-persona-retest-v4"]}
     monkeypatch.setattr(launcher,"urlopen",lambda url,**kwargs:Response(json.dumps(health).encode() if url.endswith("health") else b'{"detail":"Not Found"}'))
     assert not launcher.service_ready(8000)
 
@@ -65,6 +67,7 @@ def test_api_advertises_required_capability(client):
     data = client.get("/api/health").json()
     assert data["app_id"] == "travel-mind-sandbox"
     assert "real-participants-v1" in data["capabilities"]
+    assert "generated-persona-retest-v4" in data["capabilities"]
 
 
 def test_failed_start_does_not_open_broken_page(monkeypatch):

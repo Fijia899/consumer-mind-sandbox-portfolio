@@ -90,7 +90,7 @@ def compare(identifier: str, body: CompareRequest, request: Request):
         raise HTTPException(422, "请选择已完成的需求分析作为对照基线")
     snapshot = deepcopy(parent["snapshot"])
     snapshot.setdefault("dimensions", [])
-    snapshot.update(plan=body.plan, discussion=body.discussion, parent_id=identifier, parent_cases=parent["result"]["cases"])
+    snapshot.update(plan=body.plan, discussion=body.discussion, parent_id=identifier, parent_cases=parent["result"]["cases"], optimize=False)
     return call(start, "analyze", snapshot, request_key(request))
 
 
@@ -137,8 +137,33 @@ def report(identifier: str):
     result = run["result"]
     snapshot = run["snapshot"]
     labels = {p["id"]: p for p in snapshot["profiles"]}
+    recommendations = result["recommendations"] or {"summary": "已保留原方案分析。", "questions": [], "candidates": []}
     lines = ["# 旅游方案需求分析", "", snapshot["cohort_notice"], "", "## 方案", "", snapshot["plan"], "", "## 业务约束", "", snapshot["constraints"] or "未提供",
-             "", "## 分析概述", "", result["recommendations"]["summary"]]
+             "", "## 分析概述", "", recommendations["summary"]]
+    if run["error"]:
+        lines.extend(["", f"后续步骤未完成：{run['error']}"])
+    retest = result.get("retest")
+    draft = (retest or {}).get("candidate")
+    if draft:
+        lines.extend(["", "## 改了什么"])
+        for change in draft.get("changes", []):
+            lines.extend(["", f"- 原方案：{change['before'] or '无对应内容'}",
+                          f"  - 修改稿：{change['after'] or '删除此项'}", f"  - {change['reason']}"])
+        if not draft.get("changes"):
+            lines.append("本次报告没有记录逐项改动。")
+    if result["cases"]:
+        lines.extend(["", "## 画像评分与顾虑", "评分为画像模拟的出行推进意愿（1–10 分）。第一人称反馈为模拟表述。"])
+        revised_by_id = {case["profile_id"]: case for case in (retest or {}).get("cases", [])}
+        for original in result["cases"]:
+            profile_id = original["profile_id"]
+            lines.extend(["", f"### {labels[profile_id]['label']}"])
+            rounds = [("原方案", original)]
+            if draft:
+                rounds.append(("修改稿", revised_by_id.get(profile_id, {})))
+            for label, case in rounds:
+                score = case.get("willingness")
+                score_text = f"{score}/10" if score is not None else agent.STATUSES["failed"] if case.get("status") == "failed" else "暂无评分"
+                lines.append(f"- {label} {score_text} · {case.get('concern') or '顾虑暂无记录'}")
     lines.extend(["", "## 启用决策维度匹配", "", "维度权重仅表示研究关注优先级，不是满足分数或概率。"])
     for row in result.get("dimension_summary", []):
         lines.append(f"- {row['id']} {row['name']}（优先级 {row['weight']}）：匹配 {row['need_matches']} 项需求 / {row['profile_matches']} 个画像")
@@ -158,9 +183,32 @@ def report(identifier: str):
             for ref in need["evidence"]:
                 m = messages[ref["message_id"]]
                 lines.append(f"  - 资料依据 [{m['id']}] {m['speaker']} {m.get('start') if m.get('start') is not None else ''}：{ref['quote']}")
-    lines.extend(["", "## 待确认", *["- "+q for q in result["recommendations"]["questions"]], "", "## 候选修改（尚待对照验证）"])
-    for candidate in result["recommendations"]["candidates"]:
+    if recommendations["questions"]:
+        lines.extend(["", "## 待确认", *["- "+q for q in recommendations["questions"]]])
+    candidates = [draft] if draft else recommendations["candidates"]
+    if candidates:
+        lines.extend(["", "## 完整修改稿" if draft else "## 候选修改"])
+    for candidate in candidates:
         lines.extend(["", "### "+candidate["title"], candidate["plan"], "取舍："+candidate["tradeoff"]])
+    if retest:
+        lines.extend(["", "## 同一画像集合复测", "复测只评估文本中的需求覆盖，费用、服务和业务约束的可行性仍需核实。"])
+        if "error" in retest:
+            lines.append(retest["error"])
+        else:
+            revised = retest["metrics"]
+            original = result["metrics"]
+            lines.extend([f"复测方案：{retest['candidate']['title']}",
+                          f"全部需求满足：原方案 {original['counts']['met']} / {original['total']}，修改稿 {revised['counts']['met']} / {revised['total']}。",
+                          f"复测有效结果：{revised['analyzed']} / {revised['total']}。"])
+            changes = {row["profile_id"]: row for row in retest["comparison"]}
+            for case in retest["cases"]:
+                profile = labels[case["profile_id"]]
+                change = changes[case["profile_id"]]
+                lines.extend(["", f"### {profile['label']} · {agent.STATUSES[change['before']]} → {agent.STATUSES[change['after']]}"])
+                needs = {need["id"]: need["label"] for need in profile["needs"]}
+                for row in case["rows"]:
+                    quotes = "；".join(row["plan_quotes"]) or "未找到"
+                    lines.append(f"- {needs[row['need_id']]}：{agent.STATUSES[row['status']]}。{row['explanation']}。修改稿依据：{quotes}")
     lines.extend(["", "## 覆盖统计", json.dumps(result["metrics"], ensure_ascii=False), "", "## 执行记录", *[f"- {e['at']} {e['tool']} {e['status']}：{e['summary']}" for e in run["events"]]])
     return PlainTextResponse("\n".join(lines), media_type="text/markdown; charset=utf-8", headers={"Content-Disposition": f'attachment; filename="travel-analysis-{identifier}.md"'})
 

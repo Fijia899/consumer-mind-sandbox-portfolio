@@ -19,6 +19,7 @@ def test_model_json_retries_malformed_json_and_counts_both_calls(monkeypatch):
         def __enter__(self): return self
         def __exit__(self, *args): return False
         def create(self, **kwargs):
+            assert kwargs["response_format"] == {"type": "json_object"}
             prompts.append(json.loads(kwargs['messages'][1]['content']))
             content = next(self.responses)
             return SimpleNamespace(choices=[SimpleNamespace(message=SimpleNamespace(content=content))],
@@ -85,13 +86,16 @@ def fake_agent(monkeypatch):
         if "逐项判断" in instruction:
             status = "met" if "免费改期" in payload['plan'] else "unknown"
             dimension = next(iter(payload.get("enabled_decision_dimensions", [])), None)
-            return {"cases": [{"profile_id": p['id'], "rows": [{"need_id": n['id'], "status": status,
+            return {"cases": [{"profile_id": p['id'], "willingness": 8 if status == "met" else 4,
+                "concern": "可以免费改期，我就放心了。" if status == "met" else "我还想知道能不能免费改期。",
+                "rows": [{"need_id": n['id'], "status": status,
                 "explanation": "隔离夹具判断，非真实模型结论", "plan_quotes": [payload['plan']] if status == 'met' else [],
                 "factor_matches": ([{"factor_id": dimension["id"], "rationale": "隔离夹具维度匹配", "plan_quote": payload['plan']}]
                                    if dimension and status == 'met' else []),
                 "question": "请核实规则"} for n in p['needs']]} for p in payload['profiles']]}
         return {"summary": "隔离测试简报，非真实用户反馈", "questions": ["请核实服务能否兑现"],
-                "candidates": [{"title": "测试修改版本", "plan": "测试方案支持免费改期", "tradeoff": "新增服务成本需要确认"}]}
+                "candidates": [{"title": "测试修改版本", "plan": "测试方案支持免费改期", "tradeoff": "新增服务成本需要确认",
+                                "changes": [{"before": "", "after": "支持免费改期", "reason": "回应改期顾虑"}]}]}
     monkeypatch.setattr(agent, 'model_json', model)
     monkeypatch.setattr(agent.POOL, 'submit', lambda fn, *args: fn(*args))
     return model
@@ -118,6 +122,39 @@ def analysis(client, **changes):
     response = client.post('/api/agent/analyses',json=body)
     assert response.status_code == 202, response.text
     return store.get('run',response.json()['id'])
+
+
+def test_workbench_retest_uses_all_saved_generated_personas_or_six_builtins(client, fake_agent, monkeypatch, tmp_path):
+    from services import persona_store, travel_harness
+
+    monkeypatch.setattr(persona_store, 'PERSONAS_PATH', tmp_path / 'personas.json')
+    for attr, value in {'_personas': [], '_loaded_mtime': 0, '_last_write_at': None, '_last_write_reason': ''}.items():
+        monkeypatch.setattr(persona_store, attr, value)
+    options = dict(profile_ids=[], prefer_generated_personas=True, cohort_size=6, optimize=True)
+    shipped = travel_harness.generate_personas(1)[0]
+    shipped.research['evidence_only'] = True
+    persona_store.set_personas([shipped])
+    fallback = analysis(client, **options)
+    assert fallback['status'] == 'completed'
+    assert len(fallback['snapshot']['profiles']) == 6
+    assert all(p['type'] == 'archetype' for p in fallback['snapshot']['profiles'])
+
+    generated = client.post('/api/generate', json={'count': 7, 'use_llm': False}).json()
+    # Reload from disk as the server would after a restart.
+    monkeypatch.setattr(persona_store, '_personas', [])
+    run = analysis(client, **options)
+    assert run['status'] == 'completed'
+    profiles = run['snapshot']['profiles']
+    assert [p['label'] for p in profiles] == [p['name'] for p in generated]
+    assert all(p['type'] == 'generated_persona' for p in profiles)
+    assert generated[0]['blockers'][0] in [need['label'] for need in profiles[0]['needs']]
+    assert '7 个已生成的旅游意向画像' in run['snapshot']['cohort_notice']
+    ids = [p['id'] for p in profiles]
+    assert [c['profile_id'] for c in run['result']['cases']] == ids
+    assert [c['profile_id'] for c in run['result']['retest']['cases']] == ids
+    assert [event['summary'] for event in run['events']
+            if event['tool'] == 'retest_candidate' and event['status'] == 'progress'] == [
+                '复测已处理 3 / 7 个画像', '复测已处理 6 / 7 个画像', '复测已处理 7 / 7 个画像']
 
 
 def test_extract_review_analyze_and_export_preserves_source_attribution(client, source, fake_agent):
@@ -197,6 +234,92 @@ def test_comparison_uses_identical_cohort_and_reports_benefit(client,fake_agent)
     assert revised['result']['metrics']['total']==original['result']['metrics']['total']
     assert all(c['change']=='clarified' for c in revised['result']['comparison'])
     assert store.get('run',original['id'])['snapshot']['plan']==original['snapshot']['plan']
+
+
+def test_optimize_retests_candidate_with_frozen_inputs_and_exports_results(client, fake_agent, monkeypatch):
+    calls = []
+    assess = agent.assess_batch
+
+    def capture(identifier, deadline, profiles, plan, constraints, dimensions):
+        calls.append((deepcopy(profiles), plan, constraints, deepcopy(dimensions)))
+        return assess(identifier, deadline, profiles, plan, constraints, dimensions)
+
+    monkeypatch.setattr(agent, 'assess_batch', capture)
+    run = analysis(client, optimize=True, constraints='总价不能增加')
+    assert run['status'] == 'completed', run
+    before, after = calls
+    assert before[0] == after[0] == run['snapshot']['profiles']
+    assert before[2:] == after[2:]
+    retest = run['result']['retest']
+    assert after[1] == retest['candidate']['plan'] != before[1]
+    assert retest['metrics']['counts']['met'] == 2
+    assert retest['candidate']['changes'][0]['after'] == '支持免费改期'
+    assert [case['willingness'] for case in run['result']['cases']] == [4, 4]
+    assert [case['willingness'] for case in retest['cases']] == [8, 8]
+    assert all(row['change'] == 'clarified' for row in retest['comparison'])
+    url = '/api/agent/runs/' + run['id']
+    events = client.get(url + '/events').json()['events']
+    assert any(event['tool'] == 'retest_candidate' and event['status'] == 'completed' for event in events)
+    report = client.get(url + '/report')
+    assert '同一画像集合复测' in report.text
+    assert '原方案 0 / 2，修改稿 2 / 2' in report.text
+    assert '## 改了什么' in report.text and '回应改期顾虑' in report.text
+    assert '原方案 4/10 · 我还想知道能不能免费改期。' in report.text
+    assert '修改稿 8/10 · 可以免费改期，我就放心了。' in report.text
+
+
+def test_failed_retest_keeps_baseline_and_marks_run_partial(client, fake_agent, monkeypatch):
+    assess = agent.assess_batch
+
+    def fail_candidate(identifier, deadline, profiles, plan, constraints, dimensions):
+        if plan == '测试方案支持免费改期':
+            raise ValueError('复测输出未通过验证')
+        return assess(identifier, deadline, profiles, plan, constraints, dimensions)
+
+    monkeypatch.setattr(agent, 'assess_batch', fail_candidate)
+    run = analysis(client, optimize=True)
+    assert run['status'] == 'partial'
+    assert run['result']['metrics']['analyzed'] == 2
+    assert run['result']['retest']['metrics']['counts']['failed'] == 2
+    assert all(row['change'] == 'unresolved' for row in run['result']['retest']['comparison'])
+
+
+def test_retest_recovers_from_invalid_proposal_schema(client, fake_agent, monkeypatch):
+    proposal_attempts = []
+
+    def model(identifier, deadline, instruction, payload):
+        result = fake_agent(identifier, deadline, instruction, payload)
+        if '候选方案是待验证草稿' in instruction:
+            proposal_attempts.append(payload['previous_validation_errors'])
+            if len(proposal_attempts) == 1:
+                result['questions'] = ['待确认的出行问题'] * 9
+            elif len(proposal_attempts) == 2:
+                result['candidates'][0]['changes'][0]['after'] = '方案未提供的服务'
+        return result
+
+    monkeypatch.setattr(agent, 'model_json', model)
+    run = analysis(client, optimize=True)
+    assert proposal_attempts[:2] == [[], [{'field': 'questions', 'type': 'too_long'}]]
+    assert proposal_attempts[2][0]['field'] == 'candidates.0.changes'
+    assert run['status'] == 'completed'
+    assert run['result']['retest']['status'] == 'completed'
+
+
+def test_planner_failure_after_baseline_keeps_partial_report(client, fake_agent, monkeypatch):
+    def fail_next_choice(identifier, deadline, instruction, payload):
+        if "选择工具" in instruction and not payload["remaining_ids"]:
+            raise ValueError("模型连续两次未返回合法 JSON；请重试任务")
+        return fake_agent(identifier, deadline, instruction, payload)
+
+    monkeypatch.setattr(agent, "model_json", fail_next_choice)
+    run = analysis(client, optimize=True)
+    assert run["status"] == "partial"
+    assert run["result"]["metrics"]["analyzed"] == 2
+    assert run["result"]["recommendations"] is None
+    report = client.get(f"/api/agent/runs/{run['id']}/report")
+    assert report.status_code == 200
+    assert "已保留原方案分析" in report.text and "后续步骤未完成" in report.text
+    assert "逐项需求与依据" in report.text
 
 
 def test_discussion_does_not_relabel_unverified_candidates_as_new_analysis(client,fake_agent):
@@ -340,6 +463,19 @@ def test_budget_guard_stops_execution(condition):
         row['usage'][condition]=agent.MAX_CALLS if condition=='calls' else agent.MAX_TOKENS
         store.update_run(row['id'],usage=row['usage'])
     with pytest.raises(ValueError):agent.guard(row['id'],deadline)
+
+
+def test_optimized_analysis_has_bounded_budget_for_both_rounds():
+    row, _ = store.new_run('analyze', {'optimize': True})
+    deadline = time.monotonic() + 10
+    row['usage'].update(calls=14, tokens=112707)
+    store.update_run(row['id'], usage=row['usage'])
+    agent.guard(row['id'], deadline)
+
+    row['usage']['tokens'] = agent.MAX_RETEST_TOKENS
+    store.update_run(row['id'], usage=row['usage'])
+    with pytest.raises(ValueError, match='token 上限'):
+        agent.guard(row['id'], deadline)
 
 
 def test_restart_marks_pending_tasks_interrupted():
