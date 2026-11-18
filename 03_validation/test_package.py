@@ -58,13 +58,13 @@ def test_clean_checkout_contains_and_tracks_the_complete_application():
     assert json.loads(git("show", ":data/personas.json")) == []
 
 
-def test_readme_uses_the_reference_guide_structure_in_order():
-    headings = re.findall(r"^## (.+)$", text("README.md"), re.M)
-    assert headings == [
-        "环境要求", "环境配置", "如何打开（启动服务）", "打开界面", "使用流程",
-        "目录结构", "API", "与研究仓库的关系", "常见问题", "验收对照",
-    ]
+def test_readme_covers_current_setup_workflow_and_research_source():
     readme = text("README.md")
+    headings = set(re.findall(r"^## (.+)$", readme, re.M))
+    assert {"能做什么", "快速启动", "使用流程", "页面入口", "模型配置", "API", "研究来源", "开发与验证"} <= headings
+    for command in ("python launcher.py", "python -m pip install -r backend/requirements.txt",
+                    "python -m pytest -q", "npm run test:browser"):
+        assert command in readme
     assert "旅游意向人群" in readme
     assert "github.com/yiqiyao13/Customer-Mind-JTBD-Sandbox" in readme
     assert "7747517a36ccd92fb4a5c68866bc565ab18329c1" in readme
