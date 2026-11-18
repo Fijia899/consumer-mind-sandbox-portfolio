@@ -18,10 +18,10 @@ class Response(io.BytesIO):
 def test_ready_requires_workbench_and_generated_persona_retest(monkeypatch):
     health = {"status":"ok", "app_id":"travel-mind-sandbox", "capabilities":["legacy-travel-simulator-v1"]}
     def respond(url, **kwargs):
-        return Response(json.dumps(health).encode() if url.endswith("health") else b'<div id="persona-list"></div>')
+        return Response(json.dumps(health).encode() if url.endswith("health") else b'<button id="btn-simulate"></button>')
     monkeypatch.setattr(launcher,"urlopen",respond)
     assert not launcher.service_ready(8000)
-    health["capabilities"].append("generated-persona-retest-v4")
+    health["capabilities"].extend(["generated-persona-retest-v4", "original-travel-workbench-v1"])
     assert launcher.service_ready(8000)
     health.pop("capabilities")
     assert not launcher.service_ready(8000)
@@ -81,3 +81,11 @@ def test_failed_start_does_not_open_broken_page(monkeypatch):
     monkeypatch.setattr(launcher.webbrowser,"open",open_browser)
     assert launcher.main() == 1
     open_browser.assert_not_called()
+
+
+def test_agent_redesign_service_is_not_reused(monkeypatch):
+    health = {"status": "ok", "app_id": "travel-mind-sandbox",
+              "capabilities": ["legacy-travel-simulator-v1", "generated-persona-retest-v4"]}
+    monkeypatch.setattr(launcher, "urlopen", lambda url, **kwargs: Response(
+        json.dumps(health).encode() if url.endswith("health") else b'<button id="btn-simulate"></button>'))
+    assert not launcher.service_ready(8000)

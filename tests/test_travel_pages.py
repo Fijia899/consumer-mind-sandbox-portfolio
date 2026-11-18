@@ -1,56 +1,32 @@
 import pytest
 
 
-def test_original_travel_workflow_is_the_only_primary_page(client):
-    for path in ('/', '/agent'):
+def test_original_travel_workbench_pages(client):
+    for path in ('/', '/agent', '/jobs', '/admin'):
         response = client.get(path)
         assert response.status_code == 200
         assert '旅游意向人群心智沙盘' in response.text
-        assert '画像用于推演，方案仍需结合真实旅游研究和业务条件核实。' not in response.text
-        assert 'id="persona-list"' in response.text
-        assert 'id="agent-analysis"' in response.text
-        assert 'href="/jobs"' not in response.text
-        assert 'href="/sources"' not in response.text
         assert 'no-store' in response.headers['cache-control']
-
-    for path in ('/participants', '/jobs', '/research', '/sources'):
+    for path in ('/participants', '/research', '/sources'):
         assert client.get(path).status_code == 404
-
-    assert client.get('/admin').status_code == 200
-    health = client.get('/api/health').json()
-    assert health['audience'] == '旅游意向人群'
-    assert 'legacy-travel-simulator-v1' in health['capabilities']
-    assert 'visual-analysis-flow-v1' in health['capabilities']
-
-
-def test_home_restores_legacy_generation_and_analysis_controls(client):
     page = client.get('/').text
-    assert '原方案和修改稿使用同一组画像。' in page
-    assert '费用和服务承诺仍需核实。' not in page
-    for control in ['count', 'job-filter', 'generate', 'persona-list', 'campaign', 'simulate', 'agent-analysis']:
+    for control in ('gen-count', 'entry-themes', 'btn-generate', 'campaign-text',
+                    'btn-simulate', 'persona-list', 'persona-detail', 'result-heatmap', 'btn-export-excel'):
         assert f'id="{control}"' in page
-    assert 'data-flow="plan"' in page
-    assert 'data-flow="factors"' in page
-    assert 'data-flow="personas"' in page
-    assert 'data-flow="summary"' in page
-    css = client.get('/static/css/travel.css').text
-    assert '--paper:#f3f8fd' in css and '--green:#1769aa' in css
-    js = client.get('/static/js/travel.js').text
-    assert 'function renderAnalysisFlow' in js
-    assert "api('/api/simulate'" in js
+    assert 'research-console' not in page
+    assert 'id="run-research-agent"' not in page
+    assert 'href="/jobs"' in page
+    assert 'original-travel-workbench-v1' in client.get('/api/health').json()['capabilities']
 
 
-def test_analysis_flow_has_accessible_progress_without_replay(client):
-    page = client.get('/').text
-    assert '沿用 JTBD 旧分析逻辑' not in page
-    assert 'id="analysis-progress"' in page
-    assert 'role="progressbar"' in page
-    assert 'id="analysis-status" role="status"' in page
-    assert 'id="replay-analysis"' not in page
-    assert '重播过程' not in page
-    css = client.get('/static/css/travel.css').text
-    assert '@media(prefers-reduced-motion:reduce)' in css
-    assert '@keyframes flow-stream' in css
+def test_original_assets_use_travel_data(client):
+    js = client.get('/static/js/app.js').text
+    assert 'p.travel?.stage' in js
+    assert 'p.osa' not in js
+    assert 'MindSim for Travel' in client.get('/').text
+    for outcome in client.get('/api/outcomes').json():
+        assert outcome['label'] in js
+    assert client.get('/static/css/app.css').status_code == 200
 
 
 @pytest.mark.parametrize('method,path',[

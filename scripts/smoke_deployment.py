@@ -30,7 +30,11 @@ def wait_ready(base, attempts=60, interval=1):
 
 def verify(base):
     wait_ready(base)
-    assert 'id="persona-list"' in call(base, "/")
+    page = call(base, "/")
+    assert 'id="persona-list"' in page and 'id="btn-simulate"' in page
+    assert 'id="agent-analysis"' not in page
+    assert 'id="job-count"' in call(base, "/jobs")
+    assert 'original-travel-workbench-v1' in json.loads(call(base, "/api/health"))["capabilities"]
     assert 'id="factor-list"' in call(base, "/admin")
     assert not json.loads(call(base, "/api/config"))["llm_configured"]
     personas = json.loads(call(base, "/api/generate", {"count": 2, "use_llm": False}))

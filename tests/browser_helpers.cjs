@@ -34,15 +34,15 @@ def research_model(identifier,deadline,instruction,payload):
 research_agent.model_json=research_model` : ''}
 with tempfile.TemporaryDirectory() as temp:
     directory=Path(temp)
-    store.STATE_PATH=directory/'participants.json'
-    research_store.STATE_PATH=directory/'research.json'
     from routes import travel
     travel.MEMORY_PATH=directory/'travel_memories.json'
+    store.STATE_PATH=directory/'participants.json'
+    research_store.STATE_PATH=directory/'research.json'
     agent_store.DB_PATH=directory/'agent.sqlite3'
     agent_store.MEDIA_DIR=directory/'media'
     store.ARCHIVE_DIR=directory/'archive'
     persona_store.PERSONAS_PATH=directory/'personas.json'
-    old=directory/'personas.json'
+    old=directory/'legacy_personas.json'
     old.write_text(json.dumps([{'id':'test-archive','name':'Browser test archive'}]),encoding='utf-8')
     store.LEGACY_PATHS=[old]
     import uvicorn

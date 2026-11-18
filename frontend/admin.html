@@ -1,2 +1,90 @@
-<!doctype html><html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>旅游决策维度</title><link rel="stylesheet" href="/static/css/travel.css"></head>
-<body><header class="topbar"><a class="brand" href="/">旅程心智 <span>JTBD Sandbox</span></a><nav><a href="/">工作台</a><a class="active" href="/admin">决策维度</a></nav><span class="api-status">研究假设</span></header><main class="shell"><section class="hero compact"><div class="eyebrow">DECISION FACTORS</div><h1>旅游决策维度</h1><p>维护触发因素与决策顾虑。启用状态和权重会进入画像生成及话术仿真；新增内容会保存到本地研究数据。</p></section><section class="panel"><div class="section-head"><h2>维度清单</h2><span id="factor-count" class="count">加载中</span></div><div id="factor-list"></div></section><section class="panel"><div class="section-head"><h2>新增维度</h2></div><div class="factor-form"><input id="f-id" placeholder="编码，例如 C1"><select id="f-group"><option value="A">A · 出行触发</option><option value="B">B · 决策顾虑</option></select><input id="f-name" placeholder="维度名称"><input id="f-weight" type="number" min="1" max="10" value="5" aria-label="权重 1 到 10"><input id="f-definition" class="wide" placeholder="定义说明"><input id="f-keywords" class="wide" placeholder="识别关键词，逗号分隔"><button id="add-factor" class="button primary">添加维度</button></div></section></main><script src="/static/js/travel.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>维度后台 · MindSim</title>
+  <link rel="stylesheet" href="/static/css/app.css?v=20261116" />
+</head>
+<body>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="brand" href="/">
+        <div class="brand-icon">MS</div>
+        <div class="brand-text">
+          <strong>旅游意向人群心智沙盘</strong>
+          <span>维度数据库后台</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link" href="/">工作台</a>
+        <a class="nav-link admin" href="/jobs">任务后台</a>
+        <a class="nav-link active admin" href="/admin">维度后台</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="page-title">
+      <h1>决策维度后台</h1>
+      <p>管理购买触发 / 品牌选择维度：启停、权重、关键词。变更后工作台生成与识别自动生效。</p>
+    </div>
+
+    <section class="card card-accent">
+      <div class="card-header">
+        <h2><span class="dot"></span>维度列表</h2>
+        <span class="status" id="factor-count"></span>
+      </div>
+      <div id="factor-list"></div>
+    </section>
+
+    <section class="card" style="margin-top:1rem">
+      <div class="card-header">
+        <h2><span class="dot"></span>新增维度</h2>
+      </div>
+      <div class="factor-form">
+        <input id="f-id" placeholder="编码，如 A10" />
+        <input id="f-group" placeholder="组别 A / B" />
+        <input id="f-name" placeholder="名称" />
+        <input id="f-weight" type="number" min="1" max="10" placeholder="权重 1-10" />
+        <input id="f-def" placeholder="定义说明" style="grid-column: span 2" />
+        <input id="f-kw" placeholder="关键词，逗号分隔" style="grid-column: span 2" />
+        <button class="btn btn-primary" id="btn-add-factor" style="grid-column: span 2;justify-self:start">添加维度</button>
+      </div>
+    </section>
+  </div>
+
+  <script src="/static/js/app.js?v=20261116"></script>
+  <script>
+    const _renderFactors = renderFactors;
+    renderFactors = function() {
+      _renderFactors();
+      const el = document.getElementById('factor-count');
+      if (el) el.textContent = `${factors.length} 个维度 · ${factors.filter(f=>f.enabled).length} 个启用`;
+    };
+
+    document.getElementById('btn-add-factor').addEventListener('click', async () => {
+      const id = document.getElementById('f-id').value.trim();
+      const group = document.getElementById('f-group').value.trim();
+      const name = document.getElementById('f-name').value.trim();
+      const weight = parseInt(document.getElementById('f-weight').value, 10) || 5;
+      const definition = document.getElementById('f-def').value.trim();
+      const keywords = document.getElementById('f-kw').value.split(/[,，]/).map(s => s.trim()).filter(Boolean);
+      if (!id || !group || !name) return alert('请填写编码、组别、名称');
+      try {
+        await api('/api/factors', {
+          method: 'POST',
+          body: JSON.stringify({ id, group, name, weight, definition, keywords }),
+        });
+        ['f-id','f-group','f-name','f-weight','f-def','f-kw'].forEach(i => document.getElementById(i).value = '');
+        await loadFactors();
+      } catch (e) {
+        alert(e.message);
+      }
+    });
+
+    loadOutcomes().then(() => loadJobsMap({ renderMap: false }));
+    loadFactors();
+  </script>
+</body>
+</html>

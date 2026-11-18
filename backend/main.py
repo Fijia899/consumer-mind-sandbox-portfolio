@@ -16,7 +16,7 @@ from fastapi.responses import FileResponse
 from fastapi.staticfiles import StaticFiles
 
 from config import load_env
-from routes import travel, research, participants, agent
+from routes import travel, research, participants, agent, workbench
 from services.agent_store import interrupt_pending
 from services.participant_store import initialize
 
@@ -34,6 +34,7 @@ app.add_middleware(
 )
 
 app.include_router(travel.router)
+app.include_router(workbench.router)
 app.include_router(research.router)
 app.include_router(participants.router)
 app.include_router(agent.router)
@@ -42,7 +43,7 @@ app.include_router(agent.router)
 @app.middleware("http")
 async def refresh_frontend(request, call_next):
     response = await call_next(request)
-    if request.url.path in {"/", "/agent", "/admin"} or request.url.path.startswith(("/static/", "/api/")):
+    if request.url.path in {"/", "/agent", "/admin", "/jobs"} or request.url.path.startswith(("/static/", "/api/")):
         response.headers["Cache-Control"] = "no-store, max-age=0"
         response.headers["Pragma"] = "no-cache"
     return response
@@ -69,6 +70,11 @@ def index():
     return {"message": "API running. Place frontend/index.html to enable UI."}
 
 
+@app.get("/jobs")
+def jobs_page():
+    return FileResponse(FRONTEND_DIR / "jobs.html")
+
+
 @app.get("/admin")
 def admin_page():
     admin_path = FRONTEND_DIR / "admin.html"
@@ -81,4 +87,4 @@ def admin_page():
 def health():
     from config import llm_configured
     return {"status": "ok", "llm_configured": llm_configured(), "audience": "旅游意向人群",
-            "app_id": "travel-mind-sandbox", "capabilities": ["legacy-travel-simulator-v1", "visual-analysis-flow-v1", "real-participants-v1", "same-participant-feedback-v1", "generated-persona-retest-v4"]}
+            "app_id": "travel-mind-sandbox", "capabilities": ["legacy-travel-simulator-v1", "visual-analysis-flow-v1", "real-participants-v1", "same-participant-feedback-v1", "generated-persona-retest-v4", "original-travel-workbench-v1"]}

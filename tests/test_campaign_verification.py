@@ -8,6 +8,14 @@ from services import participant_store as store, participant_predictions as pred
 
 
 def answer(pid):
+    # Windows clock ticks can coincide with the just-completed prediction.
+    # Keep feedback strictly later without weakening the production time gate.
+    import time
+    completed = [datetime.fromisoformat(p["completed_at"]) for p in store._load()["predictions"]
+                 if p.get("completed_at") and p["participant_id"] == pid]
+    if completed:
+        while datetime.now(timezone.utc) <= max(completed):
+            time.sleep(0.001)
     return {'participant_id':pid,'respondent_key':'test-person-1','decision':'advance',
             'quote':'看过这个方案，我愿意进一步了解详情。','evidence_source':'test-only/feedback/1',
             'identity_confirmation':'同一匿名受访者编号，同一冻结情境与方案，未展示模型判断',

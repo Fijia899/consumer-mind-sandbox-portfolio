@@ -15,7 +15,7 @@ python launcher.py
 python -m uvicorn main:app --app-dir backend --host 127.0.0.1 --port 8000
 ```
 
-工作台位于 `/`，决策维度位于 `/admin`，API 文档位于 `/docs`。规则模式不需要模型凭据；配置模型的方法见 [README](README.md)。当前服务适用于本机单用户、单进程使用。
+工作台位于 `/`，任务后台位于 `/jobs`，维度后台位于 `/admin`，API 文档位于 `/docs`。规则模式不需要模型凭据；配置模型的方法见 [README](README.md)。当前服务适用于本机单用户、单进程使用。
 
 ## Docker Compose
 
@@ -42,4 +42,4 @@ docker compose down
 
 ## 验证范围
 
-Python 回归、隔离服务的浏览器回归、部署配置静态检查和干净检出验证由仓库测试覆盖。本机未安装 Docker，镜像构建与容器运行由 GitHub Actions 的 `container` 任务验证，包括健康检查、两个页面、无密钥画像生成、规则仿真和记忆清除。实际结果以对应提交的 Actions 状态为准。
+Python 回归、隔离服务的浏览器回归、部署配置静态检查和干净检出验证由仓库测试覆盖。本机未安装 Docker，镜像构建与容器运行由 GitHub Actions 的 `container` 任务验证，包括健康检查、三个页面、无密钥画像生成、规则仿真和记忆清除。实际结果以对应提交的 Actions 状态为准。

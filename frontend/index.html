@@ -1,77 +1,275 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>旅游意向人群心智沙盘</title><link rel="stylesheet" href="/static/css/travel.css">
-  <link rel="stylesheet" href="/static/css/research-console.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>旅游意向人群心智沙盘 · MindSim</title>
+  <link rel="stylesheet" href="/static/css/app.css?v=20261116" />
 </head>
 <body>
-  <header class="topbar"><a class="brand" href="/">旅程心智 <span>JTBD Sandbox</span></a><nav><a class="active" href="/">工作台</a><a href="/admin">决策维度</a></nav><span id="api-status" class="api-status">正在检查模型配置…</span></header>
-  <main class="shell">
-    <section class="hero"><div class="eyebrow">TRAVEL INTENT · CUSTOMER MIND</div><h1>分析、修改并复测旅游方案</h1><p>让研究 Agent 找出方案没有覆盖的出行需求，提出修改，再用同一批画像比较修改前后的表现。</p></section>
-    <section class="panel"><div class="section-head"><div><div class="eyebrow">01 / PERSONAS</div><h2>生成旅游意向画像</h2></div><span id="persona-count" class="count">0 位</span></div>
-      <div class="toolbar"><label>数量<input id="count" type="number" min="1" max="60" value="7"></label><label>优先任务<select id="job-filter"><option value="">均衡覆盖</option></select></label><button id="generate" class="button primary">生成画像</button><label class="check"><input id="generate-llm" type="checkbox"> 使用 DeepSeek 创造差异化画像</label></div><p id="generate-hint" class="hint" role="status">默认使用可复现的规则画像。配置 DeepSeek 后可启用模型生成与质检修复。</p>
-      <div id="persona-list" class="persona-grid"><div class="empty">正在加载画像…</div></div>
-      <details id="persona-overflow" hidden>
-        <summary><span id="persona-expand-label"></span><span class="persona-collapse-label">收起其余画像</span></summary>
-        <div id="persona-extra-list" class="persona-grid"></div>
-      </details>
+  <nav class="topnav">
+    <div class="topnav-inner">
+      <a class="brand" href="/">
+        <div class="brand-icon">MS</div>
+        <div class="brand-text">
+          <strong>旅游意向人群心智沙盘</strong>
+          <span>MindSim for Travel</span>
+        </div>
+      </a>
+      <div class="nav-links">
+        <a class="nav-link active" href="/">工作台</a>
+        <a class="nav-link admin" href="/jobs">任务后台</a>
+        <a class="nav-link admin" href="/admin">维度后台</a>
+      </div>
+    </div>
+  </nav>
+
+  <div class="page">
+    <div class="page-title">
+      <h1>旅行方案与消费者心智</h1>
+      <p>JTBD 任务驱动：从起点情境识别 Job / Step / Outcome，测试话术是否推动任务进展</p>
+    </div>
+
+    <!-- 生成栏 -->
+    <div class="gen-bar">
+      <div class="row">
+        <label>生成数量 <input type="number" id="gen-count" value="10" min="1" max="60" /></label>
+        <label class="toggle-label" style="color:rgba(255,255,255,0.85)">
+          <input type="checkbox" id="use-llm" /> LLM 生成
+        </label>
+      </div>
+      <div class="filter-label" style="color:rgba(255,255,255,0.75);margin:0.6rem 0 0.35rem">从什么问题开始（可多选）</div>
+      <div id="entry-themes" class="chips entry-themes"></div>
+      <div class="row">
+        <button class="btn btn-primary" id="btn-generate">生成消费者心智</button>
+        <span id="gen-status"></span>
+      </div>
+      <div class="memory-toolbar">
+        <span class="status">记忆管理</span>
+        <button class="btn btn-outline btn-sm" id="btn-export-memories" style="background:rgba(255,255,255,0.95)">下载记忆</button>
+        <button class="btn btn-outline btn-sm" id="btn-import-memories" style="background:rgba(255,255,255,0.95)">上传记忆</button>
+        <input type="file" id="memory-file" accept=".json,application/json" hidden />
+        <button class="btn btn-danger btn-sm" id="btn-reset-all-memories" title="清除全部经历，清除已记录的方案反馈">清除全部记忆</button>
+        <span class="status" id="memory-io-status"></span>
+      </div>
+    </div>
+
+    <!-- Campaign -->
+    <section class="card card-accent" style="margin-bottom:1rem">
+      <div class="card-header">
+        <h2><span class="dot"></span>旅行方案测试</h2>
+        <button class="btn btn-ghost" id="btn-sample">填入示例</button>
+      </div>
+      <textarea id="campaign-text" placeholder="输入旅行方案，测试旅游意向人群的第一人称反馈与决策…"></textarea>
+      <div class="row" style="margin-top:0.85rem">
+        <label class="toggle-label"><input type="checkbox" id="use-llm-simulate" /> 独立思考（LLM）</label>
+        <label class="toggle-label"><input type="checkbox" id="use-memory" /> 消费者有记忆</label>
+        <button class="btn btn-primary" id="btn-simulate">运行测试</button>
+      </div>
+      <div class="hint-box" id="sim-mode-hint">独立思考：反馈文案更口语；关闭则走规则引擎（分数/标签更稳定）。</div>
+      <div id="campaign-hits" class="campaign-hits"></div>
     </section>
-    <section class="panel" aria-labelledby="research-agent-title">
-      <div id="research-console" class="research-console" data-run-state="idle">
-        <div class="console-header">
-          <div><div class="console-kicker">02 / TRAVEL INTELLIGENCE</div><h2 id="research-agent-title">可视化研究 Agent</h2></div>
-          <span id="research-console-badge" class="console-badge">待命</span>
+
+    <!-- 心智 + 详情 -->
+    <div class="layout-main">
+      <aside class="card">
+        <div class="card-header">
+          <h2><span class="dot"></span>消费者列表</h2>
+          <span class="status" id="persona-count"></span>
         </div>
-        <div class="console-workspace">
-          <div class="console-core" aria-hidden="true">
-            <span class="core-caption">JTBD / RESEARCH CORE</span>
-            <div class="core-visual">
-              <span class="core-axis"></span><span class="core-sweep"></span>
-              <span class="core-orbit orbit-outer"></span><span class="core-orbit orbit-inner"></span>
-              <span class="core-wave"></span><span class="core-glyph">✦</span>
-            </div>
-            <span class="core-caption">需求识别 · 同组复测</span>
-          </div>
-          <div class="console-inputs">
-            <label for="campaign">旅游方案</label>
-            <textarea id="campaign" maxlength="10000" rows="3" placeholder="例如：周末两天游，人均 1200 元，含往返交通和一晚住宿。"></textarea>
-            <label for="agent-constraints">业务约束 <span>选填</span></label>
-            <textarea id="agent-constraints" rows="2" maxlength="2000" placeholder="例如：总价不得增加，改期政策需要商家确认。"></textarea>
-            <p class="console-hint">Agent 优先使用已生成的旅游意向画像，未生成时使用 6 个内置旅游假设画像。原方案和修改稿使用同一组画像。</p>
-            <button id="run-research-agent" class="button console-run" aria-describedby="research-agent-status">分析并复测 <span aria-hidden="true">↗</span></button>
-            <p id="research-agent-status" role="status">输入旅游方案后启动研究。</p>
-          </div>
-        </div>
-        <div class="console-flow">
-          <h3>执行流程</h3>
-          <ol aria-label="研究 Agent 执行阶段">
-            <li data-research-step="profiles"><span>01</span><div><strong>选取画像</strong><small>待执行</small></div></li>
-            <li data-research-step="baseline"><span>02</span><div><strong>分析原方案</strong><small>待执行</small></div></li>
-            <li data-research-step="draft"><span>03</span><div><strong>生成修改稿</strong><small>待执行</small></div></li>
-            <li data-research-step="retest"><span>04</span><div><strong>同组画像复测</strong><small>待执行</small></div></li>
-          </ol>
+        <div class="filter-label">分群</div>
+        <div id="filter-segments" class="chips"></div>
+        <div class="filter-label">决策阶段</div>
+        <div id="filter-stages" class="chips"></div>
+        <div id="persona-list" style="margin-top:0.5rem;max-height:420px;overflow-y:auto"></div>
+      </aside>
+
+      <section class="card" id="persona-detail">
+        <div class="empty">← 选择一位消费者查看完整画像</div>
+      </section>
+    </div>
+
+    <!-- 结果 -->
+    <section class="card" style="margin-top:1rem">
+      <div class="card-header">
+        <h2><span class="dot"></span>多人总览</h2>
+        <div class="row" style="gap:0.5rem;align-items:center">
+          <span class="status" id="result-count"></span>
+          <button type="button" class="btn btn-ghost btn-sm" id="btn-export-excel" disabled title="将行动话术、画像、反馈与判定结果打包为 Excel">导出 Excel</button>
         </div>
       </div>
-      <details id="research-agent-log" hidden open><summary>Agent 执行记录</summary><ol id="research-agent-events"></ol></details>
-      <div id="research-agent-result"></div>
-      <details><summary>快速规则仿真</summary>
-      <div class="toolbar"><button id="simulate" class="button">运行测试</button><label class="check"><input id="simulate-llm" type="checkbox"> DeepSeek 个性化表达</label><label class="check"><input id="simulate-memory" type="checkbox"> 连续触达记忆</label><button id="reset-memory" class="button">清除记忆</button></div>
-      <section id="agent-analysis" class="agent-analysis" aria-live="polite" hidden>
-        <div class="agent-analysis-head"><div><div class="eyebrow">ANALYSIS FLOW</div><h3>规则仿真结果</h3></div><span id="agent-analysis-count" class="count"></span></div>
-        <div class="analysis-status"><span id="analysis-status" role="status"></span></div>
-        <div id="analysis-progress" class="analysis-progress" role="progressbar" aria-label="分析展示进度" aria-valuemin="0" aria-valuemax="4" aria-valuenow="0"><span></span></div>
-        <ol class="analysis-flow">
-          <li data-flow="plan"><span>01</span><div><strong>读取旅行方案</strong><small>提取行程、费用、服务和承诺</small><p></p></div></li>
-          <li data-flow="factors"><span>02</span><div><strong>识别决策维度</strong><small>匹配方案明确回应的关注点</small><p></p></div></li>
-          <li data-flow="personas"><span>03</span><div><strong>分析画像与任务进展</strong><small>逐一检查顾虑、Outcome 和下一步</small><p></p></div></li>
-          <li data-flow="summary"><span>04</span><div><strong>汇总结果</strong><small>呈现整体分类与逐人依据</small><p></p></div></li>
-        </ol>
-      </section>
-      <div id="campaign-hits" class="chips"></div><div id="results" class="results"></div>
-      </details>
+      <p class="status" style="margin:0 0 0.65rem">上方矩阵看判定与关注点；下方为紧凑名单，点「展开」看原文，点人名打开右侧画像。</p>
+      <div id="result-heatmap" class="heatmap-wrap"></div>
+      <div id="result-summary" class="result-summary" hidden></div>
+      <div id="result-grid" class="result-list">
+        <div class="empty">运行 旅行方案测试后，总览将显示在这里</div>
+      </div>
     </section>
-  </main>
-  <script src="/static/js/travel.js"></script>
+  </div>
+
+  <script src="/static/js/app.js?v=20261116"></script>
+  <script>
+    function updatePersonaCount() {
+      const el = document.getElementById('persona-count');
+      if (el) el.textContent = personas.length ? `${personas.length} 人` : '';
+    }
+
+    const _renderPersonaList = renderPersonaList;
+    renderPersonaList = function() {
+      _renderPersonaList();
+      updatePersonaCount();
+    };
+
+    document.getElementById('btn-generate').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-generate');
+      const status = document.getElementById('gen-status');
+      btn.disabled = true;
+      const count = parseInt(document.getElementById('gen-count').value, 10);
+      const use_llm = document.getElementById('use-llm').checked;
+      status.textContent = use_llm
+        ? `LLM 逐人生成+质检 ${count} 人中…（较慢，请看启动窗口进度）`
+        : '规则生成中…';
+      try {
+        const entry_themes = [...selectedEntryThemes];
+        personas = await api('/api/generate', {
+          method: 'POST',
+          body: JSON.stringify({ count, use_llm, job_ids: entry_themes.map(t => ENTRY_THEME_JOBS[t]) }),
+        });
+        selectedId = personas[0]?.id || null;
+        const llmNote = use_llm ? '（LLM 原创人格）' : '（规则原型）';
+        status.textContent = `✓ ${personas.length} 人 ${llmNote} · 请重新运行测试`;
+        clearResults(`已生成 ${personas.length} 人，请点击「运行测试」看全部反馈`);
+        renderPersonaList();
+        renderDetail();
+        initFilters();
+        renderFactorFilters();
+      } catch (e) {
+        status.textContent = '失败';
+        alert(e.message);
+      } finally {
+        btn.disabled = false;
+      }
+    });
+
+    document.getElementById('use-memory').addEventListener('change', updateSimModeHint);
+    document.getElementById('use-llm-simulate').addEventListener('change', updateSimModeHint);
+
+    document.getElementById('btn-simulate').addEventListener('click', async () => {
+      const btn = document.getElementById('btn-simulate');
+      btn.disabled = true;
+      btn.textContent = '推演中…';
+      try {
+        // 与服务端同步，避免页面上的旧列表/旧结果造成「生成了40人却只测了10人」的错觉
+        personas = await api('/api/personas');
+        renderPersonaList();
+        const n = personas.length;
+        const useLlm = document.getElementById('use-llm-simulate').checked;
+        btn.textContent = `推演中（${n} 人）…`;
+        const data = await api('/api/simulate', {
+          method: 'POST',
+          body: JSON.stringify({
+            campaign: document.getElementById('campaign-text').value,
+            use_llm: useLlm,
+            use_memory: document.getElementById('use-memory').checked,
+          }),
+        });
+        renderResults(data);
+        if (selectedId) {
+          renderDetail();
+          renderPersonaList();
+        }
+      } catch (e) {
+        alert(e.message);
+      } finally {
+        btn.disabled = false;
+        btn.textContent = '运行测试';
+      }
+    });
+
+    document.getElementById('btn-sample').addEventListener('click', () => {
+      document.getElementById('campaign-text').value =
+        '周末两天一晚旅行，人均1200元，包含往返交通和一晚住宿，费用透明无隐藏费用；提供交通接驳、雨天备选和当地客服，可免费改期一次。';
+    });
+
+    document.getElementById('btn-export-excel')?.addEventListener('click', async () => {
+      const btn = document.getElementById('btn-export-excel');
+      btn.disabled = true;
+      const prev = btn.textContent;
+      btn.textContent = '导出中…';
+      try {
+        await exportCampaignExcel();
+      } catch (e) {
+        alert(e.message);
+      } finally {
+        btn.textContent = prev;
+        btn.disabled = !lastSimResults.length;
+      }
+    });
+
+    document.getElementById('btn-reset-all-memories').addEventListener('click', async () => {
+      if (!confirm('确定清除全部消费者的记忆？\n经历时间线将被清空。')) return;
+      try {
+        const res = await api('/api/memories/reset', { method: 'POST' });
+        personas = await api('/api/personas');
+        renderPersonaList();
+        renderDetail();
+        const st = document.getElementById('memory-io-status');
+        if (st) { st.textContent = res.message || '已清除'; setTimeout(() => st.textContent = '', 4000); }
+      } catch (e) {
+        alert(e.message);
+      }
+    });
+
+    document.getElementById('btn-export-memories').addEventListener('click', async () => {
+      const st = document.getElementById('memory-io-status');
+      try {
+        await downloadMemories();
+        if (st) { st.textContent = '✓ 记忆已下载'; setTimeout(() => st.textContent = '', 3000); }
+      } catch (e) {
+        alert(e.message);
+      }
+    });
+
+    document.getElementById('btn-import-memories').addEventListener('click', () => {
+      document.getElementById('memory-file').click();
+    });
+
+    document.getElementById('memory-file').addEventListener('change', async (e) => {
+      const file = e.target.files?.[0];
+      e.target.value = '';
+      if (!file) return;
+      if (!confirm('上传将覆盖当前全部记忆（旅游方案反馈）。是否继续？')) return;
+      const st = document.getElementById('memory-io-status');
+      try {
+        const form = new FormData();
+        form.append('file', file);
+        const res = await fetch('/api/memories/import?replace=true', { method: 'POST', body: form });
+        if (!res.ok) {
+          const err = await res.json().catch(() => ({}));
+          throw new Error(err.detail || res.statusText);
+        }
+        const data = await res.json();
+        personas = await api('/api/personas');
+        renderPersonaList();
+        renderDetail();
+        if (st) { st.textContent = data.message || '✓ 已导入'; setTimeout(() => st.textContent = '', 5000); }
+      } catch (err) {
+        alert(err.message);
+      }
+    });
+
+    initFilters();
+    initEntryThemes();
+    updateSimModeHint();
+    loadFactors();
+    // personas + outcomes 都就绪后再渲染画像，避免刷新丢列表 / outcome 描述竞态
+    Promise.all([loadPersonas(), loadOutcomes()]).then(() => {
+      updatePersonaCount();
+      renderPersonaList();
+      if (!selectedId && personas[0]) selectPersona(personas[0].id, { scrollTo: 'detail' });
+      initFilters();
+      return loadJobsMap({ renderMap: false });
+    });
+  </script>
 </body>
 </html>

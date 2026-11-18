@@ -41,12 +41,12 @@ def service_ready(port: int) -> bool:
             health = json.loads(response.read(65536))
         if not isinstance(health, dict) or health.get("app_id") != "travel-mind-sandbox":
             return False
-        required = {"legacy-travel-simulator-v1", "generated-persona-retest-v4"}
+        required = {"legacy-travel-simulator-v1", "generated-persona-retest-v4", "original-travel-workbench-v1"}
         capabilities = health.get("capabilities")
         if health.get("status") != "ok" or not isinstance(capabilities, list) or not required.issubset(capabilities):
             return False
         with urlopen(f"http://{HOST}:{port}/", timeout=1) as response:
-            return response.status == 200 and 'id="persona-list"' in response.read(65536).decode("utf-8")
+            return response.status == 200 and 'id="btn-simulate"' in response.read(65536).decode("utf-8")
     except (OSError, ValueError, TypeError, UnicodeError):
         return False
 

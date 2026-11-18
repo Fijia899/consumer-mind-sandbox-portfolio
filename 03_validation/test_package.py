@@ -16,7 +16,8 @@ REQUIRED = {
     ".env.example", "backend/main.py", "backend/requirements.txt",
     "backend/requirements-dev.txt", "backend/routes/travel.py",
     "backend/services/travel_harness.py", "frontend/index.html", "frontend/admin.html",
-    "frontend/css/travel.css", "frontend/js/travel.js", "data/jobs.json",
+    "frontend/css/app.css", "frontend/js/app.js", "frontend/jobs.html",
+    "backend/routes/workbench.py", "backend/services/export_campaign.py", "data/jobs.json",
     "data/outcomes.json", "data/factors.json", "data/persona_seeds.json",
     "data/personas.json", "tests/conftest.py", "tests/travel_browser.cjs",
     "docs/README.md", "docs/repository-audit-20261105.md",
@@ -82,17 +83,17 @@ def test_markdown_navigation_and_page_assets_resolve():
             path = (document.parent / unquote(target.split("#", 1)[0])).resolve()
             assert path.is_relative_to(ROOT), (document, target)
             assert path.is_file(), (document, target)
-    for name in ("index.html", "admin.html"):
+    for name in ("index.html", "admin.html", "jobs.html"):
         for asset in re.findall(r'(?:src|href)="(/static/[^\"]+)"', text(f"frontend/{name}")):
-            assert (ROOT / "frontend" / asset.removeprefix("/static/")).is_file(), asset
+            assert (ROOT / "frontend" / urlsplit(asset).path.removeprefix("/static/")).is_file(), asset
 
 
 def test_readme_api_table_matches_registered_application_routes():
     routes = set()
-    for filename, prefix in (("backend/main.py", ""), ("backend/routes/travel.py", "/api"), ("backend/routes/agent.py", "/api/agent")):
+    for filename, prefix in (("backend/main.py", ""), ("backend/routes/travel.py", "/api"), ("backend/routes/agent.py", "/api/agent"), ("backend/routes/workbench.py", "/api")):
         tree = ast.parse(text(filename))
         for node in ast.walk(tree):
-            if isinstance(node, ast.FunctionDef):
+            if isinstance(node, (ast.FunctionDef, ast.AsyncFunctionDef)):
                 for decorator in node.decorator_list:
                     if isinstance(decorator, ast.Call) and isinstance(decorator.func, ast.Attribute):
                         if decorator.func.attr in {"get", "post", "put", "delete"} and decorator.args:
@@ -168,3 +169,20 @@ def test_ci_installs_declared_dependencies_and_runs_both_suites():
     assert smoke == "python scripts/smoke_deployment.py"
     ast.parse(text("scripts/smoke_deployment.py"))
     assert "03_validation" in text("pytest.ini")
+
+
+def test_publication_runs_the_current_workbench_and_declares_upload_dependency():
+    page = text("frontend/index.html")
+    for marker in ('id="btn-generate"', 'id="btn-simulate"', 'id="btn-export-excel"', 'href="/jobs"'):
+        assert marker in page
+    assert '/static/js/app.js' in page
+    assert 'id="agent-analysis"' not in page
+    assert 'original-travel-workbench-v1' in text("backend/main.py")
+    assert 'original-travel-workbench-v1' in text("launcher.py")
+    assert 'python-multipart' in text("backend/requirements.txt")
+    assert 'node --check frontend/js/app.js' in json.loads(text("package.json"))["scripts"]["test:syntax"]
+    assert 'process.env.PLAYWRIGHT_CHANNEL' in text("tests/travel_browser.cjs")
+    for document in ("README.md", "SPEC.md", "使用手册.md", "docs/README.md"):
+        content = text(document)
+        for label in ("旅行方案测试", "多人总览", "导出 Excel"):
+            assert label in content, (document, label)
